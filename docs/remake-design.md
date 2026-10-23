@@ -82,3 +82,6 @@ The owner selected GitHub Pages for hosting while retaining tt.xcstudio.dev at C
 
 ## Game audio and published scope correction (2026-10-24)
 The owner reported the missing fast-letter warning. Boomlet sound now uses the recovered pitch sequence and initializes Web Audio from the game-start gesture; mute and special-target removal stop it. The earlier prototype stays in dist/prototype/ for repository/local reference but has no main-screen link and is excluded from static publication. See [game evidence](letter-invaders.md) and [deployment](deployment.md).
+
+## Word Ship audio and literal percent handling (2026-10-24)
+Word Ships now use their recovered85-tone melody with quantized rests, sharing special-target mute/lifecycle handling with Boomlets. Summary rendering decodes native printf %% tokens in one pass without reinterpreting substituted text. The scoring engine is unchanged. See [game evidence](letter-invaders.md).

@@ -41,6 +41,9 @@ try{
    await page.clock.runFor(120);
   }
   snapshot=await state();assert.equal(snapshot.phase,"level-end");assert.equal(snapshot.round,2);
+  const summary=(await page.locator(".row").allTextContents()).join("\n");
+  assert.match(summary,/Accuracy: \d+%(?!%)/);assert.ok(!summary.includes("%%"));
+
   await page.keyboard.press("Enter");
   let boomlet;
   for(let step=0;step<1500;step++){
@@ -60,8 +63,8 @@ try{
    assert.ok(!(await state()).targets.some(target=>target.type===2));
    assert.equal(await page.evaluate(()=>window.__tones.find(tone=>tone.frequencies.length===72).stops.length),2,"Collision cancels the warning immediately");
    const rms=await page.evaluate(async()=>{
-    const {BoomletAudio}=await import("./game-audio.js");
-    const offline=new OfflineAudioContext(1,22050,22050),sound=new BoomletAudio(()=>offline);
+    const {GameAudio}=await import("./game-audio.js");
+    const offline=new OfflineAudioContext(1,22050,22050),sound=new GameAudio(()=>offline);
     sound.start();const rendered=await offline.startRendering(),samples=rendered.getChannelData(0);
     return Math.sqrt(samples.reduce((sum,value)=>sum+value*value,0)/samples.length);
    });
@@ -70,6 +73,41 @@ try{
   }else{
    assert.equal(await page.evaluate(()=>window.__contexts.length),0,"Sound Off never opens or plays an audio context, including Boomlets");
    console.log("PASS Chrome audio off: same fast-falling target produces no audio context.");
+  }
+  // Finish round two and reach an actual horizontal Word Ship in round three.
+  for(let step=0;step<1800;step++){
+   snapshot=await state();if(snapshot.phase!=="playing")break;
+   for(const target of snapshot.targets.filter(target=>!target.missile))await page.keyboard.type(target.text);
+   await page.clock.runFor(120);
+  }
+  snapshot=await state();assert.equal(snapshot.phase,"level-end");assert.equal(snapshot.round,3);
+  await page.keyboard.press("Enter");
+  let ship;
+  for(let step=0;step<1500;step++){
+   snapshot=await state();assert.equal(snapshot.phase,"playing");
+   ship=snapshot.targets.find(target=>target.type===3);if(ship)break;
+   for(const target of snapshot.targets.filter(target=>!target.missile))await page.keyboard.type(target.text);
+   await page.clock.runFor(120);
+  }
+  assert.ok(ship,"Deterministic third round reaches a horizontal Word Ship");
+  if(enabled){
+   const shipCount=await page.evaluate(()=>window.__tones.filter(tone=>tone.frequencies.length===85).length);
+   assert.ok(shipCount>=1,"Word Ship schedules its own85-note melody");
+   await page.keyboard.type(ship.text);
+   for(let i=0;i<45&&(await state()).targets.some(target=>target.type===3);i++)await page.clock.runFor(60);
+   assert.ok(!(await state()).targets.some(target=>target.type===3));
+   assert.equal(await page.evaluate(()=>window.__tones.filter(tone=>tone.frequencies.length===85).at(-1).stops.length),2,"Destroyed Word Ship stops its melody");
+   const rms=await page.evaluate(async()=>{
+    const {GameAudio}=await import("./game-audio.js");
+    const offline=new OfflineAudioContext(1,22050,22050),sound=new GameAudio(()=>offline);
+    sound.start("ship");const rendered=await offline.startRendering(),samples=rendered.getChannelData(0);
+    return Math.sqrt(samples.reduce((sum,value)=>sum+value*value,0)/samples.length);
+   });
+   assert.ok(rms>.01&&rms<.1);
+   console.log("PASS Chrome Word Ship: real round-three spawn,85-note melody, collision stop, rendered RMS="+rms.toFixed(4)+"; summary has one percent sign.");
+  }else{
+   assert.equal(await page.evaluate(()=>window.__contexts.length),0);
+   console.log("PASS Chrome Word Ship muted: no audio context; summary percent formatting correct.");
   }
   assert.deepEqual(errors,[]);
   await context.close();

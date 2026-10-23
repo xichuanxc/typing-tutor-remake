@@ -40,7 +40,7 @@ Use Export browser data for a JSON backup; backup import is not implemented yet.
 - Original Disk tests from local .tst/.txt files, including six-line paging, byte decoding and separate test history.
 - Six-line Practice/All-keys tests with the recovered full-key text generator and result dialog.
 - Progress, Speed and Accuracy reports with current/history counters and original graph layout.
-- Letter Invaders: Practice Keys/Full Keyboard, one/two players, original targeting/scoring, descending Boomlet warning and separate global top-five tables.
+- Letter Invaders: Practice Keys/Full Keyboard, one/two players, original targeting/scoring, Boomlet warnings, Word Ship melodies and separate global top-five tables.
 - Working settings, practice records and game scores remain in memory. Use **Quit → Yes, save session to history** to persist them.
 - Quit → No discards changes; Return to Main Menu keeps the session open.
 - Export browser data downloads both saved versions and the current working session.

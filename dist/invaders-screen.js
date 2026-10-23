@@ -18,7 +18,7 @@ function paragraph(grid,text,top,left,bottom,right,attr=0x1f){
  }
  return row;
 }
-const format=(text,...values)=>{for(const value of values)text=text.replace(/%(?:ld|[dsc])/,String(value));return text;};
+const format=(text,...values)=>{let index=0;return text.replace(/%%|%(?:ld|[dsc])/g,token=>token==="%%"?"%":String(values[index++]));};
 const name=(game,player=game.player??0)=>game.players?.[player]??"Student";
 const score=(game,player=game.player??0)=>game.scores?.[player]??game.score??0;
 function localDate(value){

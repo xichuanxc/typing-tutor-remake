@@ -1,0 +1,123 @@
+{
+  "date": "2026-10-24",
+  "scope": "Word Ship melody and single literal percent in summaries",
+  "source_evidence": {
+    "effect": "0x17e47 case1",
+    "spawn": "0x1a541",
+    "phrase_helpers": [
+      "0x180e1",
+      "0x18104",
+      "0x1811c",
+      "0x18134",
+      "0x18152",
+      "0x18175",
+      "0x1818d",
+      "0x181a5"
+    ],
+    "note_tables": "DS7cd0..7dcf",
+    "accuracy_string": "DS846a Accuracy: %d%%"
+  },
+  "checks": {
+    "unit_tests": 146,
+    "chrome": [
+      "strict autoplay/audio on and off through round-three Word Ships",
+      "existing full game/scoring/two-player/persistence",
+      "extracted artifact/root/project path/prototype exclusion"
+    ],
+    "word_ship_notes": 85,
+    "nonzero_rests": 35,
+    "duration_bios_ticks": 163,
+    "rendered_word_ship_rms": 0.0446,
+    "rendered_boomlet_rms": 0.049,
+    "literal_percent": "one percent in round/game-over summaries; interpolated percent-name unchanged",
+    "originals_unchanged": 3,
+    "baseline_evidence_unchanged": 1588,
+    "resource_hashes": "PASS",
+    "syntax": "PASS"
+  },
+  "artifact": {
+    "archive": "typing-tutor-remake-v0.2.0-web.zip",
+    "bytes": 105687,
+    "sha256": "099ef1b205a8046fb26edc470008e7c8f2d43ed55d643c347880f657b3e2496d"
+  },
+  "limitations": [
+    "No native DOS audio runtime comparison or Safari check; physical waveform/interrupt queue occupancy not fully matched"
+  ],
+  "source_artifacts": [
+    {
+      "path": "PROCESS.md",
+      "bytes": 61715,
+      "sha256": "d3a2790211dae2e359ad12af31c51a1724eb184bb1c78d79336b7a66b6a397d1"
+    },
+    {
+      "path": "README.md",
+      "bytes": 8610,
+      "sha256": "8f40e9457395e3a0898142e7886fb44a0e9d7caeb6fe3ebfaeb2ec5f653c7696"
+    },
+    {
+      "path": "analysis/invaders/resources.json",
+      "bytes": 5593,
+      "sha256": "c71ca698c08b04c9295c2a1f0cb032748fe283c738648ddafa5144f775172a13"
+    },
+    {
+      "path": "dist/app.js",
+      "bytes": 50148,
+      "sha256": "9445238ed22fed52816deca9bd424a2f0ca318946620db2e1cafd4eaa4285ff2"
+    },
+    {
+      "path": "dist/game-audio.js",
+      "bytes": 2777,
+      "sha256": "c0b4dbc7d644fce3fe6f1b8709475c31e3637e908a5b04474ed27abbf3401bc4"
+    },
+    {
+      "path": "dist/invaders-data.js",
+      "bytes": 3925,
+      "sha256": "eb7ec1193ff3dca1659ae3facd38c518c68d5164e36a4cf602ee1d7d5a824285"
+    },
+    {
+      "path": "dist/invaders-screen.js",
+      "bytes": 7655,
+      "sha256": "164a9d83ca002d0c437786953f7903cbd76c71887b2f5008e37dfd6aafbd9837"
+    },
+    {
+      "path": "docs/letter-invaders.md",
+      "bytes": 9997,
+      "sha256": "33d8a1920972be620f6ac53c1d9e90904c97304e31d82dfda78cfc1e42f0acc2"
+    },
+    {
+      "path": "docs/remake-design.md",
+      "bytes": 9056,
+      "sha256": "abc484f6d91d09567327fb9ead28dff2b7fd278a0ca26774ba12504ddf222abc"
+    },
+    {
+      "path": "docs/screenshots/invaders-game-over.png",
+      "bytes": 65497,
+      "sha256": "671ca5bfa22fd2d53be1d12eae6b6fe5e5c4d5382872bbd1966c9ca0e9ac13dd"
+    },
+    {
+      "path": "docs/screenshots/invaders-playing.png",
+      "bytes": 32229,
+      "sha256": "5606e4aaeffd1c170e4ecad8041128615b2981051b5f94499fb48ab1e5d15975"
+    },
+    {
+      "path": "scripts/extract-invaders-data.py",
+      "bytes": 4592,
+      "sha256": "def7dcfb694a6fe4c5f5017748a5814586b4bde18124e714ce914a6e97de2813"
+    },
+    {
+      "path": "tests/game-audio-browser.mjs",
+      "bytes": 7503,
+      "sha256": "5ad799b76c2c6a6f7aebf81db8c3aa8445388deae665cefc8bc21502a52a3044"
+    },
+    {
+      "path": "tests/game-audio.test.mjs",
+      "bytes": 3048,
+      "sha256": "654504533dbfd7ef6cfa07dc9cc07c598bc2e45bdb400c43c12622b463f6b0ba"
+    },
+    {
+      "path": "tests/invaders-screen.test.mjs",
+      "bytes": 4870,
+      "sha256": "8614aff837a1875f863487e1bbaecf2b387cf18b4645267f49a6f75129dd34f6"
+    }
+  ]
+}

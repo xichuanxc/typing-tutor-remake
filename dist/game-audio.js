@@ -11,21 +11,33 @@ export function boomletNotes(){
  }
  return notes;
 }
-export class BoomletAudio{
+// Native17e47 case1 calls the stored phrases; retain their quantized rests as silence.
+export function wordShipNotes(){
+ const notes=[],ticks=ms=>Math.floor((ms*182+5000)/10000)*BIOS_TICK_MS/1000;
+ for(const [pitch,durationMs,silenceMs] of G.wordShipSound.notes){
+  const divisor=Math.trunc(G.boomletSound.pitHundredths/pitch)&0xffff;
+  notes.push({frequency:G.boomletSound.pitHundredths/100/(divisor||65536),duration:ticks(durationMs)});
+  const rest=ticks(silenceMs);if(rest)notes.push({frequency:0,duration:rest});
+ }
+ return notes;
+}
+export class GameAudio{
  constructor(contextFactory){this.contextFactory=contextFactory;this.voice=null;}
  // Called from the user's start/key gesture, before asynchronous spawns can need sound.
  unlock(){try{this.contextFactory();}catch{/* Optional browser audio. */}}
  get playing(){return this.voice!==null;}
- start(){
+ start(kind="boomlet"){
   this.stop();
   try{
    const context=this.contextFactory();if(!context)return;
    const oscillator=context.createOscillator(),gain=context.createGain();
    oscillator.type="square";oscillator.connect(gain);gain.connect(context.destination);
-   const start=context.currentTime,notes=boomletNotes();let end=start;
-   for(const note of notes){oscillator.frequency.setValueAtTime(note.frequency,end);end+=note.duration;}
-   gain.gain.setValueAtTime(.06,start);
-   gain.gain.setValueAtTime(.06,Math.max(start,end-.004));
+   const start=context.currentTime,notes=kind==="ship"?wordShipNotes():boomletNotes();let end=start;
+   for(const note of notes){
+    if(note.frequency)oscillator.frequency.setValueAtTime(note.frequency,end);
+    gain.gain.setValueAtTime(note.frequency > 0 ? .06 : 0,end);end+=note.duration;
+   }
+   gain.gain.setValueAtTime(notes.at(-1)?.frequency > 0 ? .06 : 0,Math.max(start,end-.004));
    gain.gain.linearRampToValueAtTime(0,end);
    const voice={oscillator,gain,context};this.voice=voice;
    oscillator.onended=()=>{oscillator.disconnect();gain.disconnect();if(this.voice===voice)this.voice=null;};
@@ -41,3 +53,6 @@ export class BoomletAudio{
   }catch{/* It may already have ended. */}
  }
 }
+
+// Preserve the earlier module name for already-cached app modules during deployment.
+export {GameAudio as BoomletAudio};

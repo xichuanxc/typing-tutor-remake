@@ -77,3 +77,11 @@ The initial remake reduced this event to the same short generic beep as other ev
 Two unit checks cover pitch/timing vectors and voice replacement/cleanup. A dedicated installed-Chrome test plays a real first round, reaches a second-round Boomlet, checks the 72 scheduled pitches and running context, destroys it and checks cancellation. Real OfflineAudioContext rendering produces nonzero waveform RMS 0.0490. The same gameplay with Sound Off opens no audio context. This verifies generated audio data and browser scheduling, not physical speaker output or a recorded original-machine comparison.
 
 See [Chrome's Web Audio guidance](https://developer.chrome.com/blog/web-audio-autoplay) for the browser gesture requirement. The timing/pitch findings above come from retained assembly, not that browser document.
+
+## Word Ship music and summary percent correction (2026-10-24)
+
+Horizontal type-3 targets are Word Ships. Native 0x1a541 calls 0x17e47 case 1, which expands eight phrase helpers (0x180e1–0x181a5) over 8-byte pitch/duration/rest records at DS7cd0–7dcf. The recovered phrase order contains 85 tones and 35 nonzero quantized rests, totalling 163 BIOS ticks before target-based cancellation. The browser now plays that melody through the same special-target voice as Boomlets, suppresses generic short beeps while it is playing, and stops it when the ship disappears, play ends or Sound is off. Exact timer-interrupt queue occupancy and physical PC-speaker reproduction still need native runtime comparison.
+
+The native summary format is Accuracy: %d%%. C printf turns %% into one literal percent sign; the JavaScript formatter formerly substituted the number but left both signs. It now processes placeholders and escaped percent tokens in one pass, leaving any percent characters inside substituted names alone. Accuracy calculations are unchanged.
+
+Unit checks cover native melody order/timing/rest vectors, voice replacement and literal percentages in round/game-over summaries. Strict-autoplay Chrome verification plays through to round-three Word Ships with Sound On/Off, checks all85 tone changes, collision cancellation, nonzero rendered waveform RMS0.0446 and a single summary percent sign. Existing Boomlet checks continue to pass.

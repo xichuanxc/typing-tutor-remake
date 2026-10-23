@@ -42,11 +42,14 @@ test("ready screens retain introductory text and later-round summary with format
  assert.match(first.lines()[20],/begin Round 1/);
  const next=view();Object.assign(next,{round:2,lastSummary:{hits:5,misses:0,accuracy:100,bonus:50,player:0}});
  const grid=new Grid();drawRoundReady(grid,next);assert.match(grid.lines()[4],/Hits: 5/);assert.match(grid.lines()[7],/Accuracy Bonus: 50/);
+ assert.match(grid.lines()[6],/Accuracy: 100%(?!%)/);assert.ok(!grid.lines()[6].includes("%%"));
  assert.match(grid.lines()[20],/begin Round 2/);assert.ok(!grid.lines().join("\n").includes("%ld"));
 });
 test("both global five-entry score tables and game-over rows retain native layout",()=>{
  const tables=[[{name:"Practice",score:40,keys:8,date:"10-23-26"}],[{name:"Full",score:90,keys:64,date:"10-23-26"}]];
  const grid=new Grid();drawScores(grid,tables);assert.match(grid.lines()[2],/Full Keyboard - Top Scores/);assert.match(grid.lines()[14],/Practice Keys - Top Scores/);
  assert.match(grid.lines()[5],/Full.*90.*10-23-26/);assert.match(grid.lines()[17],/Practice.*40.*10-23-26.*8/);
+ const percentName=view();percentName.players=["A%%d"];const literal=new Grid();drawGameOver(literal,percentName,tables);assert.ok(literal.lines()[9].includes("A%%d, the game is over."));
  const over=new Grid();drawGameOver(over,view(),tables);assert.match(over.lines()[9],/Student, the game is over/);assert.match(over.lines()[14],/Practice Keys - Top Scores/);
+ for(const value of [0,90,100]){const sample=view();sample.summary.accuracy=value;const result=new Grid();drawGameOver(result,sample,tables);assert.ok(result.lines()[6].includes("Accuracy: "+value+"%"));assert.ok(!result.lines()[6].includes("%%"));}
 });

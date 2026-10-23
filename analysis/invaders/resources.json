@@ -1,5 +1,5 @@
 {
-  "scope": "Static Letter Invaders UI and Boomlet sound resources; no native runtime capture or named-history score import",
+  "scope": "Static Letter Invaders UI and special-target sound resources; no native runtime capture or named-history score import",
   "binary_sha256": "6e80ab0186040beef29c8be8b39a36ddc0e2c9b15ca20e0eedd4055d76379288",
   "strings": {
     "levelTitle": "0x172d",
@@ -106,6 +106,38 @@
     {
       "address": "0x1a22a",
       "evidence": "ev_00885ae97ed2a87e03eed087ad702883a1a3f734a238c70197b897d8744830c6"
+    },
+    {
+      "address": "0x180e1",
+      "evidence": "ev_26f23eeca2f6b000538098df6d1ebe6eedf8ad5c5f62248b9b885e52595fc28f"
+    },
+    {
+      "address": "0x18104",
+      "evidence": "ev_08f1a4dae4b64c79bd152ba2b2ed87302a98304318742208b7106ebad1db3193"
+    },
+    {
+      "address": "0x1811c",
+      "evidence": "ev_4b4e1b2d783ae05b1e33fbbe0b9b178e9db6975bcc06ede5b0a31f14809b9afb"
+    },
+    {
+      "address": "0x18134",
+      "evidence": "ev_b052377ebbe5a5ebf0edb038689c626005c29d584d190b2789c44585921abbb4"
+    },
+    {
+      "address": "0x18152",
+      "evidence": "ev_39955c6de02af2f5f58d94ce179a1e65e458888eda416d4452bb030c30c7ba5f"
+    },
+    {
+      "address": "0x18175",
+      "evidence": "ev_431c5aff158946369a00473100b1274a2340626ab9f207dbd1d922cf5bc11be1"
+    },
+    {
+      "address": "0x1818d",
+      "evidence": "ev_6c34e4c499e3367a623c84893c60daae18dd77769544fe13bf86cdf608e6e027"
+    },
+    {
+      "address": "0x181a5",
+      "evidence": "ev_e9ca185c60243fdf830ec1895bae90b3b1f8fc9f6f7c8d4e48e37c9aa24877a2"
     }
   ],
   "boomlet_sound": {
@@ -122,6 +154,21 @@
     "note_ms": 83,
     "timer_rounding": "floor((ms*182+5000)/10000) BIOS ticks; zero-length silence entries consume no tick"
   },
+  "word_ship_sound": {
+    "effect": "0x17e47 case1",
+    "tables": "DS7cd0..7dcf; 8-byte uint32 pitch,uint16 duration,uint16 silence",
+    "expanded_notes": 85,
+    "phrases": [
+      "0x180e1",
+      "0x18104",
+      "0x1811c",
+      "0x18134",
+      "0x18152",
+      "0x18175",
+      "0x1818d",
+      "0x181a5"
+    ]
+  },
   "score_table": {
     "address": "DS9843",
     "modeCount": 2,
@@ -135,6 +182,6 @@
     },
     "note": "Global tail data beyond active profile; no names or score values imported."
   },
-  "output_sha256": "96c8ccca9ad738d071a627f431a9cc016974302e692400507df5c9f31e80df88",
-  "extractor_sha256": "7d049896ad4b599ced7d59da30b20a024aa4097028c439170a085387eecd5834"
+  "output_sha256": "eb7ec1193ff3dca1659ae3facd38c518c68d5164e36a4cf602ee1d7d5a824285",
+  "extractor_sha256": "def7dcfb694a6fe4c5f5017748a5814586b4bde18124e714ce914a6e97de2813"
 }
