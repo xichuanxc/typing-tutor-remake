@@ -45,7 +45,7 @@ shutil.copyfile(ROOT / "docs/deployment.md", SITE / "DEPLOYMENT.md")
     "name": "Typing Tutor IV Remake",
     "version": version,
     "intended_domain": domain,
-    "domain_status": "Proposed; DNS and deployment configured separately",
+    "domain_status": "Host and DNS configuration managed separately from this artifact",
     "runtime": "Static HTML/CSS/JavaScript; HTTPS; no backend",
     "implementation_license": "MIT; historical content scoped separately in COPYING.md",
     "verified_intro_sha256": data["evidence"]["intro_sha256"],

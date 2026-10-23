@@ -1,8 +1,11 @@
 name: Deploy static site
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 permissions:
   contents: read
+  pages: read
 concurrency:
   group: pages
   cancel-in-progress: false

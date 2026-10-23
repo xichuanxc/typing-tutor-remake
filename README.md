@@ -6,7 +6,7 @@ First public release: **v0.2.0**. This is a JavaScript reconstruction; the origi
 
 ![Typing Tutor IV main menu](docs/screenshots/faithful-main-menu.png)
 
-Intended online address: **https://tt.xcstudio.dev** (deployment pending).
+Online address: **https://tt.xcstudio.dev** — GitHub Pages is configured; Cloudflare DNS and HTTPS validation are pending.
 New implementation code is MIT licensed; [license scope](COPYING.md) and [original-resource provenance](THIRD_PARTY.md) identify the historical content separately.
 
 ## Run
@@ -68,7 +68,7 @@ See [the scoring contract and fidelity record](docs/practice-scoring.md) for the
 npm run package:web
 ~~~
 
-Upload the extracted contents of artifacts/typing-tutor-remake-v0.2.0-web.zip to an HTTPS static host. No Python or backend is needed online. See [deployment and the proposed domain](docs/deployment.md) for checksums, the manual GitHub Pages workflow, DNS and browser-storage details.
+Upload the extracted contents of artifacts/typing-tutor-remake-v0.2.0-web.zip to an HTTPS static host. No Python or backend is needed online. See [deployment and the proposed domain](docs/deployment.md) for checksums, automatic GitHub Pages deployment, DNS and browser-storage details.
 
 ## Earlier playable prototype
 

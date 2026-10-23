@@ -76,3 +76,6 @@ Options → Intro uses the earlier 17-part text independently confirmed against 
 
 ## Static deployment preparation (2026-10-24)
 The owner requested online deployment packaging for proposed tt.xcstudio.dev. The app remains entirely browser-side; static hosting replaces the local Python file server. New implementation is MIT licensed with historical resources separately identified. See [deployment](deployment.md) for the reproducible ZIP, manual Pages workflow, DNS setup and browser-origin storage boundary. No website/DNS change is included in this preparation.
+
+## GitHub-hosted automatic deployment (2026-10-24)
+The owner selected GitHub Pages for hosting while retaining tt.xcstudio.dev at Cloudflare. Pages/custom-domain settings are enabled, and pushes to main run tests, package and deploy automatically. Cloudflare DNS access is not connected; the documented tt CNAME and subsequent HTTPS verification are the remaining external setup. The VPS and existing tunnels are not used for this app.

@@ -1,6 +1,6 @@
 # Static deployment
 
-Intended domain: **tt.xcstudio.dev**. The domain is recorded as proposed; it has not been connected or deployed by this packaging step.
+Domain: **tt.xcstudio.dev**. GitHub Pages is enabled with this custom domain. The automatic deployment workflow is configured; public custom-domain access still requires the Cloudflare DNS record and GitHub HTTPS provisioning.
 
 ## Build the artifact
 
@@ -24,15 +24,31 @@ The included CNAME records tt.xcstudio.dev for branch-based GitHub Pages hosting
 
 Configure the host for tt.xcstudio.dev, then add the DNS record supplied by that host. The correct DNS target depends on the provider.
 
-## Optional GitHub Pages workflow
+## Automatic GitHub Pages deployment
 
-A manual Deploy static site workflow is included; it does not run automatically on push. To use it:
+The owner selected GitHub Pages hosting instead of the VPS/tunnel. The Deploy static site workflow runs on every push to main and can also be started manually. It runs unit tests, packages the current static site, uploads the artifact and deploys it to Pages. A failed build/test prevents that deployment.
 
-1. In this repository, open Settings → Pages and select GitHub Actions as the publishing source.
-2. Run Actions → Deploy static site → Run workflow from main. It checks unit tests, packages the same site and deploys its staged files.
-3. In Pages settings, set the custom domain to tt.xcstudio.dev. Configure that setting before adding the DNS record.
-4. At the DNS provider for xcstudio.dev, add CNAME host tt pointing to xichuanxc.github.io (no repository path).
-5. After DNS validation and certificate provisioning, enable Enforce HTTPS.
+GitHub Pages and the custom-domain setting have been enabled for this repository. No VPS credentials or Cloudflare Tunnel are needed for this site.
+
+### One-time Cloudflare DNS step
+
+In Cloudflare, select xcstudio.dev → DNS → Records → Add record:
+
+| Field | Value |
+| --- | --- |
+| Type | CNAME |
+| Name | tt |
+| Target | xichuanxc.github.io |
+| Proxy status | DNS only (grey cloud) |
+| TTL | Auto |
+
+Use the hostname without https:// or a repository path. If a record named tt already exists, update that record rather than creating a conflicting duplicate. This applies only to tt; the other websites/tunnel records remain separate.
+
+After DNS resolves, GitHub provisions a certificate. Enable Enforce HTTPS in [repository Pages settings](https://github.com/xichuanxc/typing-tutor-remake/settings/pages) once available, then verify https://tt.xcstudio.dev. This session can configure GitHub but has no connected Cloudflare DNS management access; the DNS step must be completed in that account.
+
+### Future updates
+
+Push the desired code to main. Follow [Deploy static site runs](https://github.com/xichuanxc/typing-tutor-remake/actions/workflows/pages.yml) to see test/build/deployment status. GitHub hosts the app; Cloudflare provides DNS. No manual ZIP upload is required. An already-open browser tab still needs save/reload to load a new version.
 
 For an Actions deployment, GitHub ignores CNAME files; the Pages custom-domain setting is still required. Until a custom domain is connected, the workflow may serve at the normal GitHub Pages project address. Relative app imports and the prototype link work under a project path.
 
