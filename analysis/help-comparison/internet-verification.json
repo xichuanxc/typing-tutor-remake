@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-24",
+  "source_item": "https://archive.org/details/Typing_Tutor_IV_DOS",
+  "source_metadata": "https://archive.org/metadata/Typing_Tutor_IV_DOS",
+  "download_url": "https://archive.org/download/Typing_Tutor_IV_DOS/tt.hlp",
+  "archive_description": {
+    "title": "Typing Tutor IV (DOS)",
+    "creator": "Kriya Systems, Inc",
+    "date": "1987",
+    "publicdate": "2016-10-18 20:32:02"
+  },
+  "local_download": ".runtime/help-research/ia-tt.hlp",
+  "download": {
+    "bytes": 12508,
+    "sha256": "b7dc2e9a7e3c30e8bd817c3c4e4c61f7d03c841784d6f861746d5876afadc8cf",
+    "sha1": "ca89875d21cf47e8a132117d79dbf9ad675b27c0",
+    "md5": "6449edf2a52d837c936d0b53b12822ed"
+  },
+  "archive_metadata_sha1_and_md5_match": true,
+  "zero_bytes": 0,
+  "high_bytes": 0,
+  "entire_file_matches_prior_credit_free_candidate": true,
+  "intro_matches_prior_17_page_reconstruction": true,
+  "intro_sha256": "4d8dd081f16f7eb6f110e093442e32590bf2e1eb8c15afb2f1c1953a78193bc5",
+  "confirmed_replacement_ranges_in_local_old": [
+    [
+      1024,
+      2048
+    ],
+    [
+      8192,
+      10240
+    ]
+  ],
+  "conclusion": "Independently archived HLP confirms all text in the prior candidate, including damaged local OLD spans. Intro is no longer based solely on reconstruction from the fixed copy.",
+  "limits": [
+    "Archive provenance is a third-party preservation copy, not publisher-certified original media.",
+    "Neither executable downloaded or run; Y2K behavior not assessed."
+  ],
+  "reference_policy": "No original reference file or browser resource replaced; raw download stays in Git-ignored .runtime."
+}

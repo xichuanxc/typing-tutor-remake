@@ -1,0 +1,2 @@
+# Preserve exact verified archived Intro bytes, including DOS line endings.
+analysis/help-comparison/intro-reconstructed.txt -text

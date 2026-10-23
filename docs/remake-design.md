@@ -70,3 +70,6 @@ Disk tests use the original seven-bit/rotated byte readers and immediate six-lin
 
 ## F5c update (2026-10-24)
 Letter Invaders now uses recovered setup, generation, case-sensitive targeting, tick-driven movement, collisions, ground loss, round bonuses and one/two-player turns. Global Practice/Full score tables are separate from typing counters. Optional gameRecords provide browser audit history; gameScores commits atomically with the profile on explicit Save. Browser clock/date/audio and completion-time table application are documented adapters. See [the game contract](letter-invaders.md).
+
+## Verified original Intro update (2026-10-24)
+Options → Intro uses the earlier 17-part text independently confirmed against the archived DOS help. The resource builder checks the source excerpt's SHA-256; other Help content and browser reader grouping remain unchanged. Y2K-fix attribution is preserved in provenance. See [the comparison and source](help-comparison.md).

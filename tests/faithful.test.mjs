@@ -1,4 +1,6 @@
 import test from "node:test";
+import {readFileSync} from "node:fs";
+import {createHash} from "node:crypto";
 import assert from "node:assert/strict";
 import {StudentSession,PROFILE_KEY,LEGACY_KEY,DEFAULT_PROFILE,validName} from "../dist/faithful-session.js";
 import {Grid,wrap,glyph,choiceLayout} from "../dist/grid.js";
@@ -55,5 +57,13 @@ test("resource choices and HLP substitution remain faithful to the audited recor
   assert.equal(DATA.menus.length,6);assert.equal(DATA.choices.wpm.length,10);
   assert.deepEqual(DATA.choices.drills,[5,10,15,20]);assert.equal(DATA.choices.weekly_time.length,7);
   assert.ok(DATA.help[0].some(t=>t.includes("'ASDF'")&&t.includes("'JKL;'")));
+  const intro=readFileSync("analysis/help-comparison/intro-reconstructed.txt");
+  assert.equal(DATA.evidence.intro_sha256,createHash("sha256").update(intro).digest("hex"));
+  assert.equal(DATA.help[0].length,17);
+  assert.match(DATA.help[0][0],/^Welcome to the Typing Tutor IV keyboard instruction program!  This program will tailor/);
+  assert.match(DATA.help[0][0],/mastery of the keyboard\.$/);
+  assert.ok(DATA.help[0].at(-1).endsWith("Good luck!  Enjoy!"));
+  assert.ok(!DATA.help[0].some(text=>/TiANWEi|2000 Bug|winice|263.net/.test(text)));
+
   assert.ok(!DATA.help.flat().some(t=>t.includes("'*'")||t.includes("'#'")));
 });

@@ -402,11 +402,7 @@ export default {
   },
   "help": [
     [
-      "Welcome to the Typing Tutor IV keyboard instruction program!",
-      "This Program was Modified by TiANWEi(Huainan,Anhui,China) Year 2000 Bug Fixed at 2000/1",
-      "http://winice.yeah.net/      spring_w",
-      "263.net",
-      "This program will tailor a course that matches your goals, experience, and available practice time, to help you gain mastery of the keyboard.",
+      "Welcome to the Typing Tutor IV keyboard instruction program!  This program will tailor a course that matches your goals, experience, and available practice time, to help you gain mastery of the keyboard.",
       "This introduction will explain the usage of the Typing Tutor IV program.  If you are new to computers, you should read the Typing Tutor IV user's manual before proceeding.",
       "Experienced computer users may want to get right into the program and read the introduction later.  As the bottom line of this screen tells you, pressing the Esc (Escape) key will get you past the introduction.",
       "The Esc key is used throughout the program to get out of what you are doing and do something else.  You can always look to the bottom line to find out where Esc will take you.",
@@ -534,6 +530,9 @@ export default {
   "evidence": {
     "menus_sha256": "cf20ce007f0035c72909298dc99bf45a0f5cc5459f8885d2db521aba129b91b7",
     "help_sha256": "5c787383d36fdb07dbb48a222b747309bc2aa91b1bdf45c769673f3a469c8bca",
+    "intro_source": "analysis/help-comparison/intro-reconstructed.txt",
+    "intro_sha256": "4d8dd081f16f7eb6f110e093442e32590bf2e1eb8c15afb2f1c1953a78193bc5",
+    "intro_archive_url": "https://archive.org/download/Typing_Tutor_IV_DOS/tt.hlp",
     "binary_sha256": "6e80ab0186040beef29c8be8b39a36ddc0e2c9b15ca20e0eedd4055d76379288"
   }
 };

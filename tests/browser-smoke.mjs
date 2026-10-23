@@ -1,5 +1,6 @@
 import {chromium} from "playwright";
 import assert from "node:assert/strict";
+import DATA from "../dist/original-data.js";
 import {spawn} from "node:child_process";
 import {mkdir,readFile} from "node:fs/promises";
 import {once} from "node:events";
@@ -80,8 +81,27 @@ try{
   assert.equal(await page.getByRole("option",{selected:true}).getAttribute("aria-label")," 1 -  2");
   await page.keyboard.press("Escape");
   await page.keyboard.press("o");await page.keyboard.press("i");assert.equal(await mode(),"reader");
-  assert.ok((await page.locator(".row").allTextContents()).join("\n").includes("Welcome to"));
-  await page.keyboard.press("Enter");await page.keyboard.press("Escape");assert.equal(await menu(),"0");
+  const firstIntro=(await page.locator(".row").allTextContents()).join("\n");
+  assert.ok(firstIntro.includes("Welcome to"));assert.ok(firstIntro.includes("matches your goals"));
+  assert.ok(!/TiANWEi|2000 Bug|winice/.test(firstIntro));
+  await page.screenshot({path:"docs/screenshots/faithful-intro-first.png",fullPage:true});
+  await page.keyboard.press("PageDown");await page.keyboard.press("PageUp");
+  assert.equal((await page.locator(".row").allTextContents()).join("\n"),firstIntro);
+  let introText="",introPages=0;
+  while(await mode()==="reader"){
+    const lines=await page.locator(".row").allTextContents();
+    introText+=lines.slice(5,20).map(line=>line.slice(5,75)).join(" ");
+    introPages++;assert.ok(introPages<=20,"Intro reader must finish");
+    if(lines.join(" ").includes("Good luck!")){
+      await page.screenshot({path:"docs/screenshots/faithful-intro-last.png",fullPage:true});
+    }
+    await page.keyboard.press("Enter");
+  }
+  assert.equal(introText.replace(/\s/g,""),DATA.help[0].join("").replace(/\s/g,""));
+  console.log("Verified Intro: 17 source parts, "+introPages+" fitted reader screens, complete text and backward/forward navigation.");
+  assert.equal(await menu(),"4");assert.equal(await page.locator("#terminal").getAttribute("data-dirty"),"false");
+  await page.keyboard.press("Escape");await page.keyboard.press("o");await page.keyboard.press("i");
+  await page.keyboard.press("Escape");assert.equal(await menu(),"0");
   await page.keyboard.press("o");await page.keyboard.press("h");assert.equal(await mode(),"reader");
   const help=(await page.locator(".row").allTextContents()).join("\n");assert.ok(help.includes("WPM"));assert.ok(help.includes("Time"));
   await page.keyboard.press("Escape");
@@ -108,7 +128,7 @@ try{
   await choose("Return to Main Menu");
   await page.keyboard.press("q");await choose("No, do not save to history");
   assert.deepEqual(errors,[]);
-  console.log("PASS (Chrome): recovered frame, all student menus, horizontal/list navigation, exact Options, cancel/save/discard/reload, names, HLP, idle panel, failure retention, legacy preservation, export, narrow viewport; no JS errors.");
+  console.log("PASS (Chrome): recovered frame, all student menus, horizontal/list navigation, exact Options, cancel/save/discard/reload, names, complete verified Intro/pagination, HLP, idle panel, failure retention, legacy preservation, export, narrow viewport; no JS errors.");
 }finally{
   if(browser)await browser.close();
   if(server.exitCode===null){const exited=once(server,"exit");server.kill();await exited;}

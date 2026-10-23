@@ -1,0 +1,107 @@
+{
+  "date": "2026-10-24",
+  "scope": "Verified earlier Intro applied to browser app; other Help and original references unchanged",
+  "source_parts": 17,
+  "browser_reader_screens": 7,
+  "checks": {
+    "unit_tests": 143,
+    "chrome": "Expanded menu/settings workflow PASS; complete text, first/last, next/previous, Escape, read-only, persistence regressions; no page errors",
+    "original_files": 3,
+    "baseline_evidence_files": 1588,
+    "other_generated_fields_unchanged": true,
+    "source_matches_archived_intro": true,
+    "local_documentation_links": 142,
+    "syntax": "PASS",
+    "archived_line_endings": "Path-specific Git -text attribute preserves exact archived bytes in fresh checkouts.",
+    "fresh_checkout_unit_tests": 143,
+    "git_blob_and_checkout_intro_sha256": "4d8dd081f16f7eb6f110e093442e32590bf2e1eb8c15afb2f1c1953a78193bc5"
+  },
+  "release": "Held; this change is a local commit",
+  "artifacts": [
+    {
+      "path": "README.md",
+      "bytes": 7833,
+      "sha256": "e42a92b7116865f1e4e5a65c09333eb19d3d972b1bbb80dc534d0bb4885b3eed"
+    },
+    {
+      "path": "PROCESS.md",
+      "bytes": 49932,
+      "sha256": "64d5888b77e129c3d99a76c26b98c46e393802abaf632cd24c18902993387ada"
+    },
+    {
+      "path": "THIRD_PARTY.md",
+      "bytes": 1650,
+      "sha256": "b0f377d9151190c04708a84aa49206fc04b22a0fc032030887e83127fa055e64"
+    },
+    {
+      "path": "docs/help-comparison.md",
+      "bytes": 4322,
+      "sha256": "5de1c76925fb7e8e08fbf54b0ef2a095f424c26bcf2ed975854403d7924e7ed5"
+    },
+    {
+      "path": "docs/original-program.md",
+      "bytes": 8723,
+      "sha256": "aae79f8740c7c2a60ac5b524b13527a78a2e1693cced55eb2cdf8ced36584903"
+    },
+    {
+      "path": "docs/remake-design.md",
+      "bytes": 7283,
+      "sha256": "f0def155e5bc98a4da2d534fb8561c7fa2f256dd9427627df0a371152dbca64d"
+    },
+    {
+      "path": "scripts/build-faithful-resources.py",
+      "bytes": 3615,
+      "sha256": "36faeb91a586fb6866aabfe14311221b6d5d8c2a148f385f1084e704e9eddb47"
+    },
+    {
+      "path": "scripts/compare-tt-help.py",
+      "bytes": 4028,
+      "sha256": "a49c014fb6f64cef1e1a45dd5fe920f47d54e54c7773232b7b2a34f568db0235"
+    },
+    {
+      "path": "dist/original-data.js",
+      "bytes": 25126,
+      "sha256": "ad82223303dba36503796b568b1f71c25109056015fe5ddef6b3b2ea015e4346"
+    },
+    {
+      "path": "tests/browser-smoke.mjs",
+      "bytes": 10539,
+      "sha256": "c16b1cc931bef489a4b34c63a16c0aea7f35dca9bdaa0bc22d335af2b24547e0"
+    },
+    {
+      "path": "tests/faithful.test.mjs",
+      "bytes": 5001,
+      "sha256": "17b5d8fa26877f6f52769ee1d198d4e2a2257ae5a6f6ce8e2430f8d373719fa3"
+    },
+    {
+      "path": "analysis/help-comparison/comparison.json",
+      "bytes": 2019,
+      "sha256": "d3349b4826aed2cbb8f1732c46226d0fdac64ac9e3825cff8d8521b2406f1e24"
+    },
+    {
+      "path": "analysis/help-comparison/internet-verification.json",
+      "bytes": 1615,
+      "sha256": "0b78cd8e9d1be50822302529119017b3db67c8304ea9bebdc759fb4a3fe325ca"
+    },
+    {
+      "path": "analysis/help-comparison/intro-reconstructed.txt",
+      "bytes": 4695,
+      "sha256": "4d8dd081f16f7eb6f110e093442e32590bf2e1eb8c15afb2f1c1953a78193bc5"
+    },
+    {
+      "path": "docs/screenshots/faithful-intro-first.png",
+      "bytes": 130621,
+      "sha256": "295dcd24641d9a190b607bccd942f5d128c8b579726a2dbaae0f9733a06f863f"
+    },
+    {
+      "path": "docs/screenshots/faithful-intro-last.png",
+      "bytes": 60287,
+      "sha256": "703d27722715dc10101dc95ad656b29f016bfba619fff40471fa02c0d7eefd70"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 131,
+      "sha256": "b9d084d3c0ac4a0a93c2c1ce30cb7d42c2a4d19cd5fea1babee15f0b798c65ff"
+    }
+  ]
+}

@@ -27,7 +27,7 @@ Use Export browser data for a JSON backup; backup import is not implemented yet.
 - Fixed 80×25 character screen, original menu positions, colors, header/footer and idle instructions.
 - All six student menus: Main, Lessons, Tests, Reports, Options and Game.
 - Options: original WPM tiers, weekly hours, 5/10/15/20 drills, sound, name, Intro and Help.
-- Original HLP content and home-key placeholder substitutions.
+- Original HLP content, independently verified earlier Intro text, and home-key placeholder substitutions.
 - Lessons → Practice: original exercise/focus/results boxes, error arrows, correction and end-of-lesson summary.
 - Recovered integer scoring with separate final accuracy and per-key attempt records.
 - Adaptive drills through all 64 original keyboard entries, original word lists, reach tutorials and Shift.

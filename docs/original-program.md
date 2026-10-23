@@ -79,3 +79,12 @@ Disk file enumeration, token/byte readers, rotated envelope,72-column wrapping, 
 
 ## F5c static recovery update (2026-10-24)
 Letter Invaders setup, temporary key generation, 90 case-sensitive slots, missile/ground physics, score arithmetic, two-player transitions and global score-table insertion now have unit-tested browser translations. These supersede the initial string-only game findings above. See [Letter Invaders](letter-invaders.md) for function evidence and browser choices. Chrome captures establish remake behavior; native DOS runtime, full history/onboarding and complete parity remain open.
+
+## Earlier help comparison (2026-10-24)
+The supplied OLD/TT.HLP confirms an intact original welcome without the Y2K programmer credits, but also contains two overwritten/non-text spans. A 12,508-byte credit-free reconstruction matches the earlier file outside 0x400–0x800 and 0x2000–0x2800. Missing prose is corroborated only by the readable fixed copy. See [the comparison](help-comparison.md) and its 17-page reconstructed Intro. Neither reference nor the app's current help has been replaced.
+
+## Internet verification of earlier help (2026-10-24)
+An independently archived 12,508-byte tt.hlp from Internet Archive exactly matches the credit-free candidate across the entire file, including both damaged local OLD spans. Its archive-listed SHA-1/MD5 match the download. The saved 17-page Intro is therefore independently corroborated; the previous missing-text uncertainty is superseded. See [verification details](help-comparison.md) and [the receipt](../analysis/help-comparison/internet-verification.json). This does not verify executable behavior or publisher-original media provenance.
+
+## Verified Intro applied (2026-10-24)
+The owner authorized applying the archived original Intro to the app. Its 17 source parts now replace the modified welcome/credit parts in Options → Intro; the browser groups them into seven fitted reader screens. Other Help sections still use the preserved fixed reference. Source hashes are embedded in generated resource evidence, and attribution is retained in THIRD_PARTY.md.

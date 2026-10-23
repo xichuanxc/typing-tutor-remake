@@ -1,0 +1,72 @@
+Welcome to the Typing Tutor IV keyboard instruction program!  This
+program will tailor a course that matches your goals, experience, and
+available practice time, to help you gain mastery of the keyboard. @
+This introduction will explain the usage of the Typing Tutor IV
+program.  If you are new to computers, you should read the
+Typing Tutor IV user's manual before proceeding. @
+Experienced computer users may want to get right into the program and read
+the introduction later.  As
+the bottom line of this screen tells you, pressing the
+Esc (Escape) key will get you past the introduction. @
+The Esc key is used
+throughout the program to get out of what you are doing and do something else. 
+You can always look to the bottom line to find out where Esc will take you. @
+The top line of each screen lets you know where you are in the program.  In the
+upper left corner is the name of the current screen, and your name is in
+the upper right corner. @
+Selections of Typing Tutor IV features are made from menus.  Each menu
+gives a list of program features to select from.  One feature of every menu
+is called Help.  Selecting Help will get you information about the other
+features of that menu. @
+The Main Menu is the starting point for the selection of all the features
+of the program.  The selections available on the Main Menu are: Lessons,
+Tests, Reports, Options, Game, Help, and Quit.  Selecting any of these except
+Help or Quit will lead you to a secondary menu with more choices.  Selecting
+Help will give you a fuller description of all the choices on the current
+menu. @
+Help is available as an option on every menu.  Selecting each of the menus
+and reading Help is a good way to familiarize yourself with all of the
+features of the program. @
+After reading this introduction you will be asked some questions about your
+goals in using this program, and your current skill level at the
+keyboard.  This information will be used to help create customized lessons
+and tests for you, and to give you meaningful feedback on your progress.
+If you wish to revise your goals later, you can do so by selecting Options
+from the Main Menu. @
+The area where you will probably want to spend most of your time is in
+Practice Lessons.  To get to Practice Lessons, you should select Lessons from
+the Main Menu, and then Practice from the Lessons Menu. @
+A lesson consists
+of a series of one-line drills.  Each drill appears in a box at the top of
+the screen with an arrow pointing up at the first character to be
+typed.  As you type the line, the arrow will move along the line pointing
+to the next character to be typed.  If you make a mistake, an arrow will
+appear above the line pointing down to the error.  At the end of a line
+type either space bar or Enter to complete the drill. @
+To monitor your progress with lessons, you will want to take Practice
+Tests.  The results of a Practice Test are recorded in your history file,
+and will appear on your personal Progress Report.  To get to Practice Test,
+select Tests from the Main Menu, and then Practice from the Tests Menu. @
+Tests are taken in the same way as lessons, except that there are multiple
+lines instead of just one.  Type the character above the pointer, and space
+bar or Enter at the end of each line. @
+You will see your Progress Report when you exit from the program, but you can
+also select it by choosing Reports from the Main Menu, and then Progress.  Also
+from the Reports Menu, you can view your Speed and Accuracy Graphs.  These
+graphs show how you are doing on each key, and compare the current session's
+data with your history. @
+You can take a break from lessons and tests and play the Letter Invaders
+game.  It is fast-paced, fun, and when you get back to lessons you will find
+that it sharpens your typing skills too!  Letter Invaders allows you to
+play with just the keys you have learned in your lessons (it does assume
+you have learned the home row keys '*' and '#'), so you get a game
+matched to your current skill level.  You get to Letter Invaders by selecting
+Game from the Main Menu, and Play from the Game Menu. @
+If your aim is to gain proficiency on the numeric keypad, then instead of
+Practice Lessons and Practice Tests, you will want to select Keypad Lessons
+and Keypad Tests.  You do this by choosing Keypad from either the Lessons
+Menu or the Tests Menu.  The results of Keypad Tests will be saved to your
+history and appear on the Progress Report. @
+This introduction covers the main features of Typing Tutor IV.  There
+are other features that you will want to learn by touring the menus or by
+reading the manual.  Good luck!  Enjoy! 

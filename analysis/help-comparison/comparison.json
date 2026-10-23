@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-24",
+  "scope": "Static HLP byte comparison only; neither executable run or assessed for Y2K behavior",
+  "inputs": [
+    {
+      "path": "/Users/xc/Documents/DosBox_Root/DosGames/DOSUTILS/tt/OLD/TT.HLP",
+      "bytes": 12508,
+      "sha256": "2584400a6f63f44f9f8cbbecdb30901dc3da44935b6d0c1cec3e1ac12e328140"
+    },
+    {
+      "path": "TT/TT.HLP",
+      "bytes": 12651,
+      "sha256": "5c787383d36fdb07dbb48a222b747309bc2aa91b1bdf45c769673f3a469c8bca"
+    }
+  ],
+  "observation": "Earlier file has non-text bytes and zero-filled spans replacing help prose; cause unknown.",
+  "original_zero_bytes": 2134,
+  "original_high_bytes": 477,
+  "fixed_zero_bytes": 0,
+  "fixed_high_bytes": 0,
+  "candidate_recipe": "Intact OLD welcome through first @ + CRLF + fixed text from This introduction will explain through EOF",
+  "candidate_full_file_bytes": 12508,
+  "candidate_full_file_sha256": "b7dc2e9a7e3c30e8bd817c3c4e4c61f7d03c841784d6f861746d5876afadc8cf",
+  "fixed_added_bytes_relative_to_candidate": 143,
+  "different_ranges_exclusive": [
+    {
+      "start": 1024,
+      "end": 2048,
+      "start_hex": "0x400",
+      "end_hex": "0x800",
+      "bytes": 1024,
+      "old_zero_bytes": 91
+    },
+    {
+      "start": 8192,
+      "end": 10240,
+      "start_hex": "0x2000",
+      "end_hex": "0x2800",
+      "bytes": 2048,
+      "old_zero_bytes": 2043
+    }
+  ],
+  "equal_outside_these_ranges": true,
+  "interpretation": "Credit-free candidate matches every earlier byte outside two damaged spans; missing text is sourced from fixed copy, not independently corroborated.",
+  "intro": {
+    "path": "analysis/help-comparison/intro-reconstructed.txt",
+    "bytes": 4695,
+    "sha256": "4d8dd081f16f7eb6f110e093442e32590bf2e1eb8c15afb2f1c1953a78193bc5",
+    "pages": 17,
+    "source_note": "Composite reconstruction; literal * and # placeholders retained. Not a pristine original extract."
+  },
+  "release_status": "Public repository exists; v0.2.0 release not published and held pending Intro decision."
+}
