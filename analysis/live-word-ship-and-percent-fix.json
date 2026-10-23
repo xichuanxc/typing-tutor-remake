@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-24",
+  "url": "https://tt.xcstudio.dev",
+  "runtime_commit": "8a4bbd0550323b3b9e0145045ac62295f2b627f7",
+  "ci": "https://github.com/xichuanxc/typing-tutor-remake/actions/runs/40021365409",
+  "deployment": "https://github.com/xichuanxc/typing-tutor-remake/actions/runs/40021365416",
+  "checks": {
+    "ci": "success",
+    "deployment": "success",
+    "unit_tests": 146,
+    "live_chrome_autoplay": "document-user-activation-required",
+    "actual_gameplay": "Completed rounds one/two; reached round-three Word Ship",
+    "word_ship": {
+      "tone_changes": 85,
+      "collision_stops_music": true,
+      "rendered_rms": 0.0446
+    },
+    "boomlet": {
+      "tone_changes": 72,
+      "collision_stops_warning": true,
+      "rendered_rms": 0.049
+    },
+    "sound_off": "No AudioContext created through Word Ship spawn",
+    "summary": "Accuracy numeric value followed by one percent; no double-percent substring",
+    "page_errors": []
+  },
+  "test_network": "Explicit GitHub Pages hostname mapping in isolated Chrome; normal TLS validation, no bypass",
+  "limitations": "No recorded native DOS or physical speaker comparison"
+}
