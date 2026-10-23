@@ -1,0 +1,9 @@
+; ev_ed44b5c738d50c091f0a47553cefaf78aa97b70000421a7ee0d184bef9c81b58
+0x1f404: MOV DX, word ptr [BP + 0x6]
+0x1f407: MOV CX, word ptr [BP + 0x8]
+0x1f40a: INT 0x21
+0x1f40c: JNC 0x1000:f414
+0x1f40e: MOV [0x8f00], AX
+0x1f411: MOV AX, 0xffff
+0x1f414: POP BP
+0x1f415: RET

@@ -1,0 +1,8 @@
+; ev_56c11abb30b44a3f98d88e0dcfe7f9a29bfbd90d764334593c4c29169fab03f8
+0x1c1af: MOV AX, 0x0
+0x1c1b2: CALL 0x1000:e7bd
+0x1c1b5: PUSH word ptr [0xa08c]
+0x1c1b9: PUSH word ptr [0xa08a]
+0x1c1bd: CALL 0x1000:f7da
+0x1c1c0: ADD SP, 0x4
+0x1c1c3: RET

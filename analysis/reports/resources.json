@@ -1,0 +1,112 @@
+{
+  "scope": "Static report geometry and resources; no DOS runtime capture",
+  "binary_sha256": "6e80ab0186040beef29c8be8b39a36ddc0e2c9b15ca20e0eedd4055d76379288",
+  "data_segment_file_base": "0xfae0",
+  "functions": [
+    {
+      "address": "0x12d82",
+      "evidence": "/* ev_7c318a0bd20ad6186767c3d034f36f83e96f3172e549df98ef38c75c2586b300 */"
+    },
+    {
+      "address": "0x12de2",
+      "evidence": "/* ev_fab4e3132827c77270bbb58eb4d0c1cdb287f0efdbe2bd1fb1521e8623be0b13 */"
+    },
+    {
+      "address": "0x12e3b",
+      "evidence": "/* ev_d351edfa009d2000173536d112594081896dafd9adfefd03268596edbfc68bf0 */"
+    },
+    {
+      "address": "0x18c42",
+      "evidence": "/* ev_9ed5e77c76bc962905c0d17f75fa4f0f6c09088ad2f129b536157737381eb677 */"
+    },
+    {
+      "address": "0x18857",
+      "evidence": "/* ev_5458d4929461f75e4075ead84969ebdb0eb4a38b82ca04ca24cc041850bde5db */"
+    },
+    {
+      "address": "0x18ad2",
+      "evidence": "/* ev_7c78fbf88c39b8311910faff335033b6cb526108c5dc890137b72eb44baccd47 */"
+    },
+    {
+      "address": "0x18357",
+      "evidence": "/* ev_b191159a98cd361ab23bb67a6015862e144afb90c9acc3fe278137daf94f895a */"
+    },
+    {
+      "address": "0x18383",
+      "evidence": "/* ev_60a09eb0bf002a9d97f9f20b747b7ea99ff5fa7b7984fefbf44dd61a54182ec6 */"
+    },
+    {
+      "address": "0x18497",
+      "evidence": "/* ev_85db2897384851ae388473ca5647c318d9e42c197258179b35f14e53ff575944 */"
+    },
+    {
+      "address": "0x184d1",
+      "evidence": "/* ev_5a346b4461f7adee0cd3f4f25e0be6dccfef68a3dd4d99ce6fd76eef800b44a5 */"
+    },
+    {
+      "address": "0x1853c",
+      "evidence": "/* ev_26125d5a74230a9ecf31e5d54fdc7137064784c3ad6252834184cf2e89d17dc7 */"
+    },
+    {
+      "address": "0x14802",
+      "evidence": "/* ev_a796fc8693ab39d2342e6fbb6d80277b4a5d4435c21aa45e4521a76e964ee112 */"
+    },
+    {
+      "address": "0x13a6d",
+      "evidence": "/* ev_f1ff498e7bf71235d47ba485f45fe1d9f9bd0773b9da0f721a7af1946bc93afd */"
+    },
+    {
+      "address": "0x1b1f3",
+      "evidence": "/* ev_0f1ef60b9648e8abd6675cec6f76cd3d786cfa17ddf5c8e700ed37dbf03aa67f */"
+    },
+    {
+      "address": "0x1f6bf",
+      "evidence": "/* ev_f03a3d0a4804afad64c05d6ba2be4df1bc4dd06769c4df50697d75ee598aeb4e */"
+    }
+  ],
+  "geometry": {
+    "table": {
+      "top": 3,
+      "left": 1,
+      "right": 78,
+      "dividers": [
+        38,
+        55
+      ],
+      "heading": 7,
+      "first_data": 8
+    },
+    "graph": {
+      "axis_column": 3,
+      "top": 2,
+      "baseline": 22,
+      "first_key": 4,
+      "key_count": 75,
+      "labels_row": 23
+    },
+    "test": {
+      "top": 2,
+      "left": 1,
+      "right": 78,
+      "bottom": 22,
+      "target_rows": [
+        4,
+        7,
+        10,
+        13,
+        16,
+        19
+      ],
+      "first_column": 3
+    }
+  },
+  "navigation": "Any key cycles Progress -> Speed -> Accuracy -> Progress; Escape returns Main Menu; no current/history toggle or page selector in these paths.",
+  "limits": [
+    "Browser font rasterization differs from DOS.",
+    "Native graph legend placement is translated from 0x184d1; no native screenshot comparison.",
+    "Instructor/multi-student report mode10 excluded.",
+    "DOS test frame is reconstructed from 0x13a6d(0,6,72,...) and 0x14802."
+  ],
+  "output_sha256": "fc0a0fc888285e89cb538a94fee7eeabbe41179dbcbf31108bec307460171ad5",
+  "extractor_sha256": "1bee43b2c79220c99f25238d56f86667128fff9a1264bfbef9217b8ed8f4c3e9"
+}

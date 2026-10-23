@@ -1,0 +1,10 @@
+; ev_bd425a4cee850d71fe934102feeba67a888067332b4523c35a93cd039cd26f65
+0x1c58e: MOV AX, 0x0
+0x1c591: CALL 0x1000:e7bd
+0x1c594: PUSH word ptr [BP + 0x4]
+0x1c597: CALL 0x1000:c4d0
+0x1c59a: POP CX
+0x1c59b: PUSH word ptr [BP + 0x4]
+0x1c59e: CALL 0x1000:c22d
+0x1c5a1: POP CX
+0x1c5a2: RET

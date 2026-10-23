@@ -1,0 +1,8 @@
+; ev_2de5227c02796099093990d91c90fd045dfe1ceeda2d740900ae6e09005eb61f
+0x1e6cf: PUSH BP
+0x1e6d0: MOV BP, SP
+0x1e6d2: MOV DX, word ptr [BP + 0x4]
+0x1e6d5: IN AL, DX
+0x1e6d6: AND AX, 0xff
+0x1e6d9: POP BP
+0x1e6da: RET

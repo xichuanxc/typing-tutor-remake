@@ -1,0 +1,10 @@
+; ev_2e2b25450ea1f5a58e0daa6d9850d32ffede59b8931b8e822ded1edbbe8c850b
+0x1c1c4: PUSH BP
+0x1c1c5: MOV BP, SP
+0x1c1c7: MOV AH, 0x0
+0x1c1c9: INT 0x1a
+0x1c1cb: MOV AX, DX
+0x1c1cd: MOV DX, CX
+0x1c1cf: MOV SP, BP
+0x1c1d1: POP BP
+0x1c1d2: RET

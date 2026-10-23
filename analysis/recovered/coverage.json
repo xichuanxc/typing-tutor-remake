@@ -1,0 +1,14 @@
+{
+  "artifact_sha256": "6e80ab0186040beef29c8be8b39a36ddc0e2c9b15ca20e0eedd4055d76379288",
+  "analyzed_procedures": 377,
+  "pseudocode_exports": 377,
+  "assembly_exports": 377,
+  "menus_decoded": 8,
+  "total_assembly_lines": 26555,
+  "limitations": [
+    "Only Ghidra's analyzed/seeded function inventory is exported; undiscovered code/data may remain.",
+    "Pseudocode is not original source and can lose register-based arithmetic and stack context.",
+    "Static screen frame excludes the idle help panel and uses an approximate browser font.",
+    "No runtime equivalence or scoring parity is established."
+  ]
+}

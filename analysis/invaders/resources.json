@@ -1,0 +1,102 @@
+{
+  "scope": "Static Letter Invaders UI resources; no native runtime capture or named-history score import",
+  "binary_sha256": "6e80ab0186040beef29c8be8b39a36ddc0e2c9b15ca20e0eedd4055d76379288",
+  "strings": {
+    "levelTitle": "0x172d",
+    "scoresTitle": "0x123f",
+    "title": "0x8008",
+    "gameMenu": "0x801c",
+    "roundTitle": "0x8026",
+    "roundFooter": "0x802c",
+    "roundNumber": "0x802d",
+    "score": "0x8030",
+    "modePrompt": "0x803d",
+    "choiceInstruction": "0x8516",
+    "endPrompt": "0x102e",
+    "nameDots": "0x859c",
+    "nameEnter": "0x859f",
+    "playersTitle": "0x8054",
+    "playersPrompt": "0x805c",
+    "secondNamePrompt": "0x8079",
+    "ready": "0x8426",
+    "player": "0x81cf",
+    "playerScore": "0x81dd",
+    "summaryPlayer": "0x8448",
+    "hits": "0x8456",
+    "misses": "0x845f",
+    "accuracy": "0x846a",
+    "bonus": "0x8479",
+    "gameOverPlayer": "0x84a7",
+    "gameOver": "0x84b3",
+    "playerOneFinal": "0x84c9",
+    "playerTwoFinal": "0x84db",
+    "scoreTitle": "0x7b20",
+    "scoreHeading": "0x7b30",
+    "keysHeading": "0x7b6a",
+    "scoreRow": "0x7b75",
+    "keysRow": "0x7b8b",
+    "ignoredKeys": "0x8498",
+    "replacementExcluded": "0x84a2"
+  },
+  "functions": [
+    {
+      "address": "0x12f68",
+      "evidence": "ev_9f5aba4e43b077108ad5912770bf2e0590c76f5d064f075458401f0d8c3bfefe"
+    },
+    {
+      "address": "0x12f7f",
+      "evidence": "ev_9a2aedc46d4f1eb9afcb5411354417d9cffaaae327ec1a07fb244a857998bae0"
+    },
+    {
+      "address": "0x19538",
+      "evidence": "ev_53e5855ae58087351f452f7255e32a8f81c7d0c26a5bba65a39aaf69d7f36114"
+    },
+    {
+      "address": "0x1980e",
+      "evidence": "ev_1ae6f5a015cfaabdcdcc2f975da9c58818fc08c27f9f4483df96a30600348d17"
+    },
+    {
+      "address": "0x1947e",
+      "evidence": "ev_36dbf7d7239258800f45d6756bcbb81493e88136dbd5215024e9a2a45bac611b"
+    },
+    {
+      "address": "0x19296",
+      "evidence": "ev_f1bf8ea765f1f0ca3841d35a7ce5f3afe99f69df90fc29fb3140dfa663a45229"
+    },
+    {
+      "address": "0x1922d",
+      "evidence": "ev_a4094255f7466adc8f6c4726b1af63dc9b8bc41fdc82ac75801ef35f1eaff491"
+    },
+    {
+      "address": "0x19bec",
+      "evidence": "ev_6fc72c6987ba614c9c15d119dd9af48ccc337972400e5a585318849cf5010ce2"
+    },
+    {
+      "address": "0x1787b",
+      "evidence": "ev_5a273c8fdc3d3ae80ba7602fd550de32daefdb96377c3f08ca12e1126f2b576f"
+    },
+    {
+      "address": "0x1768e",
+      "evidence": "ev_f3e38d8f93cd4b2f6c8e70bb6bd7858060b42b56b12a6f400cd9adc55deaa499"
+    },
+    {
+      "address": "0x1ab36",
+      "evidence": "ev_cfd5ec84fa09e83c3b67a3485647a3d58e1a34e3fcced77cb4cd0e3b4e165c6f"
+    }
+  ],
+  "score_table": {
+    "address": "DS9843",
+    "modeCount": 2,
+    "entriesPerMode": 5,
+    "entryBytes": 35,
+    "record_fields": {
+      "name": 0,
+      "score": 26,
+      "keys": 30,
+      "date": 31
+    },
+    "note": "Global tail data beyond active profile; no names or score values imported."
+  },
+  "output_sha256": "4c95b751d9cd57161056dcae14afafcc28769626beca534497a0d887999168af",
+  "extractor_sha256": "fdc5692ccf39747d11936f402b632fc0aab0139dfda531ba9c02022b6cced402"
+}

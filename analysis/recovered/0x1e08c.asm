@@ -1,0 +1,14 @@
+; ev_52c4ee1f3b107541c64057d110e049b69e8738389f18d861936721bc1e091a49
+0x1e08c: PUSH BP
+0x1e08d: MOV BP, SP
+0x1e08f: CMP byte ptr [BP + 0x4], 0x2e
+0x1e093: JNZ 0x1000:e098
+0x1e095: INC byte ptr [BP + 0x4]
+0x1e098: MOV AL, byte ptr [BP + 0x4]
+0x1e09b: CBW
+0x1e09c: MOV BX, AX
+0x1e09e: MOV AL, byte ptr [BX + 0x7ada]
+0x1e0a2: CBW
+0x1e0a3: MOV SP, BP
+0x1e0a5: POP BP
+0x1e0a6: RET

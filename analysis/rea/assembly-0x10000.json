@@ -1,0 +1,118 @@
+{
+  "request": {
+    "name": "procedure_assembly",
+    "arguments": {
+      "procedure": "0x10000"
+    }
+  },
+  "result": {
+    "_meta": {
+      "provenance": {
+        "untrusted_content": true,
+        "source": "analysis_target"
+      }
+    },
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"evidence_id\":\"ev_9318ce09b19b61409bc4bf2d602ef29d1ab9d3230fbfcd9f892867741a1b1b44\",\"subject\":{\"name\":\"TT.unpacked.exe\",\"digest\":{\"sha256\":\"6e80ab0186040beef29c8be8b39a36ddc0e2c9b15ca20e0eedd4055d76379288\"},\"local_path\":\"/Users/xc/PersonalProjects/type_tutor_remake/analysis/derived/TT.unpacked.exe\",\"format\":\"dos-mz\",\"architecture\":\"x86\"},\"provider\":{\"id\":\"ghidra\",\"name\":\"Ghidra\",\"version\":\"12.1.4\"},\"analysis_profile\":{\"provider\":{\"id\":\"ghidra\",\"name\":\"Ghidra\",\"version\":\"12.1.4\"},\"parameters\":{\"target_kind\":\"executable\",\"target_format\":\"dos-mz\",\"architecture\":\"x86\",\"available_architectures\":[\"x86\"],\"import_mode\":\"ephemeral-source-immutable\",\"annotation_policy\":\"atomic-function-entry-metadata-v1\",\"load_image_observations\":\"source-mappings-entry-context-v2\",\"function_body_evidence\":\"complete-inclusive-ranges-v1\",\"function_references\":\"complete-body-and-entry-reference-manager-v2\",\"call_relationship_coverage\":\"function-body-call-coverage-v5\",\"function_dossier_coverage\":\"observed-facets-and-call-relationships-v1\",\"string_inventory_evidence\":\"defined-data-coverage-v1\",\"location_resolution\":\"explicit-address-exact-entry-symbol-first-v3\",\"procedure_file_offset_resolution\":\"address-first-unique-target-source-mapping-v2\",\"instruction_flow_evidence\":\"decoded-return-pcode-v1\",\"instruction_references\":\"exact-address-incoming-without-synthetic-entry-v2\",\"function_boundary_observations\":\"ghidra-function-boundary-limitations-v4\",\"no_return_repair\":\"returning-imports-decoded-return-v2\",\"process_launch\":\"inspected-jvm-launch-support-v1\",\"load_image_evidence\":\"independent-mz-mapping-relocations-v2\",\"jump_table_evidence\":\"typed-case-default-blocks-v1\",\"decompiler_jump_loads\":true,\"loader\":\"MzLoader\",\"language_id\":\"x86:LE:16:Real Mode\",\"compiler_spec_id\":\"default\",\"load_segment\":\"0x1000\",\"address_coordinates\":\"linear-byte-offset\",\"analyzer_preset\":\"ghidra-default\",\"analysis_seeds\":{\"format\":\"rea-ghidra-seeds-v1\",\"path\":\"/Users/xc/PersonalProjects/type_tutor_remake/analysis/seeds/compiler-prologues.tsv\",\"configured_path\":\"/Users/xc/PersonalProjects/type_tutor_remake/analysis/seeds/compiler-prologues.tsv\",\"sha256\":\"b2875cb8b7ec4297da049666abb4e1791ba1b740fc4e07e30b43c3fe97125b69\",\"entries\":{\"function\":205,\"code\":0,\"label\":0}}},\"digest\":\"09b0598bc7789122b35475302ba167f8363950d37ddb124a0cc19517f874f3d0\"},\"predicate_type\":\"rea.analysis\",\"operation\":\"procedure_assembly\",\"parameters\":{\"procedure\":\"0x10000\"},\"raw_result\":{\"value\":\"0x10000: MOV AX, 0xfffd\\n0x10003: CALL 0x1000:e7bd\\n0x10006: MOV byte ptr [BP + -0x1], 0x0\\n0x1000a: MOV word ptr [BP + -0x3], 0x0\\n0x1000f: MOV AX, word ptr [BP + 0x4]\\n0x10012: CMP AX, 0x1\\n0x10015: JLE 0x1000:0044\\n0x10017: MOV BX, word ptr [BP + 0x6]\\n0x1001a: MOV BX, word ptr [BX + 0x2]\\n0x1001d: CMP byte ptr [BX], 0x2d\\n0x10020: JNZ 0x1000:003b\\n0x10022: MOV AL, byte ptr [BX + 0x1]\\n0x10025: MOV byte ptr [BP + -0x1], AL\\n0x10028: MOV AX, word ptr [BP + 0x4]\\n0x1002b: CMP AX, 0x2\\n0x1002e: JLE 0x1000:0039\\n0x10030: MOV BX, word ptr [BP + 0x6]\\n0x10033: MOV AX, word ptr [BX + 0x4]\\n0x10036: MOV word ptr [BP + -0x3], AX\\n0x10039: JMP 0x1000:0044\\n0x1003b: MOV BX, word ptr [BP + 0x6]\\n0x1003e: MOV AX, word ptr [BX + 0x2]\\n0x10041: MOV word ptr [BP + -0x3], AX\\n0x10044: PUSH word ptr [BP + -0x3]\\n0x10047: MOV AL, byte ptr [BP + -0x1]\\n0x1004a: CBW\\n0x1004b: PUSH AX\\n0x1004c: CALL 0x1000:014b\\n0x1004f: ADD SP, 0x4\\n0x10052: CALL 0x1000:0860\\n0x10055: TEST AX, AX\\n0x10057: JNZ 0x1000:0075\\n0x10059: CALL 0x1000:4cb5\\n0x1005c: MOV word ptr [0x9068], DX\\n0x10060: MOV [0x9066], AX\\n0x10063: MOV byte ptr [0x99a1], 0x1\\n0x10068: MOV AX, 0xffff\\n0x1006b: PUSH AX\\n0x1006c: XOR AX, AX\\n0x1006e: PUSH AX\\n0x1006f: CALL 0x1000:32ed\\n0x10072: ADD SP, 0x4\\n0x10075: CALL 0x1000:0335\\n0x10078: RET\",\"limitations\":[]},\"normalized_result\":\"0x10000: MOV AX, 0xfffd\\n0x10003: CALL 0x1000:e7bd\\n0x10006: MOV byte ptr [BP + -0x1], 0x0\\n0x1000a: MOV word ptr [BP + -0x3], 0x0\\n0x1000f: MOV AX, word ptr [BP + 0x4]\\n0x10012: CMP AX, 0x1\\n0x10015: JLE 0x1000:0044\\n0x10017: MOV BX, word ptr [BP + 0x6]\\n0x1001a: MOV BX, word ptr [BX + 0x2]\\n0x1001d: CMP byte ptr [BX], 0x2d\\n0x10020: JNZ 0x1000:003b\\n0x10022: MOV AL, byte ptr [BX + 0x1]\\n0x10025: MOV byte ptr [BP + -0x1], AL\\n0x10028: MOV AX, word ptr [BP + 0x4]\\n0x1002b: CMP AX, 0x2\\n0x1002e: JLE 0x1000:0039\\n0x10030: MOV BX, word ptr [BP + 0x6]\\n0x10033: MOV AX, word ptr [BX + 0x4]\\n0x10036: MOV word ptr [BP + -0x3], AX\\n0x10039: JMP 0x1000:0044\\n0x1003b: MOV BX, word ptr [BP + 0x6]\\n0x1003e: MOV AX, word ptr [BX + 0x2]\\n0x10041: MOV word ptr [BP + -0x3], AX\\n0x10044: PUSH word ptr [BP + -0x3]\\n0x10047: MOV AL, byte ptr [BP + -0x1]\\n0x1004a: CBW\\n0x1004b: PUSH AX\\n0x1004c: CALL 0x1000:014b\\n0x1004f: ADD SP, 0x4\\n0x10052: CALL 0x1000:0860\\n0x10055: TEST AX, AX\\n0x10057: JNZ 0x1000:0075\\n0x10059: CALL 0x1000:4cb5\\n0x1005c: MOV word ptr [0x9068], DX\\n0x10060: MOV [0x9066], AX\\n0x10063: MOV byte ptr [0x99a1], 0x1\\n0x10068: MOV AX, 0xffff\\n0x1006b: PUSH AX\\n0x1006c: XOR AX, AX\\n0x1006e: PUSH AX\\n0x1006f: CALL 0x1000:32ed\\n0x10072: ADD SP, 0x4\\n0x10075: CALL 0x1000:0335\\n0x10078: RET\",\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"The session serves operations only after Ghidra reports default auto-analysis complete; incomplete analysis does not expose partial results.\",\"The imported Program and temporary project are ephemeral and deleted on close. Annotation operations edit session database metadata; original executable bytes are never written.\",\"Cancelling an active Ghidra request terminates its ephemeral database and discards session annotations. The selected target remains open; the next provider query imports the original artifact again.\",\"Default-space addresses use lowercase 0x-prefixed hexadecimal; other address spaces use <percent-encoded-space>:0x<hex>.\",\"Assembly is Ghidra Listing text and does not claim textual equivalence with Hopper output.\",\"macOS sessions require a matching executable Ghidra native decompiler; REA checks for it but does not build native components or change Gatekeeper quarantine state.\",\"DOS MZ uses 16-bit x86 real mode with the Ghidra load segment 0x1000. Returned addresses are linear byte coordinates; they do not identify a unique segment:offset alias.\",\"Static DOS analysis does not emulate BIOS, DOS interrupts, device ports, or self-modifying unpacking code. Packed targets require a separately identified unpacked artifact for original-program analysis; appended overlays are not the initialized load module.\",\"Ghidra analysis was seeded before auto-analysis from /Users/xc/PersonalProjects/type_tutor_remake/analysis/seeds/compiler-prologues.tsv (sha256 b2875cb8b7ec4297da049666abb4e1791ba1b740fc4e07e30b43c3fe97125b69: 205 function, 0 code, 0 label entries). Seeded functions, code and names are caller assertions, not Ghidra discoveries.\",\"Seed outcome: 205 functions created, 0 already present, 0 failed; 0 code seeds decoded, 0 failed; 0 labels applied, 0 failed; 0 seeds outside initialized memory.\"],\"relationship_coverage\":null,\"locations\":[],\"evidence_links\":[]}"
+      }
+    ],
+    "structuredContent": {
+      "evidence_id": "ev_9318ce09b19b61409bc4bf2d602ef29d1ab9d3230fbfcd9f892867741a1b1b44",
+      "subject": {
+        "name": "TT.unpacked.exe",
+        "digest": {
+          "sha256": "6e80ab0186040beef29c8be8b39a36ddc0e2c9b15ca20e0eedd4055d76379288"
+        },
+        "local_path": "/Users/xc/PersonalProjects/type_tutor_remake/analysis/derived/TT.unpacked.exe",
+        "format": "dos-mz",
+        "architecture": "x86"
+      },
+      "provider": {
+        "id": "ghidra",
+        "name": "Ghidra",
+        "version": "12.1.4"
+      },
+      "analysis_profile": {
+        "provider": {
+          "id": "ghidra",
+          "name": "Ghidra",
+          "version": "12.1.4"
+        },
+        "parameters": {
+          "target_kind": "executable",
+          "target_format": "dos-mz",
+          "architecture": "x86",
+          "available_architectures": [
+            "x86"
+          ],
+          "import_mode": "ephemeral-source-immutable",
+          "annotation_policy": "atomic-function-entry-metadata-v1",
+          "load_image_observations": "source-mappings-entry-context-v2",
+          "function_body_evidence": "complete-inclusive-ranges-v1",
+          "function_references": "complete-body-and-entry-reference-manager-v2",
+          "call_relationship_coverage": "function-body-call-coverage-v5",
+          "function_dossier_coverage": "observed-facets-and-call-relationships-v1",
+          "string_inventory_evidence": "defined-data-coverage-v1",
+          "location_resolution": "explicit-address-exact-entry-symbol-first-v3",
+          "procedure_file_offset_resolution": "address-first-unique-target-source-mapping-v2",
+          "instruction_flow_evidence": "decoded-return-pcode-v1",
+          "instruction_references": "exact-address-incoming-without-synthetic-entry-v2",
+          "function_boundary_observations": "ghidra-function-boundary-limitations-v4",
+          "no_return_repair": "returning-imports-decoded-return-v2",
+          "process_launch": "inspected-jvm-launch-support-v1",
+          "load_image_evidence": "independent-mz-mapping-relocations-v2",
+          "jump_table_evidence": "typed-case-default-blocks-v1",
+          "decompiler_jump_loads": true,
+          "loader": "MzLoader",
+          "language_id": "x86:LE:16:Real Mode",
+          "compiler_spec_id": "default",
+          "load_segment": "0x1000",
+          "address_coordinates": "linear-byte-offset",
+          "analyzer_preset": "ghidra-default",
+          "analysis_seeds": {
+            "format": "rea-ghidra-seeds-v1",
+            "path": "/Users/xc/PersonalProjects/type_tutor_remake/analysis/seeds/compiler-prologues.tsv",
+            "configured_path": "/Users/xc/PersonalProjects/type_tutor_remake/analysis/seeds/compiler-prologues.tsv",
+            "sha256": "b2875cb8b7ec4297da049666abb4e1791ba1b740fc4e07e30b43c3fe97125b69",
+            "entries": {
+              "function": 205,
+              "code": 0,
+              "label": 0
+            }
+          }
+        },
+        "digest": "09b0598bc7789122b35475302ba167f8363950d37ddb124a0cc19517f874f3d0"
+      },
+      "predicate_type": "rea.analysis",
+      "operation": "procedure_assembly",
+      "parameters": {
+        "procedure": "0x10000"
+      },
+      "raw_result": {
+        "value": "0x10000: MOV AX, 0xfffd\n0x10003: CALL 0x1000:e7bd\n0x10006: MOV byte ptr [BP + -0x1], 0x0\n0x1000a: MOV word ptr [BP + -0x3], 0x0\n0x1000f: MOV AX, word ptr [BP + 0x4]\n0x10012: CMP AX, 0x1\n0x10015: JLE 0x1000:0044\n0x10017: MOV BX, word ptr [BP + 0x6]\n0x1001a: MOV BX, word ptr [BX + 0x2]\n0x1001d: CMP byte ptr [BX], 0x2d\n0x10020: JNZ 0x1000:003b\n0x10022: MOV AL, byte ptr [BX + 0x1]\n0x10025: MOV byte ptr [BP + -0x1], AL\n0x10028: MOV AX, word ptr [BP + 0x4]\n0x1002b: CMP AX, 0x2\n0x1002e: JLE 0x1000:0039\n0x10030: MOV BX, word ptr [BP + 0x6]\n0x10033: MOV AX, word ptr [BX + 0x4]\n0x10036: MOV word ptr [BP + -0x3], AX\n0x10039: JMP 0x1000:0044\n0x1003b: MOV BX, word ptr [BP + 0x6]\n0x1003e: MOV AX, word ptr [BX + 0x2]\n0x10041: MOV word ptr [BP + -0x3], AX\n0x10044: PUSH word ptr [BP + -0x3]\n0x10047: MOV AL, byte ptr [BP + -0x1]\n0x1004a: CBW\n0x1004b: PUSH AX\n0x1004c: CALL 0x1000:014b\n0x1004f: ADD SP, 0x4\n0x10052: CALL 0x1000:0860\n0x10055: TEST AX, AX\n0x10057: JNZ 0x1000:0075\n0x10059: CALL 0x1000:4cb5\n0x1005c: MOV word ptr [0x9068], DX\n0x10060: MOV [0x9066], AX\n0x10063: MOV byte ptr [0x99a1], 0x1\n0x10068: MOV AX, 0xffff\n0x1006b: PUSH AX\n0x1006c: XOR AX, AX\n0x1006e: PUSH AX\n0x1006f: CALL 0x1000:32ed\n0x10072: ADD SP, 0x4\n0x10075: CALL 0x1000:0335\n0x10078: RET",
+        "limitations": []
+      },
+      "normalized_result": "0x10000: MOV AX, 0xfffd\n0x10003: CALL 0x1000:e7bd\n0x10006: MOV byte ptr [BP + -0x1], 0x0\n0x1000a: MOV word ptr [BP + -0x3], 0x0\n0x1000f: MOV AX, word ptr [BP + 0x4]\n0x10012: CMP AX, 0x1\n0x10015: JLE 0x1000:0044\n0x10017: MOV BX, word ptr [BP + 0x6]\n0x1001a: MOV BX, word ptr [BX + 0x2]\n0x1001d: CMP byte ptr [BX], 0x2d\n0x10020: JNZ 0x1000:003b\n0x10022: MOV AL, byte ptr [BX + 0x1]\n0x10025: MOV byte ptr [BP + -0x1], AL\n0x10028: MOV AX, word ptr [BP + 0x4]\n0x1002b: CMP AX, 0x2\n0x1002e: JLE 0x1000:0039\n0x10030: MOV BX, word ptr [BP + 0x6]\n0x10033: MOV AX, word ptr [BX + 0x4]\n0x10036: MOV word ptr [BP + -0x3], AX\n0x10039: JMP 0x1000:0044\n0x1003b: MOV BX, word ptr [BP + 0x6]\n0x1003e: MOV AX, word ptr [BX + 0x2]\n0x10041: MOV word ptr [BP + -0x3], AX\n0x10044: PUSH word ptr [BP + -0x3]\n0x10047: MOV AL, byte ptr [BP + -0x1]\n0x1004a: CBW\n0x1004b: PUSH AX\n0x1004c: CALL 0x1000:014b\n0x1004f: ADD SP, 0x4\n0x10052: CALL 0x1000:0860\n0x10055: TEST AX, AX\n0x10057: JNZ 0x1000:0075\n0x10059: CALL 0x1000:4cb5\n0x1005c: MOV word ptr [0x9068], DX\n0x10060: MOV [0x9066], AX\n0x10063: MOV byte ptr [0x99a1], 0x1\n0x10068: MOV AX, 0xffff\n0x1006b: PUSH AX\n0x1006c: XOR AX, AX\n0x1006e: PUSH AX\n0x1006f: CALL 0x1000:32ed\n0x10072: ADD SP, 0x4\n0x10075: CALL 0x1000:0335\n0x10078: RET",
+      "confidence": "observed",
+      "authority": "shipped-artifact",
+      "environment": null,
+      "limitations": [
+        "The session serves operations only after Ghidra reports default auto-analysis complete; incomplete analysis does not expose partial results.",
+        "The imported Program and temporary project are ephemeral and deleted on close. Annotation operations edit session database metadata; original executable bytes are never written.",
+        "Cancelling an active Ghidra request terminates its ephemeral database and discards session annotations. The selected target remains open; the next provider query imports the original artifact again.",
+        "Default-space addresses use lowercase 0x-prefixed hexadecimal; other address spaces use <percent-encoded-space>:0x<hex>.",
+        "Assembly is Ghidra Listing text and does not claim textual equivalence with Hopper output.",
+        "macOS sessions require a matching executable Ghidra native decompiler; REA checks for it but does not build native components or change Gatekeeper quarantine state.",
+        "DOS MZ uses 16-bit x86 real mode with the Ghidra load segment 0x1000. Returned addresses are linear byte coordinates; they do not identify a unique segment:offset alias.",
+        "Static DOS analysis does not emulate BIOS, DOS interrupts, device ports, or self-modifying unpacking code. Packed targets require a separately identified unpacked artifact for original-program analysis; appended overlays are not the initialized load module.",
+        "Ghidra analysis was seeded before auto-analysis from /Users/xc/PersonalProjects/type_tutor_remake/analysis/seeds/compiler-prologues.tsv (sha256 b2875cb8b7ec4297da049666abb4e1791ba1b740fc4e07e30b43c3fe97125b69: 205 function, 0 code, 0 label entries). Seeded functions, code and names are caller assertions, not Ghidra discoveries.",
+        "Seed outcome: 205 functions created, 0 already present, 0 failed; 0 code seeds decoded, 0 failed; 0 labels applied, 0 failed; 0 seeds outside initialized memory."
+      ],
+      "relationship_coverage": null,
+      "locations": [],
+      "evidence_links": []
+    }
+  }
+}

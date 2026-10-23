@@ -1,0 +1,22 @@
+; ev_210e4d2019f865d82a3af764826f0a34719f965e4aff97a9c73a66d2cb1ebe0e
+0x1e43d: PUSH BP
+0x1e43e: MOV BP, SP
+0x1e440: PUSH SI
+0x1e441: MOV SI, word ptr [BP + 0x6]
+0x1e444: MOV AX, word ptr [BP + 0x4]
+0x1e447: CMP AX, 0xffff
+0x1e44a: JZ 0x1000:e453
+0x1e44c: MOV AX, word ptr [SI]
+0x1e44e: CMP AX, word ptr [SI + 0x4]
+0x1e451: JA 0x1000:e45b
+0x1e453: MOV AX, 0xffff
+0x1e456: POP SI
+0x1e457: MOV SP, BP
+0x1e459: POP BP
+0x1e45a: RET
+0x1e45b: MOV AX, word ptr [BP + 0x4]
+0x1e45e: DEC word ptr [SI]
+0x1e460: MOV BX, word ptr [SI]
+0x1e462: MOV byte ptr [BX], AL
+0x1e464: MOV AX, word ptr [BP + 0x4]
+0x1e467: JMP 0x1000:e456

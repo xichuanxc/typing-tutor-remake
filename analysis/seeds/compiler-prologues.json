@@ -1,0 +1,827 @@
+{
+  "basis": "MOV AX, stack_bytes; CALL near 0xe7bd; match exact relative target in CODE_0",
+  "warning": "Pattern-based analyst seeds, not proof of function ownership",
+  "count": 205,
+  "seeds": [
+    {
+      "address": "0x10000",
+      "stack_bytes": 65533
+    },
+    {
+      "address": "0x10079",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x100b3",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x10128",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1014b",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x102e0",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x10335",
+      "stack_bytes": 65520
+    },
+    {
+      "address": "0x107c9",
+      "stack_bytes": 65535
+    },
+    {
+      "address": "0x10860",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1095c",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x10bbb",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x10c43",
+      "stack_bytes": 65535
+    },
+    {
+      "address": "0x10d63",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x10ddc",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x10e3f",
+      "stack_bytes": 65534
+    },
+    {
+      "address": "0x10f47",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x10f9a",
+      "stack_bytes": 65527
+    },
+    {
+      "address": "0x1114b",
+      "stack_bytes": 65516
+    },
+    {
+      "address": "0x11170",
+      "stack_bytes": 65534
+    },
+    {
+      "address": "0x114f2",
+      "stack_bytes": 65534
+    },
+    {
+      "address": "0x11605",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1167f",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x11699",
+      "stack_bytes": 65503
+    },
+    {
+      "address": "0x124e8",
+      "stack_bytes": 65534
+    },
+    {
+      "address": "0x1253e",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x12565",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x12612",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x12692",
+      "stack_bytes": 65455
+    },
+    {
+      "address": "0x12723",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x12741",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1282a",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1291c",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1293a",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x12952",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x12a2c",
+      "stack_bytes": 65534
+    },
+    {
+      "address": "0x12b58",
+      "stack_bytes": 65534
+    },
+    {
+      "address": "0x12cc6",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x12d6a",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x12d82",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x12de2",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x12e3b",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x12e95",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x12ead",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x12ec5",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x12edd",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x12ef5",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x12f0d",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x12f25",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x12f50",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x12f68",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x12f7f",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x12f97",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x12faf",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x12fc9",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x12fe0",
+      "stack_bytes": 65534
+    },
+    {
+      "address": "0x130ac",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x13149",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x131df",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x13276",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x132a5",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x132bd",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x132d5",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x132ed",
+      "stack_bytes": 65527
+    },
+    {
+      "address": "0x135c3",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x135f5",
+      "stack_bytes": 65535
+    },
+    {
+      "address": "0x1366e",
+      "stack_bytes": 65535
+    },
+    {
+      "address": "0x1370e",
+      "stack_bytes": 65534
+    },
+    {
+      "address": "0x137f2",
+      "stack_bytes": 65535
+    },
+    {
+      "address": "0x138f1",
+      "stack_bytes": 65535
+    },
+    {
+      "address": "0x1394a",
+      "stack_bytes": 65535
+    },
+    {
+      "address": "0x139c4",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x13a2e",
+      "stack_bytes": 65535
+    },
+    {
+      "address": "0x13a6d",
+      "stack_bytes": 64861
+    },
+    {
+      "address": "0x14232",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x14344",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x14427",
+      "stack_bytes": 65531
+    },
+    {
+      "address": "0x14557",
+      "stack_bytes": 65445
+    },
+    {
+      "address": "0x14757",
+      "stack_bytes": 65535
+    },
+    {
+      "address": "0x14802",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1529a",
+      "stack_bytes": 65532
+    },
+    {
+      "address": "0x152dc",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1531a",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x153a7",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1544e",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x154c1",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x15584",
+      "stack_bytes": 65532
+    },
+    {
+      "address": "0x157cc",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x15854",
+      "stack_bytes": 65524
+    },
+    {
+      "address": "0x15a53",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x15a80",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x15b4d",
+      "stack_bytes": 65524
+    },
+    {
+      "address": "0x15bca",
+      "stack_bytes": 65530
+    },
+    {
+      "address": "0x15c49",
+      "stack_bytes": 65508
+    },
+    {
+      "address": "0x15cbb",
+      "stack_bytes": 65513
+    },
+    {
+      "address": "0x15e0d",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x15ec5",
+      "stack_bytes": 65534
+    },
+    {
+      "address": "0x15fad",
+      "stack_bytes": 65534
+    },
+    {
+      "address": "0x15ff7",
+      "stack_bytes": 65534
+    },
+    {
+      "address": "0x1618a",
+      "stack_bytes": 65535
+    },
+    {
+      "address": "0x16298",
+      "stack_bytes": 65533
+    },
+    {
+      "address": "0x1639e",
+      "stack_bytes": 65322
+    },
+    {
+      "address": "0x1687d",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1689a",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x168b7",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x168cd",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x168e3",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x169a0",
+      "stack_bytes": 65534
+    },
+    {
+      "address": "0x16b2b",
+      "stack_bytes": 65534
+    },
+    {
+      "address": "0x16b80",
+      "stack_bytes": 65493
+    },
+    {
+      "address": "0x16f1b",
+      "stack_bytes": 65534
+    },
+    {
+      "address": "0x17023",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1708a",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1714d",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x171ce",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1722b",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x17251",
+      "stack_bytes": 65480
+    },
+    {
+      "address": "0x172dd",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x172ff",
+      "stack_bytes": 65535
+    },
+    {
+      "address": "0x1733f",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1737b",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x173ad",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x173cc",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x173eb",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1740a",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x17429",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x17448",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1745c",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1748b",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x174ab",
+      "stack_bytes": 65521
+    },
+    {
+      "address": "0x1757b",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x175c1",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x175e2",
+      "stack_bytes": 65535
+    },
+    {
+      "address": "0x1768e",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1787b",
+      "stack_bytes": 65526
+    },
+    {
+      "address": "0x17a3a",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x18247",
+      "stack_bytes": 65492
+    },
+    {
+      "address": "0x18357",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x18383",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x18497",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x184d1",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1853c",
+      "stack_bytes": 65529
+    },
+    {
+      "address": "0x18857",
+      "stack_bytes": 65530
+    },
+    {
+      "address": "0x18ad2",
+      "stack_bytes": 65527
+    },
+    {
+      "address": "0x18c42",
+      "stack_bytes": 65508
+    },
+    {
+      "address": "0x18f6e",
+      "stack_bytes": 65534
+    },
+    {
+      "address": "0x19018",
+      "stack_bytes": 65464
+    },
+    {
+      "address": "0x1ae2b",
+      "stack_bytes": 65453
+    },
+    {
+      "address": "0x1af51",
+      "stack_bytes": 65449
+    },
+    {
+      "address": "0x1b0a9",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1b12a",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1b194",
+      "stack_bytes": 65534
+    },
+    {
+      "address": "0x1b1f3",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1b21d",
+      "stack_bytes": 65516
+    },
+    {
+      "address": "0x1b5b2",
+      "stack_bytes": 65493
+    },
+    {
+      "address": "0x1b714",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1b751",
+      "stack_bytes": 65528
+    },
+    {
+      "address": "0x1b8be",
+      "stack_bytes": 65519
+    },
+    {
+      "address": "0x1c19a",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1c1af",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1c1d3",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1c22d",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1c26e",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1c29a",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1c2c6",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1c2da",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1c2fc",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1c32b",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1c3f6",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1c411",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1c433",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1c44e",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1c478",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1c493",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1c4ae",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1c4d0",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1c504",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1c527",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1c53c",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1c565",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1c58e",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1c5a3",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1c5c6",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1c5e9",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1c612",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1c63b",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1c656",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1c67f",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1c6a8",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1c6d1",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1c6ec",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1c707",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1c722",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1c73d",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1c758",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1c773",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1c78e",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1c831",
+      "stack_bytes": 65521
+    },
+    {
+      "address": "0x1c98e",
+      "stack_bytes": 65534
+    },
+    {
+      "address": "0x1ca33",
+      "stack_bytes": 65528
+    },
+    {
+      "address": "0x1cb56",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1cbd7",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1cc89",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1ccdd",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1cd3c",
+      "stack_bytes": 0
+    },
+    {
+      "address": "0x1cd9b",
+      "stack_bytes": 65532
+    }
+  ]
+}

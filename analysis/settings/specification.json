@@ -1,0 +1,425 @@
+{
+  "scope": "Static Options/profile audit; not runtime confirmation",
+  "source_sha256": "6e80ab0186040beef29c8be8b39a36ddc0e2c9b15ca20e0eedd4055d76379288",
+  "history_sha256": "c8f20fde998af4e9adae34067513af74bc5f6b1e4bf080dbbb2d6fa48e6ce588",
+  "options_menu": {
+    "index": 4,
+    "title": "Options Menu",
+    "record_address": "0x20ca8",
+    "record_file_offset": "0x10ea8",
+    "items": [
+      {
+        "label": "WPM",
+        "column": 0,
+        "label_ds_offset": "0x149b",
+        "action": -16,
+        "handler_address": "0x12ead",
+        "description": "Change speed goal"
+      },
+      {
+        "label": "Time",
+        "column": 5,
+        "label_ds_offset": "0x149f",
+        "action": -17,
+        "handler_address": "0x12ec5",
+        "description": "Adjust practice goal"
+      },
+      {
+        "label": "Drills",
+        "column": 11,
+        "label_ds_offset": "0x14a4",
+        "action": -18,
+        "handler_address": "0x12edd",
+        "description": "Change duration of lessons"
+      },
+      {
+        "label": "Sound",
+        "column": 19,
+        "label_ds_offset": "0x1028",
+        "action": -19,
+        "handler_address": "0x12ef5",
+        "description": "Turn sound on and off"
+      },
+      {
+        "label": "Name",
+        "column": 26,
+        "label_ds_offset": "0x14ab",
+        "action": -20,
+        "handler_address": "0x12f0d",
+        "description": "Change your name"
+      },
+      {
+        "label": "Intro",
+        "column": 32,
+        "label_ds_offset": "0x14b0",
+        "action": -21,
+        "handler_address": "0x12f25",
+        "description": "Review Typing Tutor IV introduction"
+      },
+      {
+        "label": "Help",
+        "column": 39,
+        "label_ds_offset": "0x1189",
+        "action": -22,
+        "handler_address": "0x12f50",
+        "description": "Information about Options Menu"
+      }
+    ]
+  },
+  "choices": {
+    "wpm": [
+      {
+        "index": 0,
+        "label": " 10 - 19",
+        "stored_min_wpm": 10
+      },
+      {
+        "index": 1,
+        "label": " 20 - 29",
+        "stored_min_wpm": 20
+      },
+      {
+        "index": 2,
+        "label": " 30 - 39",
+        "stored_min_wpm": 30
+      },
+      {
+        "index": 3,
+        "label": " 40 - 49",
+        "stored_min_wpm": 40
+      },
+      {
+        "index": 4,
+        "label": " 50 - 59",
+        "stored_min_wpm": 50
+      },
+      {
+        "index": 5,
+        "label": " 60 - 69",
+        "stored_min_wpm": 60
+      },
+      {
+        "index": 6,
+        "label": " 70 - 79",
+        "stored_min_wpm": 70
+      },
+      {
+        "index": 7,
+        "label": " 80 - 89",
+        "stored_min_wpm": 80
+      },
+      {
+        "index": 8,
+        "label": " 90 - 99",
+        "stored_min_wpm": 90
+      },
+      {
+        "index": 9,
+        "label": "100+",
+        "stored_min_wpm": 100
+      }
+    ],
+    "weekly_time": [
+      {
+        "index": 0,
+        "label": " 1 -  2",
+        "min_hours": 1,
+        "max_hours": 2
+      },
+      {
+        "index": 1,
+        "label": " 3 -  4",
+        "min_hours": 3,
+        "max_hours": 4
+      },
+      {
+        "index": 2,
+        "label": " 5 -  6",
+        "min_hours": 5,
+        "max_hours": 6
+      },
+      {
+        "index": 3,
+        "label": " 7 -  9",
+        "min_hours": 7,
+        "max_hours": 9
+      },
+      {
+        "index": 4,
+        "label": "10 - 14",
+        "min_hours": 10,
+        "max_hours": 14
+      },
+      {
+        "index": 5,
+        "label": "15 - 19",
+        "min_hours": 15,
+        "max_hours": 19
+      },
+      {
+        "index": 6,
+        "label": "20+",
+        "min_hours": 20,
+        "max_hours": 168
+      }
+    ],
+    "drills": [
+      5,
+      10,
+      15,
+      20
+    ],
+    "sound": [
+      "Sound",
+      "No sound"
+    ]
+  },
+  "prompts": {
+    "wpm": "Setting goals is valuable to the learning process.  To assist in monitoring your progress, select the minimum speed range that you would like to achieve",
+    "weekly_time": "The key to achieving your goal is regular practice.  Please select the minimum number of hours that you intend to practice in a normal week",
+    "drills": "Select the number of drills in a lesson",
+    "sound": "Choose whether you want sound in this program",
+    "name": "Please type your name"
+  },
+  "student_record": {
+    "bytes": 1996,
+    "memory_base": "0x9072",
+    "fields": [
+      {
+        "key": "name",
+        "ds_offset": "0x9072",
+        "record_offset": "0x00",
+        "bytes": 26
+      },
+      {
+        "key": "sound",
+        "ds_offset": "0x90ad",
+        "record_offset": "0x3b",
+        "bytes": 1
+      },
+      {
+        "key": "experience",
+        "ds_offset": "0x90b5",
+        "record_offset": "0x43",
+        "bytes": 1
+      },
+      {
+        "key": "drills",
+        "ds_offset": "0x90b6",
+        "record_offset": "0x44",
+        "bytes": 1
+      },
+      {
+        "key": "weekly_time_index",
+        "ds_offset": "0x90b7",
+        "record_offset": "0x45",
+        "bytes": 1
+      },
+      {
+        "key": "minimum_wpm",
+        "ds_offset": "0x90b8",
+        "record_offset": "0x46",
+        "bytes": 1
+      }
+    ]
+  },
+  "blank_record_observations": [
+    {
+      "slot": 5,
+      "sound_raw": 1,
+      "drills": 10,
+      "weekly_time_index": 0,
+      "minimum_wpm": 10
+    },
+    {
+      "slot": 6,
+      "sound_raw": 1,
+      "drills": 10,
+      "weekly_time_index": 0,
+      "minimum_wpm": 10
+    },
+    {
+      "slot": 7,
+      "sound_raw": 1,
+      "drills": 10,
+      "weekly_time_index": 0,
+      "minimum_wpm": 10
+    },
+    {
+      "slot": 8,
+      "sound_raw": 1,
+      "drills": 10,
+      "weekly_time_index": 0,
+      "minimum_wpm": 10
+    }
+  ],
+  "onboarding": {
+    "weekly_initial_highlight": 1,
+    "weekly_initial_label": " 3 -  4",
+    "beginner_initial_goal_min": 20,
+    "two_finger_initial_goal_min": 30,
+    "note": "Initial goal picker is experience-dependent; accepting/skipping/canceling affects final values. Blank-record values are not a universal new-student configuration."
+  },
+  "behavior": {
+    "listbox_navigation": [
+      "ArrowUp",
+      "ArrowDown",
+      "Space"
+    ],
+    "listbox_enter": "Commit current index; only changed values set dirty flag",
+    "options_cancel": "Handlers queue Escape; static dispatcher path returns toward Main Menu",
+    "name_max_characters": 25,
+    "name_duplicate_comparison": "case-sensitive bytes",
+    "name_editor": "Nonempty; no leading space; ASCII letters/digits plus space, period, comma, apostrophe, and noninitial hyphen",
+    "sound_stored_mapping": {
+      "1": "Sound",
+      "0": "No sound"
+    },
+    "save": "Changes live in the profile buffer; Quit offers save / do not save / cancel. No automatic per-option disk save."
+  },
+  "evidence": [
+    {
+      "address": "0x12ead",
+      "evidence_id": "ev_a4f54aafefdac5c3b03c845c9f6c15ebb7cc271c62ed3e1529aa085700a9525e",
+      "path": "analysis/rea/function-0x12ead.json"
+    },
+    {
+      "address": "0x12ec5",
+      "evidence_id": "ev_1d5cf36ec7dc914a40abbd48f3b71eaadbfd8f5934f818829e1b8072107e16e3",
+      "path": "analysis/rea/function-0x12ec5.json"
+    },
+    {
+      "address": "0x12edd",
+      "evidence_id": "ev_b89b04194153b74823d8da471fdaf118536da98b3dd65139138c23f5d8a7a168",
+      "path": "analysis/rea/function-0x12edd.json"
+    },
+    {
+      "address": "0x12ef5",
+      "evidence_id": "ev_b2a31633367a69a5004b122f3337dcf85839ca700409696f13a0bc50fa8be858",
+      "path": "analysis/rea/function-0x12ef5.json"
+    },
+    {
+      "address": "0x12f0d",
+      "evidence_id": "ev_f9195ef7a9e42e94ee04f64d51779238e7475dec2d390611858ba85b034be1a6",
+      "path": "analysis/rea/function-0x12f0d.json"
+    },
+    {
+      "address": "0x12f25",
+      "evidence_id": "ev_eabeb05faabbc5aa3cc3653f2eaef985f6ee428eb5cc4260f904efebf8d9bd4d",
+      "path": "analysis/rea/function-0x12f25.json"
+    },
+    {
+      "address": "0x1cbd7",
+      "evidence_id": "ev_68dcbf8d962ea3015864f4ceb34aabef22ddea46533e9b75c2bb9c0f57f266f5",
+      "path": "analysis/rea/function-0x1cbd7.json"
+    },
+    {
+      "address": "0x1cc89",
+      "evidence_id": "ev_2f955fcf6180890c508a4f070e9eeafdc81608cb800d95ab214a13877c86bbc2",
+      "path": "analysis/rea/function-0x1cc89.json"
+    },
+    {
+      "address": "0x1ccdd",
+      "evidence_id": "ev_61aae4557fe4fd75f1a175ac74d7fec186314915282641af8585b3da1ce21fd1",
+      "path": "analysis/rea/function-0x1ccdd.json"
+    },
+    {
+      "address": "0x1cb56",
+      "evidence_id": "ev_05f8ccf26d3f120899296667f0a5d844c3ab4fd13d6c66f3fed4a7f5f9cbe355",
+      "path": "analysis/rea/function-0x1cb56.json"
+    },
+    {
+      "address": "0x1cd3c",
+      "evidence_id": "ev_c47f69d6cf150e4137c0d176607f2f19fd9aa6d1531bdc7d4460e6ab73eb2a9a",
+      "path": "analysis/rea/function-0x1cd3c.json"
+    },
+    {
+      "address": "0x1b21d",
+      "evidence_id": "ev_3b447d68835afccb713cf7080ac3626a3a38bad5ebd4ae37314a6726e2d4b971",
+      "path": "analysis/rea/function-0x1b21d.json"
+    },
+    {
+      "address": "0x10d63",
+      "evidence_id": "ev_bd8b13de624820193b89c71370a7d3288821c478e29fe662b51018e4f91a521a",
+      "path": "analysis/rea/function-0x10d63.json"
+    },
+    {
+      "address": "0x1b8be",
+      "evidence_id": "ev_05b7ce86c54beece8992e6ad087e37831d24745749bb4333d33e5f6c70848b69",
+      "path": "analysis/rea/function-0x1b8be.json"
+    },
+    {
+      "address": "0x1f105",
+      "evidence_id": "ev_c022696e21b3fbb362d48f7646e9f45ab212d531b76b9184acf083b6c9508340",
+      "path": "analysis/rea/function-0x1f105.json"
+    },
+    {
+      "address": "0x114f2",
+      "evidence_id": "ev_2da2492718ac30ee9436b1c5f348ad34abb423132dfb18a50fa667ce77f6e7f5",
+      "path": "analysis/rea/function-0x114f2.json"
+    },
+    {
+      "address": "0x11170",
+      "evidence_id": "ev_d6eff93aff834b5ca15c2cb7f82fc8a77cb7969aa363c8f5246972cbee4bb4e1",
+      "path": "analysis/rea/function-0x11170.json"
+    },
+    {
+      "address": "0x10860",
+      "evidence_id": "ev_f8544d81f41437974f201cd38ce050aa4dfc2f4c82e96d66542b3f394d3f282d",
+      "path": "analysis/rea/function-0x10860.json"
+    },
+    {
+      "address": "0x10335",
+      "evidence_id": "ev_10c424ac7b1d69a1a322db505dd8d466f6897cf409b8bad85d674c1e76841687",
+      "path": "analysis/rea/function-0x10335.json"
+    },
+    {
+      "address": "0x10e3f",
+      "evidence_id": "ev_aef19ddf1b68e693f7ce20b01337f90c137220bcde16fe40296248fd77259b9b",
+      "path": "analysis/rea/function-0x10e3f.json"
+    },
+    {
+      "address": "0x19018",
+      "evidence_id": "ev_cdecc1ed7ad8a2bad5375ed0459f1498823ddc2be01e714f3ec0fd3c596683cf",
+      "path": "analysis/rea/function-0x19018.json"
+    }
+  ],
+  "assembly_evidence": [
+    {
+      "address": "0x1cbd7",
+      "evidence_id": "ev_0dfce8c4fc0b9ff0600c835968f234612709d48cc2f42328ca9cf17a95097d7e",
+      "path": "analysis/rea/assembly-0x1cbd7.json"
+    },
+    {
+      "address": "0x1cc89",
+      "evidence_id": "ev_61f35933cadcd930298bb3124d012ad33a520fad0db53e458ef25e45c3e0b52a",
+      "path": "analysis/rea/assembly-0x1cc89.json"
+    },
+    {
+      "address": "0x1ccdd",
+      "evidence_id": "ev_ccf593f9055ec90dd7403386c40ed28cde84e9f8ab9d7ab06bc52d3135fa58e9",
+      "path": "analysis/rea/assembly-0x1ccdd.json"
+    },
+    {
+      "address": "0x1cb56",
+      "evidence_id": "ev_adbd6df42e9493d90ae5c4de1c2236e8d08385d9980cc97a071f3b430c60687e",
+      "path": "analysis/rea/assembly-0x1cb56.json"
+    },
+    {
+      "address": "0x10335",
+      "evidence_id": "ev_efe22421b1c60d843fdecc90651f29c7803c494a80e2d6bfe1ca51c83c2242a9",
+      "path": "analysis/rea/assembly-0x10335.json"
+    },
+    {
+      "address": "0x1b8be",
+      "evidence_id": "ev_406e0844b31770abed202f585cc76b849b668e10377955dbaaa92aee4353c0f1",
+      "path": "analysis/rea/assembly-0x1b8be.json"
+    }
+  ],
+  "remaining_unknowns": [
+    "No live DOS Options session captured.",
+    "Full legacy history format and all new-student defaults are not claimed.",
+    "Sound waveform/timing and browser audio mapping are not validated.",
+    "Current browser prototype has not yet adopted these choices or save semantics."
+  ]
+}

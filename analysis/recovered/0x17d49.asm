@@ -1,0 +1,11 @@
+; ev_bad2fe6ea47abe2274edeb164b0718c4aad18520dbd09e9a07716c8130a55ca6
+0x17d49: PUSH BP
+0x17d4a: MOV BP, SP
+0x17d4c: XOR AX, AX
+0x17d4e: MOV word ptr [0xa04c], 0x0
+0x17d54: MOV [0xa04a], AX
+0x17d57: MOV word ptr [0x8f52], 0x0
+0x17d5d: CALL 0x1000:7e2a
+0x17d60: MOV SP, BP
+0x17d62: POP BP
+0x17d63: RET

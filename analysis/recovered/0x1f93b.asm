@@ -1,0 +1,5 @@
+; ev_f8b295fef7a7728d28ab4bb9ef4e769d1cddc2729adc1fe41fa04d243e65bdb1
+0x1f93b: SUB AX, 0x7d0
+0x1f93e: JNC 0x1000:f943
+0x1f940: ADD AX, 0x64
+0x1f943: JMP 0x1000:c121

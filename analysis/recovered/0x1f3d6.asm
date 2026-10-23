@@ -1,0 +1,6 @@
+; ev_9eebab856c9d1b29ff1122caa14f0c7315586de3ab4119975f19c38f8cb629cc
+0x1f3d6: PUSH BP
+0x1f3d7: MOV BP, SP
+0x1f3d9: MOV AH, 0x40
+0x1f3db: MOV BX, word ptr [BP + 0x4]
+0x1f3de: JMP 0x1000:f404

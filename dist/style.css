@@ -1,0 +1,16 @@
+:root{color-scheme:dark;--cell-w:9.6px;--cell-h:20px;--screen-scale:1}
+*{box-sizing:border-box}body{margin:0;background:#171717;color:#b9b9b9;font:13px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace;min-height:100vh;padding:28px 16px}
+#viewport{overflow:hidden;position:relative;margin:auto;width:calc(768px * var(--screen-scale));height:calc(500px * var(--screen-scale));box-shadow:0 0 0 1px #303030}
+#terminal{position:relative;width:768px;height:500px;transform:scale(var(--screen-scale));transform-origin:top left;outline:none;background:#0000aa;font:16px/20px "Courier New",monospace;font-variant-ligatures:none;user-select:none}
+#terminal:focus-visible{outline:1px solid #707070;outline-offset:3px}
+#cells{position:absolute;inset:0;pointer-events:none}#cells .row{height:20px;white-space:pre;display:flex}#cells .cell{display:block;flex:0 0 9.6px;width:9.6px;height:20px;overflow:hidden}
+#controls{position:absolute;inset:0;pointer-events:none}
+.hotspot{position:absolute;border:0;padding:0;margin:0;background:transparent;color:transparent;cursor:pointer;font:inherit;pointer-events:auto;border-radius:0}
+.hotspot:focus-visible{outline:1px dotted #fff;outline-offset:-1px}
+#name-entry,#game-second-name{position:absolute;pointer-events:auto;font:16px/20px "Courier New",monospace;letter-spacing:0;width:240px;height:20px;padding:0;border:0;border-radius:0;background:#0000aa;color:#fff;caret-color:#fff;outline:none}
+.browser-tools{max-width:1100px;margin:18px auto 0;display:flex;justify-content:space-between;gap:14px;font-size:11px}
+.browser-tools nav{display:flex;gap:18px;flex-wrap:wrap}.browser-tools a,.browser-tools button{color:#b9b9b9;font:inherit}
+.browser-tools button{border:0;background:none;padding:0;cursor:pointer;text-decoration:underline}
+.browser-tools a:focus-visible,.browser-tools button:focus-visible{outline:1px solid #fff;outline-offset:4px}
+.browser-note{text-align:center;font-size:11px;margin:12px 0;color:#929292}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:650px){body{padding:18px 12px}.browser-tools{flex-direction:column;align-items:center;text-align:center;font-size:10px}.browser-tools nav{justify-content:center}.browser-note{font-size:10px}}

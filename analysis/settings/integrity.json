@@ -1,0 +1,30 @@
+{
+  "algorithm": "SHA-256",
+  "scope": "Settings audit extension; first-stage baseline remains unchanged",
+  "files": [
+    {
+      "path": "analysis/settings/specification.json",
+      "bytes": 12102,
+      "sha256": "62e8527983335f4af156c9b71026de8505e2e095c9985b3a726570083978bfdf"
+    },
+    {
+      "path": "scripts/audit-tt-settings.py",
+      "bytes": 6070,
+      "sha256": "29ba6da27b1bca0504ba95536678d86700280c4badf924fe71b6148ee70cb92a"
+    },
+    {
+      "path": "docs/original-settings.md",
+      "bytes": 7849,
+      "sha256": "ceea692f8f62e6ab4b10711226550d1ddb818916f4cdfc0d1f3e5e64b200102a",
+      "previous_sha256": "1dd8c350e65665d565072f324846cecb5e309149ae0f2db0dd23bdfe845df9c8",
+      "revision_note": "F4a seed trace corrects earlier date-related interpretation of DS90a6 No-save write."
+    },
+    {
+      "path": "docs/next-steps.md",
+      "bytes": 7982,
+      "sha256": "9cfe6819912209315ed31d6eddc01fec3c4f4af9446a4522b16aeafcf848326d",
+      "previous_sha256": "dbbf68217f878018e91842d25c16678bc546602fa2871ec0f471b25ac8333e20",
+      "revision_note": "F5c Letter Invaders and global scores delivered; bounded F6 native fidelity audit next."
+    }
+  ]
+}

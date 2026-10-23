@@ -1,0 +1,42 @@
+; ev_044f1bb63d09cfe83b2e3fbeca044945c9f9271590a5c492604892a7beda84a9
+0x1bc24: PUSH BP
+0x1bc25: MOV BP, SP
+0x1bc27: ADD SP, -0x3
+0x1bc2a: MOV byte ptr [BP + -0x2], 0x0
+0x1bc2e: PUSH word ptr [BP + 0x4]
+0x1bc31: CALL 0x1000:f139
+0x1bc34: POP CX
+0x1bc35: DEC AX
+0x1bc36: MOV byte ptr [BP + -0x3], AL
+0x1bc39: MOV AL, byte ptr [BP + -0x2]
+0x1bc3c: CMP AL, byte ptr [BP + -0x3]
+0x1bc3f: JNC 0x1000:bc7e
+0x1bc41: SUB AH, AH
+0x1bc43: MOV BX, AX
+0x1bc45: ADD BX, word ptr [BP + 0x4]
+0x1bc48: MOV AL, byte ptr [BX]
+0x1bc4a: MOV byte ptr [BP + -0x1], AL
+0x1bc4d: MOV AL, byte ptr [BP + -0x3]
+0x1bc50: SUB AH, AH
+0x1bc52: MOV BX, AX
+0x1bc54: ADD BX, word ptr [BP + 0x4]
+0x1bc57: MOV AL, byte ptr [BX]
+0x1bc59: PUSH AX
+0x1bc5a: MOV AL, byte ptr [BP + -0x2]
+0x1bc5d: SUB AH, AH
+0x1bc5f: MOV BX, AX
+0x1bc61: ADD BX, word ptr [BP + 0x4]
+0x1bc64: POP AX
+0x1bc65: MOV byte ptr [BX], AL
+0x1bc67: MOV AL, byte ptr [BP + -0x3]
+0x1bc6a: SUB AH, AH
+0x1bc6c: MOV BX, AX
+0x1bc6e: ADD BX, word ptr [BP + 0x4]
+0x1bc71: MOV AL, byte ptr [BP + -0x1]
+0x1bc74: MOV byte ptr [BX], AL
+0x1bc76: INC byte ptr [BP + -0x2]
+0x1bc79: DEC byte ptr [BP + -0x3]
+0x1bc7c: JMP 0x1000:bc39
+0x1bc7e: MOV SP, BP
+0x1bc80: POP BP
+0x1bc81: RET

@@ -1,0 +1,73 @@
+{
+  "scope": "Static fingering and keypad UI resources; no native runtime capture",
+  "binary_sha256": "6e80ab0186040beef29c8be8b39a36ddc0e2c9b15ca20e0eedd4055d76379288",
+  "history_sha256": "c8f20fde998af4e9adae34067513af74bc5f6b1e4bf080dbbb2d6fa48e6ce588",
+  "bootstrap_source": {
+    "unnamed_record_slot": 5,
+    "record_bytes": 1996
+  },
+  "strings": {
+    "fingeringTitle": "0x106a",
+    "lessonTitle": "0x1053",
+    "testTitle": "0x10d5",
+    "homeTitle": "0x8c89",
+    "summaryTitle": "0x8cb8",
+    "intro": "0x165d",
+    "instruction": "0x8be3",
+    "speedLabel": "0x8c6b",
+    "accuracyLabel": "0x8c7a",
+    "speed": "0x8cce",
+    "accuracy": "0x8cdc",
+    "above": "0x8ceb",
+    "best": "0x8d01",
+    "worst": "0x8d15"
+  },
+  "functions": [
+    {
+      "address": "0x1291c",
+      "evidence": "ev_4e79c48eb75ab33db9f73ba61e615897ef52c4e4f81740372955835cc0178472"
+    },
+    {
+      "address": "0x1cd9b",
+      "evidence": "ev_eb89b5fc52f55442f1b3cc1a3a8c8abffe1ded2c953eff607ce049964834f414"
+    },
+    {
+      "address": "0x1282a",
+      "evidence": "ev_7d85293978c12de362d8ebddebe73e3ed962c9bc623d6f6c10c1e8eaedb044d8"
+    },
+    {
+      "address": "0x12cc6",
+      "evidence": "ev_66d43549737a8b772b78fb8ede8ecc0a9892d6c837de849a98407d69f88ac26e"
+    },
+    {
+      "address": "0x1cf2e",
+      "evidence": "ev_32a3f1ab40608f04f40c98dff31ba4e28d8b2a97a2022d5be10994d234914b16"
+    },
+    {
+      "address": "0x1d14c",
+      "evidence": "ev_91fe27d63867d60d55ee3d66f7a918640c5e0cd7f9ca5149a4164fb5f0e7b8c8"
+    },
+    {
+      "address": "0x1d1b8",
+      "evidence": "ev_fd94b3d4cbf289bf8332920447bdb831e2b267c9ede0e94c0a20100a3a6a818a"
+    },
+    {
+      "address": "0x1d2c9",
+      "evidence": "ev_8e66c12f6175794f30c5bb0c1458154b754c45f8492c46ada1b6b6199661e3af"
+    },
+    {
+      "address": "0x1d368",
+      "evidence": "ev_24e2491566e5aaf9228c0c8fe83c26793da7dc44b5bb99e2a84cbba4a07eba99"
+    },
+    {
+      "address": "0x1d6a0",
+      "evidence": "ev_514e7b80bb487b3f3a008048d7ad79a15b35ed2952de5e875aa8c3fe8bf91b3f"
+    },
+    {
+      "address": "0x12565",
+      "evidence": "ev_87687ed14e5e93abdd73c3d3fe56cd41cdd9781b67db665efc1f2772a87340aa"
+    }
+  ],
+  "output_sha256": "b2d6452437c6c9a0e044c9c46d089c2ba652ae60daaa11011f573734de4a410b",
+  "extractor_sha256": "6a55dec5af1238e2207d4f7630ea0d6d582ee21465ca86e115efd44bc96bc7b3"
+}

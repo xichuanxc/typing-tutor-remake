@@ -1,0 +1,118 @@
+{
+  "request": {
+    "name": "procedure_assembly",
+    "arguments": {
+      "procedure": "0x1f19c"
+    }
+  },
+  "result": {
+    "_meta": {
+      "provenance": {
+        "untrusted_content": true,
+        "source": "analysis_target"
+      }
+    },
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"evidence_id\":\"ev_fb37bae65f7afed613f991c9d3c77025f4102513befc50df544398b379c19acb\",\"subject\":{\"name\":\"TT.unpacked.exe\",\"digest\":{\"sha256\":\"6e80ab0186040beef29c8be8b39a36ddc0e2c9b15ca20e0eedd4055d76379288\"},\"local_path\":\"/Users/xc/PersonalProjects/type_tutor_remake/analysis/derived/TT.unpacked.exe\",\"format\":\"dos-mz\",\"architecture\":\"x86\"},\"provider\":{\"id\":\"ghidra\",\"name\":\"Ghidra\",\"version\":\"12.1.4\"},\"analysis_profile\":{\"provider\":{\"id\":\"ghidra\",\"name\":\"Ghidra\",\"version\":\"12.1.4\"},\"parameters\":{\"target_kind\":\"executable\",\"target_format\":\"dos-mz\",\"architecture\":\"x86\",\"available_architectures\":[\"x86\"],\"import_mode\":\"ephemeral-source-immutable\",\"annotation_policy\":\"atomic-function-entry-metadata-v1\",\"load_image_observations\":\"source-mappings-entry-context-v2\",\"function_body_evidence\":\"complete-inclusive-ranges-v1\",\"function_references\":\"complete-body-and-entry-reference-manager-v2\",\"call_relationship_coverage\":\"function-body-call-coverage-v5\",\"function_dossier_coverage\":\"observed-facets-and-call-relationships-v1\",\"string_inventory_evidence\":\"defined-data-coverage-v1\",\"location_resolution\":\"explicit-address-exact-entry-symbol-first-v3\",\"procedure_file_offset_resolution\":\"address-first-unique-target-source-mapping-v2\",\"instruction_flow_evidence\":\"decoded-return-pcode-v1\",\"instruction_references\":\"exact-address-incoming-without-synthetic-entry-v2\",\"function_boundary_observations\":\"ghidra-function-boundary-limitations-v4\",\"no_return_repair\":\"returning-imports-decoded-return-v2\",\"process_launch\":\"inspected-jvm-launch-support-v1\",\"load_image_evidence\":\"independent-mz-mapping-relocations-v2\",\"jump_table_evidence\":\"typed-case-default-blocks-v1\",\"decompiler_jump_loads\":true,\"loader\":\"MzLoader\",\"language_id\":\"x86:LE:16:Real Mode\",\"compiler_spec_id\":\"default\",\"load_segment\":\"0x1000\",\"address_coordinates\":\"linear-byte-offset\",\"analyzer_preset\":\"ghidra-default\",\"analysis_seeds\":{\"format\":\"rea-ghidra-seeds-v1\",\"path\":\"/Users/xc/PersonalProjects/type_tutor_remake/analysis/seeds/compiler-prologues.tsv\",\"configured_path\":\"/Users/xc/PersonalProjects/type_tutor_remake/analysis/seeds/compiler-prologues.tsv\",\"sha256\":\"b2875cb8b7ec4297da049666abb4e1791ba1b740fc4e07e30b43c3fe97125b69\",\"entries\":{\"function\":205,\"code\":0,\"label\":0}}},\"digest\":\"09b0598bc7789122b35475302ba167f8363950d37ddb124a0cc19517f874f3d0\"},\"predicate_type\":\"rea.analysis\",\"operation\":\"procedure_assembly\",\"parameters\":{\"procedure\":\"0x1f19c\"},\"raw_result\":{\"value\":\"0x1f19c: MOV BP, 0x1f8e\\n0x1f19f: TEST BP, BP\\n0x1f1a1: JNZ 0x1000:f1a5\\n0x1f1a3: MOV BP, DS\\n0x1f1a5: MOV word ptr CS:[0xf19a], DS\\n0x1f1aa: MOV BX, word ptr [0x2]\\n0x1f1ae: SUB BX, BP\\n0x1f1b0: CMP BX, 0x1000\\n0x1f1b4: JBE 0x1000:f1c5\\n0x1f1b6: LEA BX, [BP + 0x1000]\\n0x1f1ba: MOV AX, ES\\n0x1f1bc: SUB BX, AX\\n0x1f1be: MOV AH, 0x4a\\n0x1f1c0: INT 0x21\\n0x1f1c2: MOV BX, 0x1000\\n0x1f1c5: MOV BP, ES\\n0x1f1c7: MOV word ptr ES:[0x8f0c], DS\\n0x1f1cc: MOV CL, 0x4\\n0x1f1ce: SHL BX, CL\\n0x1f1d0: MOV CX, word ptr ES:[0x8f3e]\\n0x1f1d5: TEST CX, CX\\n0x1f1d7: JZ 0x1000:f1e6\\n0x1f1d9: MOV BX, word ptr ES:[0x8f3a]\\n0x1f1de: MOV CL, 0x4\\n0x1f1e0: SHL BX, CL\\n0x1f1e2: ADD BX, 0xa092\\n0x1f1e6: CLI\\n0x1f1e7: MOV BP, SS\\n0x1f1e9: MOV SP, BX\\n0x1f1eb: STI\\n0x1f1ec: TEST BX, BX\\n0x1f1ee: JNZ 0x1000:f1f3\\n0x1f1f0: MOV BX, 0xffff\\n0x1f1f3: MOV word ptr ES:[0x8f0a], BX\\n0x1f1f8: MOV SI, word ptr ES:[0x8f3e]\\n0x1f1fd: TEST SI, SI\\n0x1f1ff: JZ 0x1000:f24b\\n0x1f201: MOV SI, word ptr ES:[0x8f3c]\\n0x1f206: MOV CX, BX\\n0x1f208: INC CX\\n0x1f209: MOV word ptr ES:[0x8efe], CX\\n0x1f20e: MOV CX, 0x4\\n0x1f211: SHL SI, CL\\n0x1f213: ADD BX, SI\\n0x1f215: JNC 0x1000:f21a\\n0x1f217: MOV BX, 0xffff\\n0x1f21a: MOV word ptr ES:[0x8f0a], BX\\n0x1f21f: ADD BX, 0xf\\n0x1f222: MOV CX, 0x4\\n0x1f225: SHR BX, CL\\n0x1f227: AND BX, 0x1fff\\n0x1f22b: MOV AX, ES\\n0x1f22d: ADD BX, AX\\n0x1f22f: MOV AX, DS\\n0x1f231: SUB BX, AX\\n0x1f233: MOV BP, ES\\n0x1f235: MOV SI, DS\\n0x1f237: MOV SI, ES\\n0x1f239: MOV AH, 0x4a\\n0x1f23b: INT 0x21\\n0x1f23d: JNC 0x1000:f24b\\n0x1f23f: MOV AH, 0x4a\\n0x1f241: INT 0x21\\n0x1f243: JNC 0x1000:f24b\\n0x1f245: MOV AX, 0xfe\\n0x1f248: JMP 0x1000:f2e1\\n0x1f24b: MOV BP, ES\\n0x1f24d: CLD\\n0x1f24e: MOV DI, 0x8f44\\n0x1f251: MOV CX, 0xa092\\n0x1f254: SUB CX, DI\\n0x1f256: INC CX\\n0x1f257: SHR CX, 0x1\\n0x1f259: JCXZ 0x1000:f25f\\n0x1f25b: SUB AX, AX\\n0x1f25d: STOSW.REP ES:DI\\n0x1f25f: MOV ES, word ptr [0x2c]\\n0x1f263: SUB DI, DI\\n0x1f265: MOV CX, 0x7fff\\n0x1f268: MOV AH, byte ptr ES:[DI]\\n0x1f26b: CMP AH, 0x3d\\n0x1f26e: JZ 0x1000:f286\\n0x1f270: TEST AH, AH\\n0x1f272: JZ 0x1000:f278\\n0x1f274: SCASB.REPNE ES:DI\\n0x1f276: JZ 0x1000:f268\\n0x1f278: MOV CL, byte ptr [0x80]\\n0x1f27c: SUB CH, CH\\n0x1f27e: MOV SI, 0x81\\n0x1f281: MOV AX, 0x1\\n0x1f284: JMP 0x1000:f28f\\n0x1f286: SUB AX, AX\\n0x1f288: STOSB ES:DI\\n0x1f289: MOV SI, DI\\n0x1f28b: MOV DI, ES\\n0x1f28d: MOV DI, DS\\n0x1f28f: PUSH AX\\n0x1f290: MOV BP, ES\\n0x1f292: MOV DI, word ptr ES:[0x8efe]\\n0x1f297: PUSH DI\\n0x1f298: JCXZ 0x1000:f2a2\\n0x1f29a: LODSB SI\\n0x1f29b: TEST AL, AL\\n0x1f29d: JZ 0x1000:f2a2\\n0x1f29f: STOSB ES:DI\\n0x1f2a0: LOOP 0x1000:f29a\\n0x1f2a2: SUB AL, AL\\n0x1f2a4: STOSB ES:DI\\n0x1f2a5: MOV BP, DS\\n0x1f2a7: INC DI\\n0x1f2a8: AND DI, 0xfffe\\n0x1f2ac: MOV word ptr [0x8efe], DI\\n0x1f2b0: MOV word ptr [0x8f06], DI\\n0x1f2b4: MOV AX, [0x8f3e]\\n0x1f2b7: TEST AX, AX\\n0x1f2b9: JNZ 0x1000:f2d2\\n0x1f2bb: MOV AX, SP\\n0x1f2bd: MOV BX, word ptr [0x8f3a]\\n0x1f2c1: TEST BX, BX\\n0x1f2c3: JNZ 0x1000:f2c8\\n0x1f2c5: MOV BX, 0x800\\n0x1f2c8: MOV CX, 0x4\\n0x1f2cb: SHL BX, CL\\n0x1f2cd: SUB AX, BX\\n0x1f2cf: MOV [0x8f08], AX\\n0x1f2d2: MOV word ptr [0x8f02], DS\\n0x1f2d6: MOV word ptr [0x8f04], CS\\n0x1f2da: CALL 0x1000:f2f3\\n0x1f2dd: JMP 0x1000:f2e1\",\"limitations\":[]},\"normalized_result\":\"0x1f19c: MOV BP, 0x1f8e\\n0x1f19f: TEST BP, BP\\n0x1f1a1: JNZ 0x1000:f1a5\\n0x1f1a3: MOV BP, DS\\n0x1f1a5: MOV word ptr CS:[0xf19a], DS\\n0x1f1aa: MOV BX, word ptr [0x2]\\n0x1f1ae: SUB BX, BP\\n0x1f1b0: CMP BX, 0x1000\\n0x1f1b4: JBE 0x1000:f1c5\\n0x1f1b6: LEA BX, [BP + 0x1000]\\n0x1f1ba: MOV AX, ES\\n0x1f1bc: SUB BX, AX\\n0x1f1be: MOV AH, 0x4a\\n0x1f1c0: INT 0x21\\n0x1f1c2: MOV BX, 0x1000\\n0x1f1c5: MOV BP, ES\\n0x1f1c7: MOV word ptr ES:[0x8f0c], DS\\n0x1f1cc: MOV CL, 0x4\\n0x1f1ce: SHL BX, CL\\n0x1f1d0: MOV CX, word ptr ES:[0x8f3e]\\n0x1f1d5: TEST CX, CX\\n0x1f1d7: JZ 0x1000:f1e6\\n0x1f1d9: MOV BX, word ptr ES:[0x8f3a]\\n0x1f1de: MOV CL, 0x4\\n0x1f1e0: SHL BX, CL\\n0x1f1e2: ADD BX, 0xa092\\n0x1f1e6: CLI\\n0x1f1e7: MOV BP, SS\\n0x1f1e9: MOV SP, BX\\n0x1f1eb: STI\\n0x1f1ec: TEST BX, BX\\n0x1f1ee: JNZ 0x1000:f1f3\\n0x1f1f0: MOV BX, 0xffff\\n0x1f1f3: MOV word ptr ES:[0x8f0a], BX\\n0x1f1f8: MOV SI, word ptr ES:[0x8f3e]\\n0x1f1fd: TEST SI, SI\\n0x1f1ff: JZ 0x1000:f24b\\n0x1f201: MOV SI, word ptr ES:[0x8f3c]\\n0x1f206: MOV CX, BX\\n0x1f208: INC CX\\n0x1f209: MOV word ptr ES:[0x8efe], CX\\n0x1f20e: MOV CX, 0x4\\n0x1f211: SHL SI, CL\\n0x1f213: ADD BX, SI\\n0x1f215: JNC 0x1000:f21a\\n0x1f217: MOV BX, 0xffff\\n0x1f21a: MOV word ptr ES:[0x8f0a], BX\\n0x1f21f: ADD BX, 0xf\\n0x1f222: MOV CX, 0x4\\n0x1f225: SHR BX, CL\\n0x1f227: AND BX, 0x1fff\\n0x1f22b: MOV AX, ES\\n0x1f22d: ADD BX, AX\\n0x1f22f: MOV AX, DS\\n0x1f231: SUB BX, AX\\n0x1f233: MOV BP, ES\\n0x1f235: MOV SI, DS\\n0x1f237: MOV SI, ES\\n0x1f239: MOV AH, 0x4a\\n0x1f23b: INT 0x21\\n0x1f23d: JNC 0x1000:f24b\\n0x1f23f: MOV AH, 0x4a\\n0x1f241: INT 0x21\\n0x1f243: JNC 0x1000:f24b\\n0x1f245: MOV AX, 0xfe\\n0x1f248: JMP 0x1000:f2e1\\n0x1f24b: MOV BP, ES\\n0x1f24d: CLD\\n0x1f24e: MOV DI, 0x8f44\\n0x1f251: MOV CX, 0xa092\\n0x1f254: SUB CX, DI\\n0x1f256: INC CX\\n0x1f257: SHR CX, 0x1\\n0x1f259: JCXZ 0x1000:f25f\\n0x1f25b: SUB AX, AX\\n0x1f25d: STOSW.REP ES:DI\\n0x1f25f: MOV ES, word ptr [0x2c]\\n0x1f263: SUB DI, DI\\n0x1f265: MOV CX, 0x7fff\\n0x1f268: MOV AH, byte ptr ES:[DI]\\n0x1f26b: CMP AH, 0x3d\\n0x1f26e: JZ 0x1000:f286\\n0x1f270: TEST AH, AH\\n0x1f272: JZ 0x1000:f278\\n0x1f274: SCASB.REPNE ES:DI\\n0x1f276: JZ 0x1000:f268\\n0x1f278: MOV CL, byte ptr [0x80]\\n0x1f27c: SUB CH, CH\\n0x1f27e: MOV SI, 0x81\\n0x1f281: MOV AX, 0x1\\n0x1f284: JMP 0x1000:f28f\\n0x1f286: SUB AX, AX\\n0x1f288: STOSB ES:DI\\n0x1f289: MOV SI, DI\\n0x1f28b: MOV DI, ES\\n0x1f28d: MOV DI, DS\\n0x1f28f: PUSH AX\\n0x1f290: MOV BP, ES\\n0x1f292: MOV DI, word ptr ES:[0x8efe]\\n0x1f297: PUSH DI\\n0x1f298: JCXZ 0x1000:f2a2\\n0x1f29a: LODSB SI\\n0x1f29b: TEST AL, AL\\n0x1f29d: JZ 0x1000:f2a2\\n0x1f29f: STOSB ES:DI\\n0x1f2a0: LOOP 0x1000:f29a\\n0x1f2a2: SUB AL, AL\\n0x1f2a4: STOSB ES:DI\\n0x1f2a5: MOV BP, DS\\n0x1f2a7: INC DI\\n0x1f2a8: AND DI, 0xfffe\\n0x1f2ac: MOV word ptr [0x8efe], DI\\n0x1f2b0: MOV word ptr [0x8f06], DI\\n0x1f2b4: MOV AX, [0x8f3e]\\n0x1f2b7: TEST AX, AX\\n0x1f2b9: JNZ 0x1000:f2d2\\n0x1f2bb: MOV AX, SP\\n0x1f2bd: MOV BX, word ptr [0x8f3a]\\n0x1f2c1: TEST BX, BX\\n0x1f2c3: JNZ 0x1000:f2c8\\n0x1f2c5: MOV BX, 0x800\\n0x1f2c8: MOV CX, 0x4\\n0x1f2cb: SHL BX, CL\\n0x1f2cd: SUB AX, BX\\n0x1f2cf: MOV [0x8f08], AX\\n0x1f2d2: MOV word ptr [0x8f02], DS\\n0x1f2d6: MOV word ptr [0x8f04], CS\\n0x1f2da: CALL 0x1000:f2f3\\n0x1f2dd: JMP 0x1000:f2e1\",\"confidence\":\"observed\",\"authority\":\"shipped-artifact\",\"environment\":null,\"limitations\":[\"The session serves operations only after Ghidra reports default auto-analysis complete; incomplete analysis does not expose partial results.\",\"The imported Program and temporary project are ephemeral and deleted on close. Annotation operations edit session database metadata; original executable bytes are never written.\",\"Cancelling an active Ghidra request terminates its ephemeral database and discards session annotations. The selected target remains open; the next provider query imports the original artifact again.\",\"Default-space addresses use lowercase 0x-prefixed hexadecimal; other address spaces use <percent-encoded-space>:0x<hex>.\",\"Assembly is Ghidra Listing text and does not claim textual equivalence with Hopper output.\",\"macOS sessions require a matching executable Ghidra native decompiler; REA checks for it but does not build native components or change Gatekeeper quarantine state.\",\"DOS MZ uses 16-bit x86 real mode with the Ghidra load segment 0x1000. Returned addresses are linear byte coordinates; they do not identify a unique segment:offset alias.\",\"Static DOS analysis does not emulate BIOS, DOS interrupts, device ports, or self-modifying unpacking code. Packed targets require a separately identified unpacked artifact for original-program analysis; appended overlays are not the initialized load module.\",\"Ghidra analysis was seeded before auto-analysis from /Users/xc/PersonalProjects/type_tutor_remake/analysis/seeds/compiler-prologues.tsv (sha256 b2875cb8b7ec4297da049666abb4e1791ba1b740fc4e07e30b43c3fe97125b69: 205 function, 0 code, 0 label entries). Seeded functions, code and names are caller assertions, not Ghidra discoveries.\",\"Seed outcome: 205 functions created, 0 already present, 0 failed; 0 code seeds decoded, 0 failed; 0 labels applied, 0 failed; 0 seeds outside initialized memory.\"],\"relationship_coverage\":null,\"locations\":[],\"evidence_links\":[]}"
+      }
+    ],
+    "structuredContent": {
+      "evidence_id": "ev_fb37bae65f7afed613f991c9d3c77025f4102513befc50df544398b379c19acb",
+      "subject": {
+        "name": "TT.unpacked.exe",
+        "digest": {
+          "sha256": "6e80ab0186040beef29c8be8b39a36ddc0e2c9b15ca20e0eedd4055d76379288"
+        },
+        "local_path": "/Users/xc/PersonalProjects/type_tutor_remake/analysis/derived/TT.unpacked.exe",
+        "format": "dos-mz",
+        "architecture": "x86"
+      },
+      "provider": {
+        "id": "ghidra",
+        "name": "Ghidra",
+        "version": "12.1.4"
+      },
+      "analysis_profile": {
+        "provider": {
+          "id": "ghidra",
+          "name": "Ghidra",
+          "version": "12.1.4"
+        },
+        "parameters": {
+          "target_kind": "executable",
+          "target_format": "dos-mz",
+          "architecture": "x86",
+          "available_architectures": [
+            "x86"
+          ],
+          "import_mode": "ephemeral-source-immutable",
+          "annotation_policy": "atomic-function-entry-metadata-v1",
+          "load_image_observations": "source-mappings-entry-context-v2",
+          "function_body_evidence": "complete-inclusive-ranges-v1",
+          "function_references": "complete-body-and-entry-reference-manager-v2",
+          "call_relationship_coverage": "function-body-call-coverage-v5",
+          "function_dossier_coverage": "observed-facets-and-call-relationships-v1",
+          "string_inventory_evidence": "defined-data-coverage-v1",
+          "location_resolution": "explicit-address-exact-entry-symbol-first-v3",
+          "procedure_file_offset_resolution": "address-first-unique-target-source-mapping-v2",
+          "instruction_flow_evidence": "decoded-return-pcode-v1",
+          "instruction_references": "exact-address-incoming-without-synthetic-entry-v2",
+          "function_boundary_observations": "ghidra-function-boundary-limitations-v4",
+          "no_return_repair": "returning-imports-decoded-return-v2",
+          "process_launch": "inspected-jvm-launch-support-v1",
+          "load_image_evidence": "independent-mz-mapping-relocations-v2",
+          "jump_table_evidence": "typed-case-default-blocks-v1",
+          "decompiler_jump_loads": true,
+          "loader": "MzLoader",
+          "language_id": "x86:LE:16:Real Mode",
+          "compiler_spec_id": "default",
+          "load_segment": "0x1000",
+          "address_coordinates": "linear-byte-offset",
+          "analyzer_preset": "ghidra-default",
+          "analysis_seeds": {
+            "format": "rea-ghidra-seeds-v1",
+            "path": "/Users/xc/PersonalProjects/type_tutor_remake/analysis/seeds/compiler-prologues.tsv",
+            "configured_path": "/Users/xc/PersonalProjects/type_tutor_remake/analysis/seeds/compiler-prologues.tsv",
+            "sha256": "b2875cb8b7ec4297da049666abb4e1791ba1b740fc4e07e30b43c3fe97125b69",
+            "entries": {
+              "function": 205,
+              "code": 0,
+              "label": 0
+            }
+          }
+        },
+        "digest": "09b0598bc7789122b35475302ba167f8363950d37ddb124a0cc19517f874f3d0"
+      },
+      "predicate_type": "rea.analysis",
+      "operation": "procedure_assembly",
+      "parameters": {
+        "procedure": "0x1f19c"
+      },
+      "raw_result": {
+        "value": "0x1f19c: MOV BP, 0x1f8e\n0x1f19f: TEST BP, BP\n0x1f1a1: JNZ 0x1000:f1a5\n0x1f1a3: MOV BP, DS\n0x1f1a5: MOV word ptr CS:[0xf19a], DS\n0x1f1aa: MOV BX, word ptr [0x2]\n0x1f1ae: SUB BX, BP\n0x1f1b0: CMP BX, 0x1000\n0x1f1b4: JBE 0x1000:f1c5\n0x1f1b6: LEA BX, [BP + 0x1000]\n0x1f1ba: MOV AX, ES\n0x1f1bc: SUB BX, AX\n0x1f1be: MOV AH, 0x4a\n0x1f1c0: INT 0x21\n0x1f1c2: MOV BX, 0x1000\n0x1f1c5: MOV BP, ES\n0x1f1c7: MOV word ptr ES:[0x8f0c], DS\n0x1f1cc: MOV CL, 0x4\n0x1f1ce: SHL BX, CL\n0x1f1d0: MOV CX, word ptr ES:[0x8f3e]\n0x1f1d5: TEST CX, CX\n0x1f1d7: JZ 0x1000:f1e6\n0x1f1d9: MOV BX, word ptr ES:[0x8f3a]\n0x1f1de: MOV CL, 0x4\n0x1f1e0: SHL BX, CL\n0x1f1e2: ADD BX, 0xa092\n0x1f1e6: CLI\n0x1f1e7: MOV BP, SS\n0x1f1e9: MOV SP, BX\n0x1f1eb: STI\n0x1f1ec: TEST BX, BX\n0x1f1ee: JNZ 0x1000:f1f3\n0x1f1f0: MOV BX, 0xffff\n0x1f1f3: MOV word ptr ES:[0x8f0a], BX\n0x1f1f8: MOV SI, word ptr ES:[0x8f3e]\n0x1f1fd: TEST SI, SI\n0x1f1ff: JZ 0x1000:f24b\n0x1f201: MOV SI, word ptr ES:[0x8f3c]\n0x1f206: MOV CX, BX\n0x1f208: INC CX\n0x1f209: MOV word ptr ES:[0x8efe], CX\n0x1f20e: MOV CX, 0x4\n0x1f211: SHL SI, CL\n0x1f213: ADD BX, SI\n0x1f215: JNC 0x1000:f21a\n0x1f217: MOV BX, 0xffff\n0x1f21a: MOV word ptr ES:[0x8f0a], BX\n0x1f21f: ADD BX, 0xf\n0x1f222: MOV CX, 0x4\n0x1f225: SHR BX, CL\n0x1f227: AND BX, 0x1fff\n0x1f22b: MOV AX, ES\n0x1f22d: ADD BX, AX\n0x1f22f: MOV AX, DS\n0x1f231: SUB BX, AX\n0x1f233: MOV BP, ES\n0x1f235: MOV SI, DS\n0x1f237: MOV SI, ES\n0x1f239: MOV AH, 0x4a\n0x1f23b: INT 0x21\n0x1f23d: JNC 0x1000:f24b\n0x1f23f: MOV AH, 0x4a\n0x1f241: INT 0x21\n0x1f243: JNC 0x1000:f24b\n0x1f245: MOV AX, 0xfe\n0x1f248: JMP 0x1000:f2e1\n0x1f24b: MOV BP, ES\n0x1f24d: CLD\n0x1f24e: MOV DI, 0x8f44\n0x1f251: MOV CX, 0xa092\n0x1f254: SUB CX, DI\n0x1f256: INC CX\n0x1f257: SHR CX, 0x1\n0x1f259: JCXZ 0x1000:f25f\n0x1f25b: SUB AX, AX\n0x1f25d: STOSW.REP ES:DI\n0x1f25f: MOV ES, word ptr [0x2c]\n0x1f263: SUB DI, DI\n0x1f265: MOV CX, 0x7fff\n0x1f268: MOV AH, byte ptr ES:[DI]\n0x1f26b: CMP AH, 0x3d\n0x1f26e: JZ 0x1000:f286\n0x1f270: TEST AH, AH\n0x1f272: JZ 0x1000:f278\n0x1f274: SCASB.REPNE ES:DI\n0x1f276: JZ 0x1000:f268\n0x1f278: MOV CL, byte ptr [0x80]\n0x1f27c: SUB CH, CH\n0x1f27e: MOV SI, 0x81\n0x1f281: MOV AX, 0x1\n0x1f284: JMP 0x1000:f28f\n0x1f286: SUB AX, AX\n0x1f288: STOSB ES:DI\n0x1f289: MOV SI, DI\n0x1f28b: MOV DI, ES\n0x1f28d: MOV DI, DS\n0x1f28f: PUSH AX\n0x1f290: MOV BP, ES\n0x1f292: MOV DI, word ptr ES:[0x8efe]\n0x1f297: PUSH DI\n0x1f298: JCXZ 0x1000:f2a2\n0x1f29a: LODSB SI\n0x1f29b: TEST AL, AL\n0x1f29d: JZ 0x1000:f2a2\n0x1f29f: STOSB ES:DI\n0x1f2a0: LOOP 0x1000:f29a\n0x1f2a2: SUB AL, AL\n0x1f2a4: STOSB ES:DI\n0x1f2a5: MOV BP, DS\n0x1f2a7: INC DI\n0x1f2a8: AND DI, 0xfffe\n0x1f2ac: MOV word ptr [0x8efe], DI\n0x1f2b0: MOV word ptr [0x8f06], DI\n0x1f2b4: MOV AX, [0x8f3e]\n0x1f2b7: TEST AX, AX\n0x1f2b9: JNZ 0x1000:f2d2\n0x1f2bb: MOV AX, SP\n0x1f2bd: MOV BX, word ptr [0x8f3a]\n0x1f2c1: TEST BX, BX\n0x1f2c3: JNZ 0x1000:f2c8\n0x1f2c5: MOV BX, 0x800\n0x1f2c8: MOV CX, 0x4\n0x1f2cb: SHL BX, CL\n0x1f2cd: SUB AX, BX\n0x1f2cf: MOV [0x8f08], AX\n0x1f2d2: MOV word ptr [0x8f02], DS\n0x1f2d6: MOV word ptr [0x8f04], CS\n0x1f2da: CALL 0x1000:f2f3\n0x1f2dd: JMP 0x1000:f2e1",
+        "limitations": []
+      },
+      "normalized_result": "0x1f19c: MOV BP, 0x1f8e\n0x1f19f: TEST BP, BP\n0x1f1a1: JNZ 0x1000:f1a5\n0x1f1a3: MOV BP, DS\n0x1f1a5: MOV word ptr CS:[0xf19a], DS\n0x1f1aa: MOV BX, word ptr [0x2]\n0x1f1ae: SUB BX, BP\n0x1f1b0: CMP BX, 0x1000\n0x1f1b4: JBE 0x1000:f1c5\n0x1f1b6: LEA BX, [BP + 0x1000]\n0x1f1ba: MOV AX, ES\n0x1f1bc: SUB BX, AX\n0x1f1be: MOV AH, 0x4a\n0x1f1c0: INT 0x21\n0x1f1c2: MOV BX, 0x1000\n0x1f1c5: MOV BP, ES\n0x1f1c7: MOV word ptr ES:[0x8f0c], DS\n0x1f1cc: MOV CL, 0x4\n0x1f1ce: SHL BX, CL\n0x1f1d0: MOV CX, word ptr ES:[0x8f3e]\n0x1f1d5: TEST CX, CX\n0x1f1d7: JZ 0x1000:f1e6\n0x1f1d9: MOV BX, word ptr ES:[0x8f3a]\n0x1f1de: MOV CL, 0x4\n0x1f1e0: SHL BX, CL\n0x1f1e2: ADD BX, 0xa092\n0x1f1e6: CLI\n0x1f1e7: MOV BP, SS\n0x1f1e9: MOV SP, BX\n0x1f1eb: STI\n0x1f1ec: TEST BX, BX\n0x1f1ee: JNZ 0x1000:f1f3\n0x1f1f0: MOV BX, 0xffff\n0x1f1f3: MOV word ptr ES:[0x8f0a], BX\n0x1f1f8: MOV SI, word ptr ES:[0x8f3e]\n0x1f1fd: TEST SI, SI\n0x1f1ff: JZ 0x1000:f24b\n0x1f201: MOV SI, word ptr ES:[0x8f3c]\n0x1f206: MOV CX, BX\n0x1f208: INC CX\n0x1f209: MOV word ptr ES:[0x8efe], CX\n0x1f20e: MOV CX, 0x4\n0x1f211: SHL SI, CL\n0x1f213: ADD BX, SI\n0x1f215: JNC 0x1000:f21a\n0x1f217: MOV BX, 0xffff\n0x1f21a: MOV word ptr ES:[0x8f0a], BX\n0x1f21f: ADD BX, 0xf\n0x1f222: MOV CX, 0x4\n0x1f225: SHR BX, CL\n0x1f227: AND BX, 0x1fff\n0x1f22b: MOV AX, ES\n0x1f22d: ADD BX, AX\n0x1f22f: MOV AX, DS\n0x1f231: SUB BX, AX\n0x1f233: MOV BP, ES\n0x1f235: MOV SI, DS\n0x1f237: MOV SI, ES\n0x1f239: MOV AH, 0x4a\n0x1f23b: INT 0x21\n0x1f23d: JNC 0x1000:f24b\n0x1f23f: MOV AH, 0x4a\n0x1f241: INT 0x21\n0x1f243: JNC 0x1000:f24b\n0x1f245: MOV AX, 0xfe\n0x1f248: JMP 0x1000:f2e1\n0x1f24b: MOV BP, ES\n0x1f24d: CLD\n0x1f24e: MOV DI, 0x8f44\n0x1f251: MOV CX, 0xa092\n0x1f254: SUB CX, DI\n0x1f256: INC CX\n0x1f257: SHR CX, 0x1\n0x1f259: JCXZ 0x1000:f25f\n0x1f25b: SUB AX, AX\n0x1f25d: STOSW.REP ES:DI\n0x1f25f: MOV ES, word ptr [0x2c]\n0x1f263: SUB DI, DI\n0x1f265: MOV CX, 0x7fff\n0x1f268: MOV AH, byte ptr ES:[DI]\n0x1f26b: CMP AH, 0x3d\n0x1f26e: JZ 0x1000:f286\n0x1f270: TEST AH, AH\n0x1f272: JZ 0x1000:f278\n0x1f274: SCASB.REPNE ES:DI\n0x1f276: JZ 0x1000:f268\n0x1f278: MOV CL, byte ptr [0x80]\n0x1f27c: SUB CH, CH\n0x1f27e: MOV SI, 0x81\n0x1f281: MOV AX, 0x1\n0x1f284: JMP 0x1000:f28f\n0x1f286: SUB AX, AX\n0x1f288: STOSB ES:DI\n0x1f289: MOV SI, DI\n0x1f28b: MOV DI, ES\n0x1f28d: MOV DI, DS\n0x1f28f: PUSH AX\n0x1f290: MOV BP, ES\n0x1f292: MOV DI, word ptr ES:[0x8efe]\n0x1f297: PUSH DI\n0x1f298: JCXZ 0x1000:f2a2\n0x1f29a: LODSB SI\n0x1f29b: TEST AL, AL\n0x1f29d: JZ 0x1000:f2a2\n0x1f29f: STOSB ES:DI\n0x1f2a0: LOOP 0x1000:f29a\n0x1f2a2: SUB AL, AL\n0x1f2a4: STOSB ES:DI\n0x1f2a5: MOV BP, DS\n0x1f2a7: INC DI\n0x1f2a8: AND DI, 0xfffe\n0x1f2ac: MOV word ptr [0x8efe], DI\n0x1f2b0: MOV word ptr [0x8f06], DI\n0x1f2b4: MOV AX, [0x8f3e]\n0x1f2b7: TEST AX, AX\n0x1f2b9: JNZ 0x1000:f2d2\n0x1f2bb: MOV AX, SP\n0x1f2bd: MOV BX, word ptr [0x8f3a]\n0x1f2c1: TEST BX, BX\n0x1f2c3: JNZ 0x1000:f2c8\n0x1f2c5: MOV BX, 0x800\n0x1f2c8: MOV CX, 0x4\n0x1f2cb: SHL BX, CL\n0x1f2cd: SUB AX, BX\n0x1f2cf: MOV [0x8f08], AX\n0x1f2d2: MOV word ptr [0x8f02], DS\n0x1f2d6: MOV word ptr [0x8f04], CS\n0x1f2da: CALL 0x1000:f2f3\n0x1f2dd: JMP 0x1000:f2e1",
+      "confidence": "observed",
+      "authority": "shipped-artifact",
+      "environment": null,
+      "limitations": [
+        "The session serves operations only after Ghidra reports default auto-analysis complete; incomplete analysis does not expose partial results.",
+        "The imported Program and temporary project are ephemeral and deleted on close. Annotation operations edit session database metadata; original executable bytes are never written.",
+        "Cancelling an active Ghidra request terminates its ephemeral database and discards session annotations. The selected target remains open; the next provider query imports the original artifact again.",
+        "Default-space addresses use lowercase 0x-prefixed hexadecimal; other address spaces use <percent-encoded-space>:0x<hex>.",
+        "Assembly is Ghidra Listing text and does not claim textual equivalence with Hopper output.",
+        "macOS sessions require a matching executable Ghidra native decompiler; REA checks for it but does not build native components or change Gatekeeper quarantine state.",
+        "DOS MZ uses 16-bit x86 real mode with the Ghidra load segment 0x1000. Returned addresses are linear byte coordinates; they do not identify a unique segment:offset alias.",
+        "Static DOS analysis does not emulate BIOS, DOS interrupts, device ports, or self-modifying unpacking code. Packed targets require a separately identified unpacked artifact for original-program analysis; appended overlays are not the initialized load module.",
+        "Ghidra analysis was seeded before auto-analysis from /Users/xc/PersonalProjects/type_tutor_remake/analysis/seeds/compiler-prologues.tsv (sha256 b2875cb8b7ec4297da049666abb4e1791ba1b740fc4e07e30b43c3fe97125b69: 205 function, 0 code, 0 label entries). Seeded functions, code and names are caller assertions, not Ghidra discoveries.",
+        "Seed outcome: 205 functions created, 0 already present, 0 failed; 0 code seeds decoded, 0 failed; 0 labels applied, 0 failed; 0 seeds outside initialized memory."
+      ],
+      "relationship_coverage": null,
+      "locations": [],
+      "evidence_links": []
+    }
+  }
+}

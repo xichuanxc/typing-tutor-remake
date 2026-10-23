@@ -1,0 +1,69 @@
+{
+  "scope": "Static Disk picker/resources; browser file import and filename aliases are explicit adapters, not native runtime observations",
+  "binary_sha256": "6e80ab0186040beef29c8be8b39a36ddc0e2c9b15ca20e0eedd4055d76379288",
+  "strings": {
+    "mask": "0xffe",
+    "title": "0x10cb",
+    "suffix": "0x1328",
+    "noFiles": "0x12fb",
+    "pickerPrompt": "0x854c",
+    "pickerInstruction": "0x8516",
+    "resultPrefix": "0x10a3",
+    "testPrompt": "0x102e",
+    "exit": "0x843"
+  },
+  "functions": [
+    {
+      "address": "0x12b58",
+      "evidence": "ev_533d75a2bcd48d6bde9b12cd1474daba5fc52b2a9b36b83ea4bbc1740e542304"
+    },
+    {
+      "address": "0x1b5b2",
+      "evidence": "ev_189b44e3c83ee0e92a74ff6501a2942418c5c7288af93d5e9c97ea64aac16258"
+    },
+    {
+      "address": "0x1b21d",
+      "evidence": "ev_236db771dfe50869414cb35999995086980ae802ea3d7f9c5a8e0022f1f26b0e"
+    },
+    {
+      "address": "0x1b714",
+      "evidence": "ev_827b579fed76f38d57955d0743c5ff6425b96c3d92e62f8a59ffaeec74726f1b"
+    },
+    {
+      "address": "0x1b194",
+      "evidence": "ev_224a8b38426bb34a598d78ac8b2dd29c5e14ed8bb3adc815be41c3ee7087b2c7"
+    },
+    {
+      "address": "0x1b12a",
+      "evidence": "ev_612d8fee3fb81b5c587c667431bf4b71d19f610226918031814de8c68e7b2717"
+    },
+    {
+      "address": "0x12565",
+      "evidence": "ev_87687ed14e5e93abdd73c3d3fe56cd41cdd9781b67db665efc1f2772a87340aa"
+    }
+  ],
+  "native_selection": {
+    "mask": "*.tst",
+    "max_readable_files": 8,
+    "order": "DOS FindFirst/FindNext enumeration; no sort",
+    "encrypted_filter": false,
+    "history_choice": false,
+    "empty_geometry": {
+      "top": 10,
+      "left": 22,
+      "bottom": 13,
+      "right": 56
+    }
+  },
+  "browser_adapter": {
+    "extensions": [
+      ".tst",
+      ".txt"
+    ],
+    "order": "caller-selected order, first eight matching files",
+    "aliases": "uppercase sanitized first-eight-character basename plus .TST; collisions append ~n",
+    "retention": "caller owns imported bytes; resource extractor includes no test text"
+  },
+  "output_sha256": "3b7b6ecb3b7b6b1397ee4c92b830c11f386edad191c93acbab0cb2d42cd0fd56",
+  "extractor_sha256": "d54c2bc1702d173a2993d95f6c7a107f5867b33d5ab677deb437ca21093fd6ba"
+}

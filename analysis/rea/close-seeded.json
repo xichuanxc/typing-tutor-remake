@@ -1,0 +1,31 @@
+{
+  "request": {
+    "name": "close_binary",
+    "arguments": {
+      "snapshot_path": "/Users/xc/PersonalProjects/type_tutor_remake/analysis/rea/seeded.snapshot.json"
+    }
+  },
+  "result": {
+    "_meta": {
+      "provenance": {
+        "untrusted_content": true,
+        "source": "analysis_target"
+      }
+    },
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"result\":{\"path\":\"/Users/xc/PersonalProjects/type_tutor_remake/analysis/rea/seeded.snapshot.json\",\"bytes\":5637416,\"primitive_entries\":1,\"workflow_entries\":1,\"evidence_records\":761}}"
+      }
+    ],
+    "structuredContent": {
+      "result": {
+        "path": "/Users/xc/PersonalProjects/type_tutor_remake/analysis/rea/seeded.snapshot.json",
+        "bytes": 5637416,
+        "primitive_entries": 1,
+        "workflow_entries": 1,
+        "evidence_records": 761
+      }
+    }
+  }
+}

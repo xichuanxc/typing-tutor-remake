@@ -1,0 +1,15 @@
+; ev_0bc18344f8131f0c0fff319d75fd1ad7bf765e2ca1ab35ef0277edb8106e2ff0
+0x173eb: MOV AX, 0x0
+0x173ee: CALL 0x1000:e7bd
+0x173f1: MOV AX, 0x212b
+0x173f4: PUSH AX
+0x173f5: CALL 0x1000:7251
+0x173f8: POP CX
+0x173f9: MOV BX, word ptr [BP + 0x4]
+0x173fc: MOV BX, word ptr [BX]
+0x173fe: MOV byte ptr [BX], AL
+0x17400: TEST AL, AL
+0x17402: JZ 0x1000:7409
+0x17404: MOV BX, word ptr [BP + 0x4]
+0x17407: INC word ptr [BX]
+0x17409: RET

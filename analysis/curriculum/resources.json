@@ -1,0 +1,55 @@
+{
+  "scope": "Static table extraction; no DOS runtime parity claim or named student data import",
+  "binary_sha256": "6e80ab0186040beef29c8be8b39a36ddc0e2c9b15ca20e0eedd4055d76379288",
+  "history_sha256": "c8f20fde998af4e9adae34067513af74bc5f6b1e4bf080dbbb2d6fa48e6ce588",
+  "bootstrap_source": {
+    "unnamed_record_slot": 5,
+    "record_bytes": 1996,
+    "note": "Observed unnamed saved template, not a complete onboarding algorithm"
+  },
+  "data_segment_file_base": "0xfae0",
+  "tables": {
+    "grammar": "DS8698..8878; offsets DS8632[51]",
+    "dictionary": "DS214e[46][23] uint16 offsets relative DS2992; MSB-first 5-bit symbols",
+    "callbacks": "DS2088[44] code offsets, not string pointers",
+    "character_classification": "DS8e7d[128]; key normalization 0x1722b, 0x1e793",
+    "weights": "TT.HIS unnamed profile +0x49[75]",
+    "counterparts": "DS85b4[64]; remaining terminator/extra bytes deliberately omitted"
+  },
+  "validation": {
+    "dictionary_blocks": 1058,
+    "dictionary_words": 4019,
+    "highest_dictionary_end_ds": "0x7a0f",
+    "all_blocks_within_next_block": true,
+    "grammar_bytes": 481
+  },
+  "evidence_functions": [
+    "0x164cc",
+    "0x16629",
+    "0x1665a",
+    "0x16802",
+    "0x1722b",
+    "0x1e793",
+    "0x1bdcb",
+    "0x15854",
+    "0x157cc",
+    "0x168e3",
+    "0x169a0",
+    "0x16b2b",
+    "0x16b80",
+    "0x16f1b",
+    "0x17023",
+    "0x1708a",
+    "0x1714d",
+    "0x171ce",
+    "0x173ad",
+    "0x1745c",
+    "0x174ab",
+    "0x1757b",
+    "0x175e2",
+    "0x1c32b",
+    "0x1c98e"
+  ],
+  "output_sha256": "3c16eb0b400fee1fcb197d8cd5ba5a3813c94cdbe853084ee68b96a72506ea82",
+  "extractor_sha256": "67c13b34d40aa09843c692a7a79745265a51b95fe9cefd51164b9a806b55d924"
+}

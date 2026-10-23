@@ -1,0 +1,16 @@
+; ev_451ccbacd170464da7664dcd23d23dd4efc9bcc95e8abfb177c8eaa136eb0e78
+0x1f6a4: PUSH BP
+0x1f6a5: MOV BP, SP
+0x1f6a7: PUSH SI
+0x1f6a8: MOV SI, word ptr [BP + 0x4]
+0x1f6ab: LEA AX, [BP + 0x6]
+0x1f6ae: PUSH AX
+0x1f6af: PUSH SI
+0x1f6b0: MOV AX, 0xf660
+0x1f6b3: PUSH AX
+0x1f6b4: CALL 0x1000:ece8
+0x1f6b7: ADD SP, 0x6
+0x1f6ba: POP SI
+0x1f6bb: MOV SP, BP
+0x1f6bd: POP BP
+0x1f6be: RET

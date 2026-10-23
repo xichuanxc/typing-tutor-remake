@@ -1,0 +1,22 @@
+{
+  "source": "/Users/xc/Documents/DosBox_Root/DosGames/DOSUTILS/TT",
+  "recorded": "2026-10-22",
+  "algorithm": "SHA-256",
+  "files": [
+    {
+      "path": "TT/TT.EXE",
+      "bytes": 100592,
+      "sha256": "22b70fb15d9dbef9d1c2e00a3a0e6dca6a20486fc0bdca8cc8371b6f3b8026b7"
+    },
+    {
+      "path": "TT/TT.HLP",
+      "bytes": 12651,
+      "sha256": "5c787383d36fdb07dbb48a222b747309bc2aa91b1bdf45c769673f3a469c8bca"
+    },
+    {
+      "path": "TT/TT.HIS",
+      "bytes": 18319,
+      "sha256": "c8f20fde998af4e9adae34067513af74bc5f6b1e4bf080dbbb2d6fa48e6ce588"
+    }
+  ]
+}

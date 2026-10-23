@@ -1,0 +1,132 @@
+{
+  "version": "0.2.0",
+  "scope": "F1/F2 delivered application, test sources and screenshots",
+  "algorithm": "SHA-256",
+  "files": [
+    {
+      "path": "dist/app.js",
+      "bytes": 16501,
+      "sha256": "bdabbc0aae3ab39b9cf096308062b2f80545385afe659d7112bfd159b0197485"
+    },
+    {
+      "path": "dist/cp437.js",
+      "bytes": 1625,
+      "sha256": "a483eb446c79d2e0d29351fd1c07366c8c7cff7abce374f62569d3ea729708c2"
+    },
+    {
+      "path": "dist/engine.js",
+      "bytes": 4772,
+      "sha256": "60615bc45482b9205144dd1522b2ec76d4ce86e5b8bf4091f78154111d2e2439"
+    },
+    {
+      "path": "dist/faithful-session.js",
+      "bytes": 3128,
+      "sha256": "c2b7a536f2ed8459bf1afabef4aa3218710f083e96454fde907606ffda5ee292"
+    },
+    {
+      "path": "dist/grid.js",
+      "bytes": 2702,
+      "sha256": "7acd66983fc0e7f7071684ad714e0e5aa594bfbff2a59e4f786eca3514a2dfc3"
+    },
+    {
+      "path": "dist/index.html",
+      "bytes": 1162,
+      "sha256": "07abef2215ccf5307bca4c065d306dfdf701e5177e8a6b067e48d3ca21dabc40"
+    },
+    {
+      "path": "dist/original-data.js",
+      "bytes": 24522,
+      "sha256": "5a0cde974aacba988d58d636011fd20df1fcdc6c63d53db444842eafaefc36fa"
+    },
+    {
+      "path": "dist/prototype/app.js",
+      "bytes": 14395,
+      "sha256": "02ff2c4272f98c4f4fad4fb73770382ee2f644ed1386c8b6be815607eeb505c1"
+    },
+    {
+      "path": "dist/prototype/engine.js",
+      "bytes": 4772,
+      "sha256": "60615bc45482b9205144dd1522b2ec76d4ce86e5b8bf4091f78154111d2e2439"
+    },
+    {
+      "path": "dist/prototype/index.html",
+      "bytes": 998,
+      "sha256": "7d3a4994cd4189a5d272e4332b36e682dc14d9dde97d8e782d788abd98f3322b"
+    },
+    {
+      "path": "dist/prototype/storage.js",
+      "bytes": 1822,
+      "sha256": "dcc4fb07c3a5cb429d8ccf79091cacda5988d4e57797ebe61efe101b70811d98"
+    },
+    {
+      "path": "dist/prototype/style.css",
+      "bytes": 5820,
+      "sha256": "0a4b196bd17a78f4d46bcdd60e77688d05d31854dc850787a658d149053ad04b"
+    },
+    {
+      "path": "dist/storage.js",
+      "bytes": 1822,
+      "sha256": "dcc4fb07c3a5cb429d8ccf79091cacda5988d4e57797ebe61efe101b70811d98"
+    },
+    {
+      "path": "dist/style.css",
+      "bytes": 2279,
+      "sha256": "59551407b6daa713223ab06c7053d5ed709a13ad058300265a1bfa072f0c29b9"
+    },
+    {
+      "path": "docs/faithful-delivery.md",
+      "bytes": 7369,
+      "sha256": "3f7c6c338ba1fa1ce8d629be9ed7c5c6b9021054943125ea39e76816c6623da0"
+    },
+    {
+      "path": "docs/screenshots/faithful-idle-help.png",
+      "bytes": 119733,
+      "sha256": "c82c269b34207fa431d94e521116bc6125b0132cc56890f1f233b7d095942a04"
+    },
+    {
+      "path": "docs/screenshots/faithful-main-menu.png",
+      "bytes": 36427,
+      "sha256": "8aea95ae06464ae1bf70fd188d6478a567fd27ee32111bdb1a8f4f29095f2d83"
+    },
+    {
+      "path": "docs/screenshots/faithful-mobile.png",
+      "bytes": 37607,
+      "sha256": "27d0ef6be85d0b312ece20055bf9c8413b3dc2f58bc1f04a6ea0065188b6d7d0"
+    },
+    {
+      "path": "docs/screenshots/faithful-options-menu.png",
+      "bytes": 32964,
+      "sha256": "d49b71f6fb449e4788376a7057a515cc2c5eccc637741fc85909b5073d880713"
+    },
+    {
+      "path": "docs/screenshots/faithful-quit-dialog.png",
+      "bytes": 50297,
+      "sha256": "07a96d8685d5de0c972c83c01e27e1b42639450f8d1ffb52e82b864d89c89755"
+    },
+    {
+      "path": "docs/screenshots/faithful-wpm-dialog.png",
+      "bytes": 69580,
+      "sha256": "f700ac8aa3776199744270a96eb10cbc31b667405b0f40fa8036719faeba26d9"
+    },
+    {
+      "path": "scripts/build-faithful-resources.py",
+      "bytes": 2488,
+      "sha256": "c1236cb35ec6f2312da54701b6d9162ed857dbf225009cfa1c8a06787a57b03f"
+    },
+    {
+      "path": "tests/browser-smoke.mjs",
+      "bytes": 9047,
+      "sha256": "38f901c866e2433c01ec6de608e58bfc6664e5f73275d71d322497ea1fcca1dc"
+    },
+    {
+      "path": "tests/faithful.test.mjs",
+      "bytes": 4374,
+      "sha256": "aeb9de6a85ee4faf660a5b676026ee34903207b306b111fc5821d623b14941dd"
+    },
+    {
+      "path": "tests/prototype-smoke.mjs",
+      "bytes": 4746,
+      "sha256": "d5818fe43678d6e49ed736aaf85e10aad56175761c62f70b8082ca2ccfd0e604"
+    }
+  ]
+}

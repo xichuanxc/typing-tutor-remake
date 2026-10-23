@@ -1,0 +1,25 @@
+; ev_59b5596846e951e50afc81135c9e9f3105128039b8d59150cef160b4c25ac524
+0x1bbea: PUSH BP
+0x1bbeb: MOV BP, SP
+0x1bbed: ADD SP, -0x1
+0x1bbf0: MOV byte ptr [BP + -0x1], 0x0
+0x1bbf4: MOV AL, byte ptr [BP + -0x1]
+0x1bbf7: CMP AL, byte ptr [BP + 0x6]
+0x1bbfa: JNC 0x1000:bc10
+0x1bbfc: MOV AL, byte ptr [BP + -0x1]
+0x1bbff: INC byte ptr [BP + -0x1]
+0x1bc02: SUB AH, AH
+0x1bc04: MOV BX, AX
+0x1bc06: ADD BX, word ptr [BP + 0x8]
+0x1bc09: MOV AL, byte ptr [BP + 0x4]
+0x1bc0c: MOV byte ptr [BX], AL
+0x1bc0e: JMP 0x1000:bbf4
+0x1bc10: MOV AL, byte ptr [BP + -0x1]
+0x1bc13: SUB AH, AH
+0x1bc15: MOV BX, AX
+0x1bc17: ADD BX, word ptr [BP + 0x8]
+0x1bc1a: MOV byte ptr [BX], 0x0
+0x1bc1d: MOV AX, word ptr [BP + 0x8]
+0x1bc20: MOV SP, BP
+0x1bc22: POP BP
+0x1bc23: RET

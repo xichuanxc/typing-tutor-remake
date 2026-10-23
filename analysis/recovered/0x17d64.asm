@@ -1,0 +1,23 @@
+; ev_7e37d43dbfac3be854a53478c9e9f54ca613aad8a188d7a31051b8979e6ba0cb
+0x17d64: PUSH BP
+0x17d65: MOV BP, SP
+0x17d67: MOV AX, [0xa04a]
+0x17d6a: CMP AX, word ptr [0xa04c]
+0x17d6e: JC 0x1000:7d7b
+0x17d70: SUB AX, word ptr [0xa04c]
+0x17d74: MOV BX, word ptr [BP + 0x4]
+0x17d77: MOV word ptr [BX], AX
+0x17d79: JMP 0x1000:7d8b
+0x17d7b: MOV AX, 0xaa
+0x17d7e: SUB AX, word ptr [0xa04c]
+0x17d82: ADD AX, word ptr [0xa04a]
+0x17d86: MOV BX, word ptr [BP + 0x4]
+0x17d89: MOV word ptr [BX], AX
+0x17d8b: MOV AX, 0xaa
+0x17d8e: MOV BX, word ptr [BP + 0x4]
+0x17d91: SUB AX, word ptr [BX]
+0x17d93: MOV BX, word ptr [BP + 0x6]
+0x17d96: MOV word ptr [BX], AX
+0x17d98: MOV SP, BP
+0x17d9a: POP BP
+0x17d9b: RET

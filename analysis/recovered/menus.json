@@ -1,0 +1,396 @@
+{
+  "evidence": [
+    "ev_e6eb21054f8ed7beabfe2411d9371943e57d1982a743e57e00d1c7d823530c7d",
+    "ev_63c8db3c31ea69ec02033f050460cbdf4cf6934c3a07b2aa78979d7d3ade53d7",
+    "ev_a545e9e0b8b411f8891b88f927bbecac71d83fb858ce2203b5196d830ec64423",
+    "ev_c9fc2ce3fe49f925a28f0513c6d1064b538924774dd3d80e720c4342df01e1a8"
+  ],
+  "menus": [
+    {
+      "index": 0,
+      "title": "Main Menu",
+      "record_address": "0x20c2c",
+      "record_file_offset": "0x10e2c",
+      "items": [
+        {
+          "label": "Lessons",
+          "column": 0,
+          "label_ds_offset": "0x1444",
+          "action": 1,
+          "submenu_index": 1
+        },
+        {
+          "label": "Tests",
+          "column": 9,
+          "label_ds_offset": "0x144c",
+          "action": 2,
+          "submenu_index": 2
+        },
+        {
+          "label": "Reports",
+          "column": 16,
+          "label_ds_offset": "0x1112",
+          "action": 3,
+          "submenu_index": 3
+        },
+        {
+          "label": "Options",
+          "column": 25,
+          "label_ds_offset": "0x1452",
+          "action": 4,
+          "submenu_index": 4
+        },
+        {
+          "label": "Game",
+          "column": 34,
+          "label_ds_offset": "0x145a",
+          "action": 5,
+          "submenu_index": 5
+        },
+        {
+          "label": "Help",
+          "column": 40,
+          "label_ds_offset": "0x1189",
+          "action": -1,
+          "handler_address": "0x132bd",
+          "description": "Information about Main Menu"
+        },
+        {
+          "label": "Quit",
+          "column": 46,
+          "label_ds_offset": "0x118e",
+          "action": -2,
+          "handler_address": "0x10335",
+          "description": "Exit Typing Tutor IV"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "title": "Lessons Menu",
+      "record_address": "0x20c4b",
+      "record_file_offset": "0x10e4b",
+      "items": [
+        {
+          "label": "Practice",
+          "column": 0,
+          "label_ds_offset": "0x131f",
+          "action": -3,
+          "handler_address": "0x12741",
+          "description": "Practice Lesson"
+        },
+        {
+          "label": "Fingering",
+          "column": 10,
+          "label_ds_offset": "0x146c",
+          "action": -4,
+          "handler_address": "0x1291c",
+          "description": "Finger Positioning Lesson"
+        },
+        {
+          "label": "Keypad",
+          "column": 21,
+          "label_ds_offset": "0x1333",
+          "action": -5,
+          "handler_address": "0x1282a",
+          "description": "Keypad Lesson"
+        },
+        {
+          "label": "Help",
+          "column": 29,
+          "label_ds_offset": "0x1189",
+          "action": -6,
+          "handler_address": "0x1293a",
+          "description": "Information about Lessons Menu"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "title": "Tests Menu",
+      "record_address": "0x20c6a",
+      "record_file_offset": "0x10e6a",
+      "items": [
+        {
+          "label": "Practice",
+          "column": 0,
+          "label_ds_offset": "0x131f",
+          "action": -7,
+          "handler_address": "0x12952",
+          "description": "Practice Test"
+        },
+        {
+          "label": "All-keys",
+          "column": 10,
+          "label_ds_offset": "0x1061",
+          "action": -8,
+          "handler_address": "0x12a2c",
+          "description": "All-keys Test"
+        },
+        {
+          "label": "Disk",
+          "column": 20,
+          "label_ds_offset": "0x1484",
+          "action": -9,
+          "handler_address": "0x12b58",
+          "description": "Disk Test"
+        },
+        {
+          "label": "Keypad",
+          "column": 26,
+          "label_ds_offset": "0x1333",
+          "action": -10,
+          "handler_address": "0x12cc6",
+          "description": "Keypad Test"
+        },
+        {
+          "label": "Help",
+          "column": 34,
+          "label_ds_offset": "0x1189",
+          "action": -11,
+          "handler_address": "0x12d6a",
+          "description": "Information about Tests Menu"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "title": "Reports Menu",
+      "record_address": "0x20c89",
+      "record_file_offset": "0x10e89",
+      "items": [
+        {
+          "label": "Progress",
+          "column": 0,
+          "label_ds_offset": "0x1127",
+          "action": -12,
+          "handler_address": "0x12d82",
+          "description": "Progress Report"
+        },
+        {
+          "label": "Speed",
+          "column": 10,
+          "label_ds_offset": "0x1130",
+          "action": -13,
+          "handler_address": "0x12de2",
+          "description": "Speed Graph"
+        },
+        {
+          "label": "Accuracy",
+          "column": 17,
+          "label_ds_offset": "0x1136",
+          "action": -14,
+          "handler_address": "0x12e3b",
+          "description": "Accuracy Graph"
+        },
+        {
+          "label": "Help",
+          "column": 27,
+          "label_ds_offset": "0x1189",
+          "action": -15,
+          "handler_address": "0x12e95",
+          "description": "Information about Reports Menu"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "title": "Options Menu",
+      "record_address": "0x20ca8",
+      "record_file_offset": "0x10ea8",
+      "items": [
+        {
+          "label": "WPM",
+          "column": 0,
+          "label_ds_offset": "0x149b",
+          "action": -16,
+          "handler_address": "0x12ead",
+          "description": "Change speed goal"
+        },
+        {
+          "label": "Time",
+          "column": 5,
+          "label_ds_offset": "0x149f",
+          "action": -17,
+          "handler_address": "0x12ec5",
+          "description": "Adjust practice goal"
+        },
+        {
+          "label": "Drills",
+          "column": 11,
+          "label_ds_offset": "0x14a4",
+          "action": -18,
+          "handler_address": "0x12edd",
+          "description": "Change duration of lessons"
+        },
+        {
+          "label": "Sound",
+          "column": 19,
+          "label_ds_offset": "0x1028",
+          "action": -19,
+          "handler_address": "0x12ef5",
+          "description": "Turn sound on and off"
+        },
+        {
+          "label": "Name",
+          "column": 26,
+          "label_ds_offset": "0x14ab",
+          "action": -20,
+          "handler_address": "0x12f0d",
+          "description": "Change your name"
+        },
+        {
+          "label": "Intro",
+          "column": 32,
+          "label_ds_offset": "0x14b0",
+          "action": -21,
+          "handler_address": "0x12f25",
+          "description": "Review Typing Tutor IV introduction"
+        },
+        {
+          "label": "Help",
+          "column": 39,
+          "label_ds_offset": "0x1189",
+          "action": -22,
+          "handler_address": "0x12f50",
+          "description": "Information about Options Menu"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "title": "Game Menu",
+      "record_address": "0x20cc7",
+      "record_file_offset": "0x10ec7",
+      "items": [
+        {
+          "label": "Play",
+          "column": 0,
+          "label_ds_offset": "0x14c0",
+          "action": -23,
+          "handler_address": "0x12f68",
+          "description": "Letter Invaders (R)"
+        },
+        {
+          "label": "Scores",
+          "column": 6,
+          "label_ds_offset": "0x14c5",
+          "action": -24,
+          "handler_address": "0x12f7f",
+          "description": "Score board"
+        },
+        {
+          "label": "Help",
+          "column": 14,
+          "label_ds_offset": "0x1189",
+          "action": -25,
+          "handler_address": "0x12f97",
+          "description": "Information about Game Menu"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "title": "Main Menu",
+      "record_address": "0x20ce6",
+      "record_file_offset": "0x10ee6",
+      "items": [
+        {
+          "label": "Encrypt",
+          "column": 0,
+          "label_ds_offset": "0x14d0",
+          "action": -26,
+          "handler_address": "0x12faf",
+          "description": "Encrypt a test file on disk"
+        },
+        {
+          "label": "Reports",
+          "column": 9,
+          "label_ds_offset": "0x1112",
+          "action": 7,
+          "submenu_index": 7
+        },
+        {
+          "label": "Password",
+          "column": 18,
+          "label_ds_offset": "0x14d8",
+          "action": -27,
+          "handler_address": "0x12fc9",
+          "description": "Change teacher password"
+        },
+        {
+          "label": "Delete",
+          "column": 28,
+          "label_ds_offset": "0x14e1",
+          "action": -28,
+          "handler_address": "0x13276",
+          "description": "Remove a student from history"
+        },
+        {
+          "label": "Help",
+          "column": 36,
+          "label_ds_offset": "0x1189",
+          "action": -29,
+          "handler_address": "0x132a5",
+          "description": "Information about Main Menu"
+        },
+        {
+          "label": "Quit",
+          "column": 42,
+          "label_ds_offset": "0x118e",
+          "action": -2,
+          "handler_address": "0x10335",
+          "description": "Exit Typing Tutor IV"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "title": "Reports Menu",
+      "record_address": "0x20d05",
+      "record_file_offset": "0x10f05",
+      "items": [
+        {
+          "label": "Composite",
+          "column": 0,
+          "label_ds_offset": "0x14e9",
+          "action": -30,
+          "handler_address": "0x12fe0",
+          "description": "Summary of disk test for all students"
+        },
+        {
+          "label": "Progress",
+          "column": 11,
+          "label_ds_offset": "0x1127",
+          "action": -31,
+          "handler_address": "0x130ac",
+          "description": "Progress Report"
+        },
+        {
+          "label": "Speed",
+          "column": 21,
+          "label_ds_offset": "0x1130",
+          "action": -32,
+          "handler_address": "0x13149",
+          "description": "Speed Graph"
+        },
+        {
+          "label": "Accuracy",
+          "column": 28,
+          "label_ds_offset": "0x1136",
+          "action": -33,
+          "handler_address": "0x131df",
+          "description": "Accuracy Graph"
+        },
+        {
+          "label": "Help",
+          "column": 38,
+          "label_ds_offset": "0x1189",
+          "action": -34,
+          "handler_address": "0x132d5",
+          "description": "Information about Reports Menu"
+        }
+      ]
+    }
+  ]
+}

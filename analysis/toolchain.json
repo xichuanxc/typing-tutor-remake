@@ -1,0 +1,52 @@
+{
+  "rea_version": "6.7.0",
+  "ghidra_version": "12.1.4",
+  "unpacker": "David Fifield exepack 1.4.0",
+  "transformation": [
+    ".tools/exepack-1.4.0/target/release/exepack",
+    "-d",
+    "TT/TT.EXE",
+    "analysis/derived/TT.unpacked.exe"
+  ],
+  "artifacts": [
+    {
+      "path": "TT/TT.EXE",
+      "bytes": 100592,
+      "sha256": "22b70fb15d9dbef9d1c2e00a3a0e6dca6a20486fc0bdca8cc8371b6f3b8026b7"
+    },
+    {
+      "path": "analysis/derived/TT.unpacked.exe",
+      "bytes": 100912,
+      "sha256": "6e80ab0186040beef29c8be8b39a36ddc0e2c9b15ca20e0eedd4055d76379288"
+    },
+    {
+      "path": ".tools/exepack-1.4.0.tar.gz",
+      "bytes": 49776,
+      "sha256": "212f3ec55822dc67763ab79534e5c9cd5fc2cf127a557a983a6b95ae4ad89ecf"
+    },
+    {
+      "path": ".tools/ghidra_12.1.4_PUBLIC_20260921.zip",
+      "bytes": 569649598,
+      "sha256": "ddac49f903da9d5bac833e5cc79395098b9c33cfd3279be5f31bd00387d2d4db"
+    }
+  ],
+  "ghidra_native_build": {
+    "command": [
+      "make",
+      "-j4",
+      "ghidra_opt",
+      "ARCH_TYPE=-arch arm64",
+      "ADDITIONAL_FLAGS=-mmacosx-version-min=11.0 -w"
+    ],
+    "source_directory": ".tools/ghidra_12.1.4_PUBLIC/Ghidra/Features/Decompiler/src/decompile/cpp",
+    "installed_path": ".tools/ghidra_12.1.4_PUBLIC/Ghidra/Features/Decompiler/os/mac_arm_64/decompile",
+    "sha256": "7434284fc5a6b46b3cb27ef2e8d3c4ea7f801ac1f0cca30e95eb27732c0c62f0"
+  },
+  "java_home": "/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home",
+  "java_version": "21.0.12.1",
+  "sources": {
+    "rea": "https://github.com/morluto/rea",
+    "ghidra": "https://github.com/NationalSecurityAgency/ghidra/releases/tag/Ghidra_12.1.4_build",
+    "exepack": "https://www.bamsoftware.com/software/exepack/"
+  }
+}

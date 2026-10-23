@@ -1,0 +1,18 @@
+; ev_b60c9ff73303862f3e8e9691fa0d65af8944bf61adc4b3631db5e767e10b3bc5
+0x1ec0b: PUSH BP
+0x1ec0c: MOV BP, SP
+0x1ec0e: PUSH SI
+0x1ec0f: MOV SI, word ptr [BP + 0x4]
+0x1ec12: DEC SI
+0x1ec13: DEC SI
+0x1ec14: TEST word ptr [SI], 0x1
+0x1ec18: JNZ 0x1000:ec22
+0x1ec1a: MOV AX, 0xffff
+0x1ec1d: POP SI
+0x1ec1e: MOV SP, BP
+0x1ec20: POP BP
+0x1ec21: RET
+0x1ec22: AND word ptr [SI], 0xfffe
+0x1ec26: MOV word ptr [0x8f58], SI
+0x1ec2a: XOR AX, AX
+0x1ec2c: JMP 0x1000:ec1d

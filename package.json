@@ -1,0 +1,37 @@
+{
+  "name": "typing-tutor-remake",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "python3 scripts/serve.py",
+    "test": "node --test tests/*.test.mjs",
+    "verify": "python3 scripts/verify-originals.py",
+    "test:browser": "node tests/browser-smoke.mjs",
+    "test:prototype": "node tests/prototype-smoke.mjs",
+    "resources": "python3 scripts/build-faithful-resources.py",
+    "test:practice": "node tests/practice-browser.mjs",
+    "test:adaptive": "node tests/adaptive-browser.mjs",
+    "resources:curriculum": "python3 scripts/extract-curriculum-data.py",
+    "test:reports": "node tests/tests-reports-browser.mjs",
+    "resources:reports": "python3 scripts/extract-report-data.py",
+    "test:keypad": "node tests/keypad-browser.mjs",
+    "resources:keypad": "python3 scripts/extract-keypad-data.py",
+    "test:disk": "node tests/disk-browser.mjs",
+    "resources:disk": "python3 scripts/extract-disk-data.py",
+    "test:invaders": "node tests/invaders-browser.mjs",
+    "resources:invaders": "python3 scripts/extract-invaders-data.py"
+  },
+  "devDependencies": {
+    "playwright": "^1.64.1"
+  },
+  "description": "A local browser reconstruction of Typing Tutor IV, with original keyboard lessons, reports and Letter Invaders.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xichuanxc/typing-tutor-remake.git"
+  },
+  "homepage": "https://github.com/xichuanxc/typing-tutor-remake#readme",
+  "bugs": {
+    "url": "https://github.com/xichuanxc/typing-tutor-remake/issues"
+  }
+}

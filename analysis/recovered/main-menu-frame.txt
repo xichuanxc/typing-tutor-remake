@@ -1,0 +1,25 @@
+ Main Menu                                                              Student 
+════════════════════════════════════════════════════════════════════════════════
+                                                                                
+Lessons  Tests  Reports  Options  Game  Help  Quit                              
+Practice  Fingering  Keypad  Help                                               
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                          Esc -> Exit Typing Tutor IV                           

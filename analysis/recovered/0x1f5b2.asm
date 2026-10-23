@@ -1,0 +1,17 @@
+; ev_d218363b7bb6d9f26404aa8b82481ae88dac2f3a9836a09df4417449044e5500
+0x1f5b2: PUSH BP
+0x1f5b3: MOV BP, SP
+0x1f5b5: PUSH DI
+0x1f5b6: MOV AX, word ptr [BP + 0x4]
+0x1f5b9: MOV DI, word ptr [0x8efe]
+0x1f5bd: ADD AX, DI
+0x1f5bf: PUSH AX
+0x1f5c0: CALL 0x1000:f5cf
+0x1f5c3: POP CX
+0x1f5c4: TEST AX, AX
+0x1f5c6: JNZ 0x1000:f5ca
+0x1f5c8: MOV AX, DI
+0x1f5ca: POP DI
+0x1f5cb: TEST AX, AX
+0x1f5cd: POP BP
+0x1f5ce: RET

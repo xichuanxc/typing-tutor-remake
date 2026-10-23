@@ -1,0 +1,15 @@
+.DS_Store
+__pycache__/
+.runtime/
+node_modules/
+
+.tools/
+analysis/derived/
+
+# Original DOS references and personal history stay local.
+TT/
+# Local credentials and execution logs.
+.env
+.env.*
+!.env.example
+*.log

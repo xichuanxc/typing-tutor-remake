@@ -1,0 +1,9 @@
+; ev_bc72ddc64adb0bb1957c124e1b6e357787001dd299e26a5a10d6f35a534bcc20
+0x1e696: PUSH BP
+0x1e697: MOV BP, SP
+0x1e699: PUSH DS
+0x1e69a: LDS BX, [BP + 0x4]
+0x1e69d: MOV AX, word ptr [BX]
+0x1e69f: POP DS
+0x1e6a0: POP BP
+0x1e6a1: RET

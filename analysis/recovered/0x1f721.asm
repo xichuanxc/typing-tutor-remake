@@ -1,0 +1,14 @@
+; ev_79820ee4a4d8185288c4e8739f4613120bd9c8ea427cbc54d357de5c38a0410c
+0x1f721: PUSH BP
+0x1f722: MOV BP, SP
+0x1f724: ADD SP, -0x1
+0x1f727: PUSH SI
+0x1f728: MOV SI, word ptr [BP + 0x4]
+0x1f72b: MOV AX, [0x8f42]
+0x1f72e: MOV byte ptr [BP + -0x1], AL
+0x1f731: MOV word ptr [0x8f42], SI
+0x1f735: CBW
+0x1f736: POP SI
+0x1f737: MOV SP, BP
+0x1f739: POP BP
+0x1f73a: RET
