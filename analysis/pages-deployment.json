@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-24",
+  "repository": "xichuanxc/typing-tutor-remake",
+  "host": "GitHub Pages",
+  "custom_domain": "tt.xcstudio.dev",
+  "build_type": "workflow",
+  "automatic_trigger": "push to main",
+  "first_deployed_source_commit": "34fcf49117efc8af2b315c2432dc2b21567b449c",
+  "first_deployment": {
+    "conclusion": "success",
+    "url": "https://github.com/xichuanxc/typing-tutor-remake/actions/runs/40012762697"
+  },
+  "checks": {
+    "conclusion": "success",
+    "url": "https://github.com/xichuanxc/typing-tutor-remake/actions/runs/40012762665",
+    "unit_tests": 143
+  },
+  "dns_at_verification": "No public tt CNAME/A response; zone uses Cloudflare nameservers",
+  "required_cloudflare_record": {
+    "type": "CNAME",
+    "name": "tt",
+    "target": "xichuanxc.github.io",
+    "proxy_status": "DNS only",
+    "ttl": "Auto"
+  },
+  "https_at_verification": {
+    "certificate": null,
+    "enforced": false,
+    "reason": "Awaiting DNS and certificate provisioning"
+  },
+  "external_action": "Owner adds DNS record; then verify public domain and enable HTTPS enforcement.",
+  "vps_used": false
+}
