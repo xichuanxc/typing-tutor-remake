@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-24",
+  "url": "https://tt.xcstudio.dev",
+  "runtime_commit": "0bbe89ce0a78326ffcb7db959d29538df1390a9d",
+  "ci": "https://github.com/xichuanxc/typing-tutor-remake/actions/runs/40018948600",
+  "deployment": "https://github.com/xichuanxc/typing-tutor-remake/actions/runs/40018948565",
+  "checks": {
+    "ci": "success",
+    "deployment": "success",
+    "public_prototype_link": "absent",
+    "prototype_path_status": 404,
+    "chrome_autoplay_policy": "document-user-activation-required",
+    "actual_gameplay": "Round1 completed through UI; round2 Boomlet reached",
+    "boomlet_pitches_scheduled": 72,
+    "audio_context": "running after user gesture",
+    "collision": "warning stopped",
+    "rendered_waveform_rms": 0.049,
+    "sound_off": "no AudioContext created",
+    "page_errors": []
+  },
+  "tls_validation": "normal; no bypass",
+  "test_dns_override": "tt.xcstudio.dev mapped to185.199.108.153 in isolated Chrome only",
+  "source_prototype": "Five files retained unchanged in dist/prototype/"
+}
