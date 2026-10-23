@@ -1,5 +1,6 @@
 import {InvadersGame,invadersTick} from "./invaders.js";
 import GAME from "./invaders-data.js";
+import {BoomletAudio} from "./game-audio.js";
 import {drawGameSetup,drawSecondName,drawRoundReady,drawGame,drawGameOver,drawScores} from "./invaders-screen.js";
 import {DiskTest} from "./disk-test.js";
 import DISK from "./disk-data.js";
@@ -48,11 +49,16 @@ function resize(){
 }
 window.addEventListener("resize",resize);resize();
 function announce(message){document.querySelector("#screen-status").textContent=message;}
+function audioContext(){
+  audio??=new (window.AudioContext||window.webkitAudioContext)();
+  if(audio.state==="suspended")audio.resume().catch(()=>{});
+  return audio;
+}
+const boomletAudio=new BoomletAudio(audioContext);
 function beep(){
   if(!student.working.sound)return;
   try{
-    audio??=new (window.AudioContext||window.webkitAudioContext)();
-    if(audio.state==="suspended")audio.resume().catch(()=>{});
+    audioContext();
     const tone=audio.createOscillator(),gain=audio.createGain();
     tone.type="square";tone.frequency.value=660;gain.gain.value=.025;
     tone.connect(gain);gain.connect(audio.destination);tone.start();tone.stop(audio.currentTime+.055);
@@ -346,7 +352,7 @@ function goMenu(menu=0,resetSelection=true){
 
 
 
-function stopGameClock(){if(gameFrame!==null){cancelAnimationFrame(gameFrame);gameFrame=null;}}
+function stopGameClock(){if(gameFrame!==null){cancelAnimationFrame(gameFrame);gameFrame=null;}boomletAudio.stop();}
 function openGameSetup(){
   stopGameClock();clearTimeout(idleTimer);gameSession=null;
   state.mode="game-setup";state.selected=0;state.gameMode="practice";state.gameNameError="";
@@ -382,6 +388,7 @@ function acceptGameName(){
 }
 function startInvaders(players){
   stopGameClock();
+  if(student.working.sound)boomletAudio.unlock();
   gameSession=new InvadersGame(student.beginAdaptivePractice(),{mode:state.gameMode,players});
   syncGameMode();render();announce("Round 1. Press Enter to begin.");
 }
@@ -392,7 +399,14 @@ function retainGame(){
 function syncGameMode(){
   state.mode=({"ready":"game-ready","playing":"game-playing","level-end":"game-round","game-over":"game-over"})[gameSession.phase];
 }
-function gameSounds(){if(gameSession.drainEvents().length)beep();}
+function gameSounds(){
+  const events=gameSession.drainEvents();
+  if(!student.working.sound||gameSession.phase!=="playing"){boomletAudio.stop();return;}
+  const active=gameSession.targets.some(target=>target.type===2);
+  if(!active)boomletAudio.stop();
+  if(active&&events.some(event=>event.type==="boomlet"))boomletAudio.start();
+  if(events.some(event=>event.type!=="boomlet")&&!boomletAudio.playing)beep();
+}
 function armGameClock(){
   if(gameFrame!==null||state.mode!=="game-playing")return;
   const frame=()=>{
@@ -406,6 +420,7 @@ function armGameClock(){
   gameFrame=requestAnimationFrame(frame);
 }
 function invadersKey(key){
+  if(student.working.sound)boomletAudio.unlock();
   const previous=gameSession.phase;
   const result=gameSession.input(key,invadersTick(performance.now()));
   gameSounds();syncGameMode();

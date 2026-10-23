@@ -79,3 +79,6 @@ The owner requested online deployment packaging for proposed tt.xcstudio.dev. Th
 
 ## GitHub-hosted automatic deployment (2026-10-24)
 The owner selected GitHub Pages for hosting while retaining tt.xcstudio.dev at Cloudflare. Pages/custom-domain settings are enabled, and pushes to main run tests, package and deploy automatically. Cloudflare DNS access is not connected; the documented tt CNAME and subsequent HTTPS verification are the remaining external setup. The VPS and existing tunnels are not used for this app.
+
+## Game audio and published scope correction (2026-10-24)
+The owner reported the missing fast-letter warning. Boomlet sound now uses the recovered pitch sequence and initializes Web Audio from the game-start gesture; mute and special-target removal stop it. The earlier prototype stays in dist/prototype/ for repository/local reference but has no main-screen link and is excluded from static publication. See [game evidence](letter-invaders.md) and [deployment](deployment.md).

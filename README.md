@@ -40,7 +40,7 @@ Use Export browser data for a JSON backup; backup import is not implemented yet.
 - Original Disk tests from local .tst/.txt files, including six-line paging, byte decoding and separate test history.
 - Six-line Practice/All-keys tests with the recovered full-key text generator and result dialog.
 - Progress, Speed and Accuracy reports with current/history counters and original graph layout.
-- Letter Invaders: Practice Keys/Full Keyboard, one/two players, original targeting/scoring and separate global top-five tables.
+- Letter Invaders: Practice Keys/Full Keyboard, one/two players, original targeting/scoring, descending Boomlet warning and separate global top-five tables.
 - Working settings, practice records and game scores remain in memory. Use **Quit → Yes, save session to history** to persist them.
 - Quit → No discards changes; Return to Main Menu keeps the session open.
 - Export browser data downloads both saved versions and the current working session.
@@ -72,8 +72,8 @@ Upload the extracted contents of artifacts/typing-tutor-remake-v0.2.0-web.zip to
 
 ## Earlier playable prototype
 
-The v0.1 typing app remains at http://127.0.0.1:8080/prototype/ and via the link below the new screen.
-Its lessons, tests, reports and old scoring rules remain available.
+The v0.1 typing app is retained in dist/prototype/ for reference and local testing at http://127.0.0.1:8080/prototype/.
+It is excluded from the online site and deployment ZIP. Its old lessons, reports and scoring remain available in the repository.
 Its original browser-storage key is untouched. The faithful app uses a separate versioned key; no scores are migrated or relabeled.
 
 ## Checks
@@ -95,6 +95,7 @@ npm run test:reports
 npm run test:keypad
 npm run test:disk
 npm run test:invaders
+npm run test:audio
 ```
 
 The tests use temporary profiles, start/stop their own loopback servers and capture screenshots under docs/screenshots/.

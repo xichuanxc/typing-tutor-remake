@@ -1,5 +1,5 @@
 {
-  "scope": "Static Letter Invaders UI resources; no native runtime capture or named-history score import",
+  "scope": "Static Letter Invaders UI and Boomlet sound resources; no native runtime capture or named-history score import",
   "binary_sha256": "6e80ab0186040beef29c8be8b39a36ddc0e2c9b15ca20e0eedd4055d76379288",
   "strings": {
     "levelTitle": "0x172d",
@@ -82,8 +82,46 @@
     {
       "address": "0x1ab36",
       "evidence": "ev_cfd5ec84fa09e83c3b67a3485647a3d58e1a34e3fcced77cb4cd0e3b4e165c6f"
+    },
+    {
+      "address": "0x1a541",
+      "evidence": "ev_514c05072e2d126263c130188778dce044a89fe5ce248012537406459b04fe15"
+    },
+    {
+      "address": "0x17e47",
+      "evidence": "ev_ca6539bd67c89e1a39b2f70fb56ede4ae78d536b904dccc4637e58edf571988f"
+    },
+    {
+      "address": "0x17a75",
+      "evidence": "ev_ae78b4f461a068957284e71237e2c15b69ad01353aeae76e6c03a02cc219530c"
+    },
+    {
+      "address": "0x17ce8",
+      "evidence": "ev_1269a907b6538aae4cbe69368c56eab210d23de04c4bd4d9d7914a6a50a08b9b"
+    },
+    {
+      "address": "0x17d49",
+      "evidence": "ev_bad2fe6ea47abe2274edeb164b0718c4aad18520dbd09e9a07716c8130a55ca6"
+    },
+    {
+      "address": "0x1a22a",
+      "evidence": "ev_00885ae97ed2a87e03eed087ad702883a1a3f734a238c70197b897d8744830c6"
     }
   ],
+  "boomlet_sound": {
+    "pitch_table": "DS7dd0[12] uint32",
+    "pitch_unit": "hundredths of Hz",
+    "octave_divisors": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32
+    ],
+    "note_ms": 83,
+    "timer_rounding": "floor((ms*182+5000)/10000) BIOS ticks; zero-length silence entries consume no tick"
+  },
   "score_table": {
     "address": "DS9843",
     "modeCount": 2,
@@ -97,6 +135,6 @@
     },
     "note": "Global tail data beyond active profile; no names or score values imported."
   },
-  "output_sha256": "4c95b751d9cd57161056dcae14afafcc28769626beca534497a0d887999168af",
-  "extractor_sha256": "fdc5692ccf39747d11936f402b632fc0aab0139dfda531ba9c02022b6cced402"
+  "output_sha256": "96c8ccca9ad738d071a627f431a9cc016974302e692400507df5c9f31e80df88",
+  "extractor_sha256": "7d049896ad4b599ced7d59da30b20a024aa4097028c439170a085387eecd5834"
 }

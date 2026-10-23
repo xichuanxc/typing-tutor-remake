@@ -10,11 +10,11 @@ From the repository root:
 npm run package:web
 ~~~
 
-Python 3 is only a packaging tool here. The output artifacts/typing-tutor-remake-v0.2.0-web.zip contains the complete static app, including the verified original Intro, earlier prototype, license scope, provenance and deployment notes. Its adjacent .sha256 and .manifest.json files record archive/file checksums. The uncompressed site is also staged under .runtime/site/.
+Python 3 is only a packaging tool here. The output artifacts/typing-tutor-remake-v0.2.0-web.zip contains the complete static app, including the verified original Intro, license scope, provenance and deployment notes. Its adjacent .sha256 and .manifest.json files record archive/file checksums. The uncompressed site is also staged under .runtime/site/.
 
 The packager reads only dist/ and the named release notices. It rejects symlinks and excludes DOS references, analysis archives, tools, dependencies, private saves and server code. No build framework or server interpreter is needed at runtime.
 
-Verify the extracted archive in installed Google Chrome with npm run test:package after packaging. This checks both root and project-path hosting, the current Intro, local Disk files and the preserved prototype.
+Verify the extracted archive in installed Google Chrome with npm run test:package after packaging. This checks both root and project-path hosting, the current Intro, local Disk files and absence of the prototype.
 
 ## Deploy to a static host
 
@@ -50,7 +50,7 @@ After DNS resolves, GitHub provisions a certificate. Enable Enforce HTTPS in [re
 
 Push the desired code to main. Follow [Deploy static site runs](https://github.com/xichuanxc/typing-tutor-remake/actions/workflows/pages.yml) to see test/build/deployment status. GitHub hosts the app; Cloudflare provides DNS. No manual ZIP upload is required. An already-open browser tab still needs save/reload to load a new version.
 
-For an Actions deployment, GitHub ignores CNAME files; the Pages custom-domain setting is still required. Until a custom domain is connected, the workflow may serve at the normal GitHub Pages project address. Relative app imports and the prototype link work under a project path.
+For an Actions deployment, GitHub ignores CNAME files; the Pages custom-domain setting is still required. Until a custom domain is connected, the workflow may serve at the normal GitHub Pages project address. Relative app imports work under a project path. The earlier prototype remains in the repository but is deliberately excluded from the public site and deployment ZIP.
 
 These instructions follow [GitHub's workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages) and [custom-domain documentation](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
 

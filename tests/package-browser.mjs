@@ -2,10 +2,10 @@ import {chromium} from "playwright";
 import assert from "node:assert/strict";
 import {spawn,execFileSync} from "node:child_process";
 import {once} from "node:events";
-import {readFile} from "node:fs/promises";
+import {rm} from "node:fs/promises";
 const archive="artifacts/typing-tutor-remake-v0.2.0-web.zip";
-execFileSync("python3",["-c","from pathlib import Path; import zipfile; root=Path('.runtime/deployment-check'); root.mkdir(parents=True,exist_ok=True); z=zipfile.ZipFile('"+archive+"'); z.extractall(root); z.extractall(root/'typing-tutor-remake')"]);
-const base="http://127.0.0.1:8773",server=spawn("python3",["-m","http.server","8773","--bind","127.0.0.1","--directory",".runtime/deployment-check"],{stdio:"ignore"});
+const root=execFileSync("python3",["-c","from pathlib import Path; import tempfile,zipfile; Path('.runtime').mkdir(exist_ok=True); root=Path(tempfile.mkdtemp(prefix='deployment-check-',dir='.runtime')); z=zipfile.ZipFile('"+archive+"'); assert not any(n.startswith('prototype/') for n in z.namelist()); z.extractall(root); z.extractall(root/'typing-tutor-remake'); print(root)"]).toString().trim();
+const base="http://127.0.0.1:8773",server=spawn("python3",["-m","http.server","8773","--bind","127.0.0.1","--directory",root],{stdio:"ignore"});
 let browser;
 try{
  for(let i=0;i<50;i++){
@@ -32,12 +32,13 @@ try{
   assert.match(await page.locator("#terminal").getAttribute("data-disk-target"),/A simple typing test/);
   await page.keyboard.press("Escape");
   await page.keyboard.press("q");await page.getByRole("option",{name:"No, do not save to history",exact:true}).click();
-  await page.getByRole("link",{name:"Earlier typing prototype"}).click();await page.waitForLoadState("load");
-  assert.ok(page.url().endsWith(path+"prototype/"));
+  assert.equal(await page.getByRole("link",{name:"Earlier typing prototype"}).count(),0);
+  assert.equal((await fetch(base+path+"prototype/")).status,404);
  }
  assert.deepEqual(errors,[]);
- console.log("PASS extracted ZIP in installed Chrome: root and project-path modules, original Intro, local Disk test/hash, prototype, license/domain files and excluded private paths; no page errors.");
+ console.log("PASS extracted ZIP in installed Chrome: root and project-path modules, original Intro, local Disk test/hash, prototype exclusion, license/domain files and excluded private paths; no page errors.");
 }finally{
  if(browser)await browser.close();
  if(server.exitCode===null){const ended=once(server,"exit");server.kill();await ended;}
+ await rm(root,{recursive:true,force:true});
 }

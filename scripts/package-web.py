@@ -33,6 +33,8 @@ for source in sorted(DIST.rglob("*")):
     if not source.is_file():
         continue
     relative = source.relative_to(DIST)
+    if relative.parts[0] == "prototype":
+        continue
     if source.suffix.lower() not in {".html", ".js", ".css"} and str(relative) not in {"CNAME", ".nojekyll"}:
         raise SystemExit("Unexpected web-root file: " + str(relative))
     destination = SITE / relative
@@ -52,7 +54,9 @@ shutil.copyfile(ROOT / "docs/deployment.md", SITE / "DEPLOYMENT.md")
     "repository": "https://github.com/xichuanxc/typing-tutor-remake",
 }, indent=2) + "\n")
 files = sorted(p for p in SITE.rglob("*") if p.is_file())
-assert (SITE / "index.html").is_file() and (SITE / "prototype/index.html").is_file()
+assert (SITE / "index.html").is_file()
+assert not (SITE / "prototype").exists()
+assert (DIST / "prototype/index.html").is_file()  # Retained only in the source repository.
 OUTPUT.mkdir(exist_ok=True)
 basename = "typing-tutor-remake-v" + version + "-web"
 archive = OUTPUT / (basename + ".zip")

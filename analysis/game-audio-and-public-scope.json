@@ -1,0 +1,199 @@
+{
+  "date": "2026-10-24",
+  "scope": "Native Boomlet warning restored; prototype retained in source and excluded from publication",
+  "sound_evidence": {
+    "spawn": "0x1a541",
+    "effect": "0x17e47 case0",
+    "pitches": "DS7dd0[12] uint32",
+    "queue": "0x17a75 and0x17ce8",
+    "special_stop": "0x1a22a and0x17d49"
+  },
+  "checks": {
+    "unit_tests": 145,
+    "chrome": [
+      "menus/settings/Intro",
+      "game/scoring/two-player/persistence",
+      "root/project-path extracted package and prototype404",
+      "strict autoplay; genuine round-two Boomlet; Sound On/Off"
+    ],
+    "rendered_waveform_rms": 0.049,
+    "prototype_source_files_unchanged": 5,
+    "original_references_unchanged": 3,
+    "baseline_evidence_unchanged": 1588,
+    "syntax": "PASS",
+    "documentation_links": 150,
+    "test_ports_stopped": "8765\u20138774"
+  },
+  "artifact": {
+    "archive": "typing-tutor-remake-v0.2.0-web.zip",
+    "bytes": 105216,
+    "sha256": "ddcd065ff89d0bd4b6f457ee6ed802014e165820e50809e1d5188ad064ef0833"
+  },
+  "artifact_files": 42,
+  "limitations": [
+    "Other brief game effects and physical speaker waveform remain approximate",
+    "No native DOS audio runtime comparison or Safari check"
+  ],
+  "source_artifacts": [
+    {
+      "path": "PROCESS.md",
+      "bytes": 58717,
+      "sha256": "2c4894b8a83df78bd5f7de16ded0ef2d52fdad4c7cabd830ece18ba6d02f70dc"
+    },
+    {
+      "path": "README.md",
+      "bytes": 8600,
+      "sha256": "6487dcb994effb720b32855437b56de43d9cbedfbd8b88347e3b60f7acdb14e8"
+    },
+    {
+      "path": "analysis/invaders/resources.json",
+      "bytes": 4229,
+      "sha256": "5939056e45d8a96eb030645bc1b791722c5fb77324ba8fd50b954d471e21ad97"
+    },
+    {
+      "path": "dist/app.js",
+      "bytes": 50101,
+      "sha256": "a137161528fc9e1dc1deef2c2a13c396deac1b2a0366c2d58bc2f32109cbced0"
+    },
+    {
+      "path": "dist/game-audio.js",
+      "bytes": 1989,
+      "sha256": "6976b482243541b1d2bc7b095e10bac80d26b3b5ca0309b4298e9ac0da6dfd86"
+    },
+    {
+      "path": "dist/index.html",
+      "bytes": 1307,
+      "sha256": "46f13aea374615f7099afeb4805e69420044bddfc8c39b1e73265ccd531262c7"
+    },
+    {
+      "path": "dist/invaders-data.js",
+      "bytes": 2658,
+      "sha256": "96c8ccca9ad738d071a627f431a9cc016974302e692400507df5c9f31e80df88"
+    },
+    {
+      "path": "docs/deployment.md",
+      "bytes": 5877,
+      "sha256": "194643f06dbd5813d11231db5995fd9fc8b67aecdee1b11fa3570996a65bd3c7"
+    },
+    {
+      "path": "docs/letter-invaders.md",
+      "bytes": 8554,
+      "sha256": "e72e74627c50964af5d12b72bb70071f87d5bc4266e5cb336191552375368a45"
+    },
+    {
+      "path": "docs/releases/v0.2.0.md",
+      "bytes": 2456,
+      "sha256": "73ec3a3ff447a1ebff9f55aefccdad88fce107e766e24afe3fe84da0808ed03c"
+    },
+    {
+      "path": "docs/remake-design.md",
+      "bytes": 8684,
+      "sha256": "3ea748292d33d2be894976b64a39d9c43ee1734a5c355b59d2800c18b0d81dff"
+    },
+    {
+      "path": "docs/screenshots/faithful-idle-help.png",
+      "bytes": 118909,
+      "sha256": "8a444c10f5fcb828949e561a56f0c8d7f97f149e94a83a1af689347b2cdd5234"
+    },
+    {
+      "path": "docs/screenshots/faithful-intro-first.png",
+      "bytes": 129549,
+      "sha256": "255cbebc66f9a7b67eb684cc476353a813acc76f005ef4e1492e5352285a81f9"
+    },
+    {
+      "path": "docs/screenshots/faithful-intro-last.png",
+      "bytes": 59175,
+      "sha256": "9f85982621ca63f68caa928a26b1e85cddeae0512b10415278b4de745c6ed8ce"
+    },
+    {
+      "path": "docs/screenshots/faithful-main-menu.png",
+      "bytes": 35655,
+      "sha256": "33e29f7ae8fe01f01ec95fda0ac76d23693a9c17d8b4faba5a5e13e96559366e"
+    },
+    {
+      "path": "docs/screenshots/faithful-mobile.png",
+      "bytes": 36887,
+      "sha256": "2a2105ca26eb2cf77a05dfed9b249ea0e75d62ab22757ce345fcc0208d139c43"
+    },
+    {
+      "path": "docs/screenshots/faithful-options-menu.png",
+      "bytes": 32103,
+      "sha256": "309552655af682746f3805e7f835e709ce68f517d8c7c00b5c1548d28faf7d33"
+    },
+    {
+      "path": "docs/screenshots/faithful-quit-dialog.png",
+      "bytes": 49591,
+      "sha256": "67d1e05505073311b47a5402c8c95efd7ba5e2d86434223bf5b64c8c015ab07c"
+    },
+    {
+      "path": "docs/screenshots/faithful-wpm-dialog.png",
+      "bytes": 68798,
+      "sha256": "08e42fdcd6fbea0fc3efbdbe991ec315b1fedbae5ce3d2a3cc8946a7db1b232c"
+    },
+    {
+      "path": "docs/screenshots/invaders-game-over.png",
+      "bytes": 64658,
+      "sha256": "2df23a74556d2e9ee782e812fb65e09e50e5adf6b70ea8ab4bf41545d8efce1c"
+    },
+    {
+      "path": "docs/screenshots/invaders-mobile.png",
+      "bytes": 22560,
+      "sha256": "44e45176de6384ef4fdefd35ec945e93541e874b2f53997cb4e6719d1199d929"
+    },
+    {
+      "path": "docs/screenshots/invaders-mode.png",
+      "bytes": 42666,
+      "sha256": "8c4ca19b9e387d0689a347a899c89d7c1e0cd539cc4b8b0f50bbffac937a9a06"
+    },
+    {
+      "path": "docs/screenshots/invaders-playing.png",
+      "bytes": 32229,
+      "sha256": "e8f7a5d14e9e410f6d6d2839785a2052a64588745939806bae98cbfa95a7f46e"
+    },
+    {
+      "path": "docs/screenshots/invaders-ready.png",
+      "bytes": 105151,
+      "sha256": "a26407db5d2dd55d00c886e7e2739c633fb2b312ce6ae523ffd395e1aee58edf"
+    },
+    {
+      "path": "docs/screenshots/invaders-scores.png",
+      "bytes": 70685,
+      "sha256": "9b129b0a49869453d0d9d7cc34faa99d0bcfdbfe6785a5ddeb3bd821fc04539c"
+    },
+    {
+      "path": "docs/screenshots/invaders-two-player.png",
+      "bytes": 108138,
+      "sha256": "cbe62fe7a5f8f29ae90dcd1869fa76e1cf7a4eb7eb638a010ba61660d735ab34"
+    },
+    {
+      "path": "package.json",
+      "bytes": 1698,
+      "sha256": "d59ab9afd8536f6e0f98211d4cc8ce8daf2b5ba921dc31e7bd45ab738e220fa7"
+    },
+    {
+      "path": "scripts/extract-invaders-data.py",
+      "bytes": 3377,
+      "sha256": "7d049896ad4b599ced7d59da30b20a024aa4097028c439170a085387eecd5834"
+    },
+    {
+      "path": "scripts/package-web.py",
+      "bytes": 4341,
+      "sha256": "e05024d7e2e6358a6d9013092182819deab0b918bb45a4146c3aeea6b3022013"
+    },
+    {
+      "path": "tests/game-audio-browser.mjs",
+      "bytes": 5138,
+      "sha256": "eea09b13b6696a26f2f9155488c7343e6ae2dfe399a681de3e4c5fa5e3913a03"
+    },
+    {
+      "path": "tests/game-audio.test.mjs",
+      "bytes": 2092,
+      "sha256": "cb605fbd4adc7b6eedba731534a8551107fc82f17d3507b479ac3053e3a3a175"
+    },
+    {
+      "path": "tests/package-browser.mjs",
+      "bytes": 3222,
+      "sha256": "0e8c4111231fc6051aeba52519280d5222b4bc4defa299c23921ec40e6d59da5"
+    }
+  ]
+}
