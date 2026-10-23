@@ -13,3 +13,6 @@ TT/
 .env.*
 !.env.example
 *.log
+
+# Reproducible deployment archives and checksums.
+/artifacts/

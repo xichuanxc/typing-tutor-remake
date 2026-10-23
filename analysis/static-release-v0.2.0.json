@@ -1,0 +1,341 @@
+{
+  "date": "2026-10-24",
+  "version": "0.2.0",
+  "intended_domain": "tt.xcstudio.dev",
+  "hosting_status": "Prepared only; DNS, Pages and website not deployed",
+  "implementation_license": "MIT with historical resources separately scoped",
+  "checks": {
+    "unit_tests": 143,
+    "unchanged_originals": 3,
+    "baseline_evidence_files": 1588,
+    "chrome_extracted_zip": "PASS root and project paths; Intro, Disk/hash, prototype, notices, private-path isolation; no page errors",
+    "deterministic_second_build": true,
+    "all_archive_file_hashes_match": true,
+    "documentation_links": 147,
+    "syntax": "PASS"
+  },
+  "artifact": {
+    "archive": "typing-tutor-remake-v0.2.0-web.zip",
+    "bytes": 113860,
+    "sha256": "d9ee348ff7c62cfb0088277ba31f6cf85063ed340a40893d8711a30580c8de9d"
+  },
+  "files": [
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "BUILD.json",
+      "bytes": 486,
+      "sha256": "e42ed0b83cc648d73d47aa4fd6673d827743334fb598ff4b5c36670d574a5635"
+    },
+    {
+      "path": "CNAME",
+      "bytes": 16,
+      "sha256": "421a63466bc9ab5e3f132123131fbf2135d809d35ffde7b446faa8d54390c169"
+    },
+    {
+      "path": "COPYING.md",
+      "bytes": 1017,
+      "sha256": "9a6b311b364845661c339ac16d98f2766fd861f4b795fbe361ce2b98d795304b"
+    },
+    {
+      "path": "DEPLOYMENT.md",
+      "bytes": 4027,
+      "sha256": "2c8527a5d86f251f40d0a613110e5be1c5c472b552f3eb58bd29e8062169a236"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1079,
+      "sha256": "87cf29da5aff935c1646895008b0b616d58a211136c7bddeff87c6f8f08e8b30"
+    },
+    {
+      "path": "THIRD_PARTY.md",
+      "bytes": 1662,
+      "sha256": "ef5b696f486ab18315a2d62fc640239909f6281de5d8113af545cc0fadfa8ffd"
+    },
+    {
+      "path": "adaptive-lesson.js",
+      "bytes": 3591,
+      "sha256": "836b1a56156e5650d61f0a661c29bc3439d7cc7d8c9a84c7746c9120a1e3d46f"
+    },
+    {
+      "path": "app.js",
+      "bytes": 49479,
+      "sha256": "b016d6dd4e398e5640b347488f68629de2b7166f2b168098e5a5a0dc47b79a87"
+    },
+    {
+      "path": "cp437.js",
+      "bytes": 1625,
+      "sha256": "a483eb446c79d2e0d29351fd1c07366c8c7cff7abce374f62569d3ea729708c2"
+    },
+    {
+      "path": "curriculum-data.js",
+      "bytes": 100647,
+      "sha256": "3c16eb0b400fee1fcb197d8cd5ba5a3813c94cdbe853084ee68b96a72506ea82"
+    },
+    {
+      "path": "curriculum.js",
+      "bytes": 6486,
+      "sha256": "e4d7cbdcf5ad56075b5c502cd8dd29be65a942da6df8a79a6d018e810fd97b14"
+    },
+    {
+      "path": "disk-data.js",
+      "bytes": 601,
+      "sha256": "3b7b6ecb3b7b6b1397ee4c92b830c11f386edad191c93acbab0cb2d42cd0fd56"
+    },
+    {
+      "path": "disk-screen.js",
+      "bytes": 2107,
+      "sha256": "6627eeb3247cd4bf5b343b72f1a54e59b9024e38f1e926d0a6a4acff1593f5f4"
+    },
+    {
+      "path": "disk-test.js",
+      "bytes": 7808,
+      "sha256": "a76e6decc713aab549aa71adb4287c8420c08fcbac8bb7c92006ccffd7e48dcf"
+    },
+    {
+      "path": "drill-generator.js",
+      "bytes": 9655,
+      "sha256": "57e7e8a6ddf9de457b5fc584d38f0a7880acfe246fab1700f775ec5bcfb9aa35"
+    },
+    {
+      "path": "engine.js",
+      "bytes": 4772,
+      "sha256": "60615bc45482b9205144dd1522b2ec76d4ce86e5b8bf4091f78154111d2e2439"
+    },
+    {
+      "path": "faithful-session.js",
+      "bytes": 6049,
+      "sha256": "cd2370c92125381e43653d5c80426112570019f27c5e1b31e6c9e24c86bd34bc"
+    },
+    {
+      "path": "fingering.js",
+      "bytes": 1889,
+      "sha256": "b55b0557c69edc4319f1dea9c868cddf67d263e4b85f0fab69e80577c0711f3d"
+    },
+    {
+      "path": "game-scores.js",
+      "bytes": 1348,
+      "sha256": "3fba219f4bedf1fb13a815cea7713d0908790bba6195e8a2425e16b8f5dc466f"
+    },
+    {
+      "path": "grid.js",
+      "bytes": 2702,
+      "sha256": "7acd66983fc0e7f7071684ad714e0e5aa594bfbff2a59e4f786eca3514a2dfc3"
+    },
+    {
+      "path": "index.html",
+      "bytes": 1358,
+      "sha256": "8c4a166c157623d1e227f687c4dac42bf69be7f5d75a2e806618007391a7a9ca"
+    },
+    {
+      "path": "invaders-data.js",
+      "bytes": 2503,
+      "sha256": "4c95b751d9cd57161056dcae14afafcc28769626beca534497a0d887999168af"
+    },
+    {
+      "path": "invaders-screen.js",
+      "bytes": 7641,
+      "sha256": "d8a07641fc4c118272a16b1bb23b46cf98992853ab3d7ad6ffaa1a0ed8fb7144"
+    },
+    {
+      "path": "invaders.js",
+      "bytes": 13610,
+      "sha256": "94de85a6bf5af46fbd33d4b4a45b26efeaf6242c23703ac33c69ec93f799edf7"
+    },
+    {
+      "path": "keyboard-screen.js",
+      "bytes": 1781,
+      "sha256": "e0236567ab0dc7aaaf4b2d9b71f473808534921ce34f674d3d36b510326091a1"
+    },
+    {
+      "path": "keypad-data.js",
+      "bytes": 1498,
+      "sha256": "b2d6452437c6c9a0e044c9c46d089c2ba652ae60daaa11011f573734de4a410b"
+    },
+    {
+      "path": "keypad-screen.js",
+      "bytes": 3472,
+      "sha256": "039f4eda3b6be2c816f4bef0b27faca6a28138df12c1681600b25b071fe84c0e"
+    },
+    {
+      "path": "keypad.js",
+      "bytes": 9685,
+      "sha256": "d5364de8a80739d06b33355116b173bf056e852f84ae6450d654796ba03f32ef"
+    },
+    {
+      "path": "numeric-generator.js",
+      "bytes": 4342,
+      "sha256": "1fb8e298612ab2ef67780783e3aaa82d39edd75ffb73db87c8fe44d7433cde02"
+    },
+    {
+      "path": "original-data.js",
+      "bytes": 25126,
+      "sha256": "ad82223303dba36503796b568b1f71c25109056015fe5ddef6b3b2ea015e4346"
+    },
+    {
+      "path": "practice-screen.js",
+      "bytes": 1270,
+      "sha256": "bac8cf2471bbfed26cdca1500e6fe935dea71f94ce944b2695ffb72187864067"
+    },
+    {
+      "path": "practice.js",
+      "bytes": 7490,
+      "sha256": "1cc0703777bb1671876cc4565a2f6d8ac6a0f80be97739fbd780be779c89f73c"
+    },
+    {
+      "path": "prototype/app.js",
+      "bytes": 14395,
+      "sha256": "02ff2c4272f98c4f4fad4fb73770382ee2f644ed1386c8b6be815607eeb505c1"
+    },
+    {
+      "path": "prototype/engine.js",
+      "bytes": 4772,
+      "sha256": "60615bc45482b9205144dd1522b2ec76d4ce86e5b8bf4091f78154111d2e2439"
+    },
+    {
+      "path": "prototype/index.html",
+      "bytes": 998,
+      "sha256": "7d3a4994cd4189a5d272e4332b36e682dc14d9dde97d8e782d788abd98f3322b"
+    },
+    {
+      "path": "prototype/storage.js",
+      "bytes": 1822,
+      "sha256": "dcc4fb07c3a5cb429d8ccf79091cacda5988d4e57797ebe61efe101b70811d98"
+    },
+    {
+      "path": "prototype/style.css",
+      "bytes": 5820,
+      "sha256": "0a4b196bd17a78f4d46bcdd60e77688d05d31854dc850787a658d149053ad04b"
+    },
+    {
+      "path": "report-data.js",
+      "bytes": 1333,
+      "sha256": "fc0a0fc888285e89cb538a94fee7eeabbe41179dbcbf31108bec307460171ad5"
+    },
+    {
+      "path": "report-screen.js",
+      "bytes": 4425,
+      "sha256": "3f09b0ed4ca252d11f2d8f1d2c7c917075731c6e1a6dc77e736f5e6284a89e02"
+    },
+    {
+      "path": "reports-model.js",
+      "bytes": 6271,
+      "sha256": "cd69ce1b62d6c1fa246b53e4db85bec294b53599e5b503b76a7d72163aed5574"
+    },
+    {
+      "path": "scoring.js",
+      "bytes": 332,
+      "sha256": "d7dc148a2aa2e658a6a1458b6d5f0ca04d024eed91ad6fd954eea7e527a42110"
+    },
+    {
+      "path": "storage.js",
+      "bytes": 1822,
+      "sha256": "dcc4fb07c3a5cb429d8ccf79091cacda5988d4e57797ebe61efe101b70811d98"
+    },
+    {
+      "path": "style.css",
+      "bytes": 2297,
+      "sha256": "e80ce2e2c5dc32138570edc73d761717718feac3dfbd687dcac6cf8fbe027f56"
+    },
+    {
+      "path": "timed-observation.js",
+      "bytes": 645,
+      "sha256": "99483edfd194aa1e7cba5e62de0c7823fed6042b16e19b21fd986ddc802b58d6"
+    },
+    {
+      "path": "typing-test.js",
+      "bytes": 4302,
+      "sha256": "ff2c3ae7cedcdec7f416f2975d0a4f3ce1b8db3495041ee6ab11ce7d37d88f67"
+    }
+  ],
+  "source_artifacts": [
+    {
+      "path": "scripts/package-web.py",
+      "bytes": 4182,
+      "sha256": "70e6d40c5e8093d7a9cd04f32de6915ac9a614199a1b26588666b168a39cd055"
+    },
+    {
+      "path": "tests/package-browser.mjs",
+      "bytes": 3055,
+      "sha256": "bb22080de8951485244d6aa8fd0f70ab5dbe28def8f25e291c989c55b938a26a"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "bytes": 615,
+      "sha256": "fee66677c8dc7edb3f2dcda1d9a14df58657966077a58d2aafa53097d37db504"
+    },
+    {
+      "path": ".github/workflows/pages.yml",
+      "bytes": 925,
+      "sha256": "f2f733314614ea5e0911be7756a54146d199beca758330bfab8947b0e37d627b"
+    },
+    {
+      "path": "dist/CNAME",
+      "bytes": 16,
+      "sha256": "421a63466bc9ab5e3f132123131fbf2135d809d35ffde7b446faa8d54390c169"
+    },
+    {
+      "path": "dist/.nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1079,
+      "sha256": "87cf29da5aff935c1646895008b0b616d58a211136c7bddeff87c6f8f08e8b30"
+    },
+    {
+      "path": "COPYING.md",
+      "bytes": 1017,
+      "sha256": "9a6b311b364845661c339ac16d98f2766fd861f4b795fbe361ce2b98d795304b"
+    },
+    {
+      "path": "THIRD_PARTY.md",
+      "bytes": 1662,
+      "sha256": "ef5b696f486ab18315a2d62fc640239909f6281de5d8113af545cc0fadfa8ffd"
+    },
+    {
+      "path": "docs/deployment.md",
+      "bytes": 4027,
+      "sha256": "2c8527a5d86f251f40d0a613110e5be1c5c472b552f3eb58bd29e8062169a236"
+    },
+    {
+      "path": "docs/remake-design.md",
+      "bytes": 7768,
+      "sha256": "32abf3fc4952624dd2e9d4d1ffc100a56ed66cea07564faae62d74fe41b6e254"
+    },
+    {
+      "path": "docs/releases/v0.2.0.md",
+      "bytes": 2394,
+      "sha256": "a9eedb2ec2ea34e7ad39c9fe3174d202ba9ad957624e71593a1517f04f5a5a62"
+    },
+    {
+      "path": "README.md",
+      "bytes": 8428,
+      "sha256": "e7e68e5976b2f0ce64f690cd5d81eb4699360f61a8a2e0666f3a3c990ef6d710"
+    },
+    {
+      "path": "PROCESS.md",
+      "bytes": 52523,
+      "sha256": "953b3daccfe8a6df6342fce5ae711ddcf7559c0c5a01715c790e34703e7dd58b"
+    },
+    {
+      "path": "package.json",
+      "bytes": 1643,
+      "sha256": "c03b79c0dfeeef2980dc4c4217460eb14d38ec740e47f3f40a98fd9c0615117c"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 1228,
+      "sha256": "7edbd339bf301ca78cf11c656b333154589f2bb7d27c8f792788471b9da4dd4e"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 273,
+      "sha256": "f25447bce89fbb5f8a1a752c903a6b167005e66bb3e35dc1a924e46bd2ed78e5"
+    }
+  ]
+}

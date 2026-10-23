@@ -73,3 +73,6 @@ Letter Invaders now uses recovered setup, generation, case-sensitive targeting, 
 
 ## Verified original Intro update (2026-10-24)
 Options → Intro uses the earlier 17-part text independently confirmed against the archived DOS help. The resource builder checks the source excerpt's SHA-256; other Help content and browser reader grouping remain unchanged. Y2K-fix attribution is preserved in provenance. See [the comparison and source](help-comparison.md).
+
+## Static deployment preparation (2026-10-24)
+The owner requested online deployment packaging for proposed tt.xcstudio.dev. The app remains entirely browser-side; static hosting replaces the local Python file server. New implementation is MIT licensed with historical resources separately identified. See [deployment](deployment.md) for the reproducible ZIP, manual Pages workflow, DNS setup and browser-origin storage boundary. No website/DNS change is included in this preparation.

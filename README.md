@@ -1,10 +1,13 @@
 # Typing Tutor IV Remake
 
-A local browser remake of the DOS programme. The current delivery recreates the **original menus, settings, practice screen/scoring, full-keyboard teaching, fingering review, keypad lessons/tests, Disk tests, reports and Letter Invaders** using recovered REA/Ghidra evidence.
+An open-source browser remake of the DOS programme. The current delivery recreates the **original menus, settings, practice screen/scoring, full-keyboard teaching, fingering review, keypad lessons/tests, Disk tests, reports and Letter Invaders** using recovered REA/Ghidra evidence.
 
 First public release: **v0.2.0**. This is a JavaScript reconstruction; the original DOS executable is not run or bundled.
 
 ![Typing Tutor IV main menu](docs/screenshots/faithful-main-menu.png)
+
+Intended online address: **https://tt.xcstudio.dev** (deployment pending).
+New implementation code is MIT licensed; [license scope](COPYING.md) and [original-resource provenance](THIRD_PARTY.md) identify the historical content separately.
 
 ## Run
 
@@ -58,6 +61,14 @@ Keypad entries accept Plus, Enter or Space to finish a number; digit keys and th
 Practice uses printable keys, Backspace and Enter/Space to finish a line. Escape returns to Main Menu.
 Corrected mistakes disappear from final accuracy while timed attempts remain recorded. Inactivity counts; there is no automatic pause.
 See [the scoring contract and fidelity record](docs/practice-scoring.md) for the recovered rules and current limits.
+
+## Package for online hosting
+
+~~~sh
+npm run package:web
+~~~
+
+Upload the extracted contents of artifacts/typing-tutor-remake-v0.2.0-web.zip to an HTTPS static host. No Python or backend is needed online. See [deployment and the proposed domain](docs/deployment.md) for checksums, the manual GitHub Pages workflow, DNS and browser-storage details.
 
 ## Earlier playable prototype
 

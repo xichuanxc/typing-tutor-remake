@@ -4,7 +4,7 @@ Typing Tutor IV Remake reconstructs the DOS Typing Tutor IV interface and teachi
 
 The public repository excludes TT.EXE, TT.HLP, TT.HIS, unpacked executables and local reverse-engineering tool installations. No original students' named history or high-score tables are imported into the browser app.
 
-This repository does not claim ownership of the original programme or grant a license to its materials. No blanket open-source license has been applied to this mixed-source release.
+The new implementation is open source under MIT; see LICENSE and COPYING.md for scope. This grant does not claim ownership of or relicense the original programme, branding or recovered content.
 
 Development uses Playwright (Apache-2.0), installed separately through npm. Reverse-engineering work used [REA](https://github.com/morluto/rea), [Ghidra](https://github.com/NationalSecurityAgency/ghidra) and [David Fifield's exepack](https://www.bamsoftware.com/software/exepack/). Their installations are not bundled; toolchain versions and source locations are recorded in analysis/toolchain.json.
 
