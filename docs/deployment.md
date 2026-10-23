@@ -1,6 +1,6 @@
 # Static deployment
 
-Domain: **tt.xcstudio.dev**. GitHub Pages is enabled with this custom domain. The automatic deployment workflow is configured; public custom-domain access still requires the Cloudflare DNS record and GitHub HTTPS provisioning.
+Live site: **https://tt.xcstudio.dev**. GitHub Pages hosts the app, Cloudflare CNAME DNS is verified, the TLS certificate is approved and HTTPS is enforced. Pushes to main deploy automatically after tests/build pass.
 
 ## Build the artifact
 
@@ -44,7 +44,7 @@ In Cloudflare, select xcstudio.dev → DNS → Records → Add record:
 
 Use the hostname without https:// or a repository path. If a record named tt already exists, update that record rather than creating a conflicting duplicate. This applies only to tt; the other websites/tunnel records remain separate.
 
-After DNS resolves, GitHub provisions a certificate. Enable Enforce HTTPS in [repository Pages settings](https://github.com/xichuanxc/typing-tutor-remake/settings/pages) once available, then verify https://tt.xcstudio.dev. This session can configure GitHub but has no connected Cloudflare DNS management access; the DNS step must be completed in that account.
+After DNS resolves, GitHub provisions a certificate. Enable Enforce HTTPS in [repository Pages settings](https://github.com/xichuanxc/typing-tutor-remake/settings/pages) once available, then verify https://tt.xcstudio.dev. The owner completed this DNS step in Cloudflare on 2026-10-24. Authoritative/public DNS, certificate validation, HTTPS enforcement and the public app have been verified.
 
 ### Future updates
 
@@ -63,3 +63,7 @@ Progress stays in each visitor's browser at its origin. localhost, a Pages previ
 ## Open source and provenance
 
 New implementation code is MIT licensed; recovered original content is separately identified in COPYING.md and THIRD_PARTY.md. The bundle contains original-derived resources needed for the faithful display, so the MIT grant must not be represented as a license to the historical programme's content.
+
+## Live verification — 2026-10-24
+
+GitHub approved the certificate for tt.xcstudio.dev (reported expiry 2027-01-22). HTTP returns 301 to HTTPS and HTTPS returns 200. Installed Chrome verified the live original Intro (Page 1 / 7), secure-context APIs and local Disk-file hashing/loading without page errors. The verification browser temporarily mapped the hostname to a GitHub Pages IP because this machine retained a stale negative DNS cache; normal TLS verification remained enabled. Cloudflare authoritative DNS and resolver 1.1.1.1 both returned the correct CNAME. See [the live receipt](../analysis/pages-live-verification.json).

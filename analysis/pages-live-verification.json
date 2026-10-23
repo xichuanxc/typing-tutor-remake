@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-24",
+  "url": "https://tt.xcstudio.dev",
+  "host": "GitHub Pages",
+  "dns": {
+    "authoritative": "guss.ns.cloudflare.com",
+    "public_resolver": "1.1.1.1",
+    "cname": "xichuanxc.github.io",
+    "ttl": 300,
+    "verified": true
+  },
+  "tls": {
+    "state": "approved",
+    "domains": [
+      "tt.xcstudio.dev"
+    ],
+    "reported_expires_at": "2027-01-22",
+    "https_enforced": true,
+    "verification_bypassed": false
+  },
+  "http": {
+    "status": 301,
+    "location": "https://tt.xcstudio.dev/"
+  },
+  "https_status": 200,
+  "chrome": {
+    "result": "PASS",
+    "secure_context": true,
+    "original_intro": "Page 1 / 7; complete welcome; no Y2K credit",
+    "disk_test": "Local file SHA-256 and typing load pass",
+    "page_errors": [],
+    "screenshot": "docs/screenshots/live-intro.png",
+    "dns_override": "Temporary hostname mapping to 185.199.108.153 in isolated test browser due local negative cache; TLS validation unchanged"
+  },
+  "automatic_deployment": "Push to main \u2192 tests \u2192 package \u2192 GitHub Pages",
+  "confirmed_deployments": [
+    "https://github.com/xichuanxc/typing-tutor-remake/actions/runs/40012762697",
+    "https://github.com/xichuanxc/typing-tutor-remake/actions/runs/40013328519"
+  ],
+  "vps_or_tunnel_used": false
+}

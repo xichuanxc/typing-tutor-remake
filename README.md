@@ -6,7 +6,7 @@ First public release: **v0.2.0**. This is a JavaScript reconstruction; the origi
 
 ![Typing Tutor IV main menu](docs/screenshots/faithful-main-menu.png)
 
-Online address: **https://tt.xcstudio.dev** — GitHub Pages is configured; Cloudflare DNS and HTTPS validation are pending.
+Live app: **https://tt.xcstudio.dev** — hosted on GitHub Pages with automatic deployment from main and HTTPS enforced.
 New implementation code is MIT licensed; [license scope](COPYING.md) and [original-resource provenance](THIRD_PARTY.md) identify the historical content separately.
 
 ## Run
