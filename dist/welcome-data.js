@@ -4,6 +4,11 @@ export default {
   "historyFile": "TT.HIS",
   "profileBytes": 1996,
   "enumeratedSlots": 8,
+  "registration": {
+    "title": "Registration",
+    "prompt": "Please type your name",
+    "exit": "Exit Typing Tutor IV"
+  },
   "keyboard": {
     "top": 12,
     "left": 13

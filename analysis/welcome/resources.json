@@ -1,8 +1,8 @@
 {
   "scope": "Startup screen/music and profile-file identity; no saved student names/history exported",
   "binary_sha256": "6e80ab0186040beef29c8be8b39a36ddc0e2c9b15ca20e0eedd4055d76379288",
-  "output_sha256": "9fd7d9a2ee13fec26b52fee570d407f9d63e6283759e09d5f254844e2896a962",
-  "extractor_sha256": "983c5602be27b956b0f2b2ad3fa5066ceab439d89f40289d2d64ae0f13d3c60c",
+  "output_sha256": "15eb6a181c6e3a177d3e0930b7500587af5abb2bcc74b4a9dd67a8835f95dede",
+  "extractor_sha256": "3ca8bc1e3444fed35db2512a72ce0b1af98eb8bfc7267a39e508a2e73bfd5e6f",
   "functions": [
     {
       "address": "0x10860",
@@ -71,6 +71,18 @@
     {
       "address": "0x10ddc",
       "sha256": "8b1b7df03558742156ff933572b1be156f9cdf66c50f03ff27d85e10094512d2"
+    },
+    {
+      "address": "0x10d63",
+      "sha256": "7fedb17f80812d745dfaf5788b058cb1c20c9bd1433ac55b538c581be048d726"
+    },
+    {
+      "address": "0x10f9a",
+      "sha256": "1c9a6abd844fe714999560eab3ce03695f015640edc0f2e02957c7cdb35e8899"
+    },
+    {
+      "address": "0x1b751",
+      "sha256": "b13e9082f949f343f3a84f9db009742f427cf79028250cd93e64e298ee04489c"
     }
   ],
   "music": {

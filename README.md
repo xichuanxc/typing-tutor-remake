@@ -26,7 +26,7 @@ Use the same browser and address to return to saved progress. Direct file:// ope
 Use Export browser data for a JSON backup; backup import is not implemented yet.
 To start over, choose **Reset all Typing Tutor data** beside Export, then **Clear data** in the confirmation dialog. This removes current and earlier-prototype saves for this browser/site, discards the unsaved session, and reloads the welcome. **Export first** downloads a backup; **Cancel** or Escape leaves the session intact.
 
-A browser with no saved user data shows the recovered welcome animation and music. Press a key or click its prompt to start; Escape skips. Saved profiles open directly at the main menu. To try it without changing your progress, use a fresh Chrome Incognito session. See [startup behavior and original TT.HIS findings](docs/startup-welcome.md).
+A browser with no saved user data shows the recovered welcome animation and music. Press a key or click its prompt to start; Escape skips the animation. Both paths lead to **Registration**, where you enter your name before the main menu. The DOS date-confirmation step is omitted; the browser supplies the date. Save the new profile with Quit → Yes, save session to history. Saved profiles open directly at the main menu. To try it without changing your progress, use a fresh Chrome Incognito session. See [startup behavior and original TT.HIS findings](docs/startup-welcome.md).
 
 ## Current delivery: original typing loop and Letter Invaders
 

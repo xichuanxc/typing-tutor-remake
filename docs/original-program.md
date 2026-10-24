@@ -94,3 +94,7 @@ The owner authorized applying the archived original Intro to the app. Its 17 sou
 Retained assembly confirms TT.HIS is the native student-history file:0x10128 opens it r+,0x10f47 enumerates26-byte names at0x7cc-byte strides across eight scanned slots, and0x10e3f/0x10ddc load an existing1996-byte record or an unnamed template. This refines the initial unknown-layout finding without claiming a complete importer. No names/history were exported or references modified.
 
 0x1095c/0x10c43/0x1ca33 recover title correction, keyboard, copyright/logo and0x17e47 case7 startup melody. The browser first-user gate is an owner-requested adaptation; native startup precedes student selection. See [startup evidence and remaining runtime limits](startup-welcome.md). These are assembly/data findings, not help-text or native runtime observations.
+
+## 2026-10-24 — Registration after welcome
+
+Static startup order at0x10860 is welcome, student selection/registration (0x10e3f,0x10ddc,0x10d63), then Date (0x10f9a). DS01c9 is Registration and DS01ae is Please type your name. Shared editor0x1b751 yields the same row9–17, column17–62 frame and row13/column27 name entry already used for Options → Name. No native DOS run was performed. The browser now requires name entry after fresh welcome and omits DOS date confirmation as an owner-suggested browser adaptation. Saved-profile behavior and remaining native questionnaires/history recovery are separate.

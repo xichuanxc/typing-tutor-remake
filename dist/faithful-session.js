@@ -51,6 +51,12 @@ export class StudentSession {
       this.dirty=true;
     }
   }
+  register(name) {
+    if(!this.readable||this.baseRaw!==null)return "Registration is only available for a new session.";
+    if(!validName(name))return "Please enter 1 to 25 valid name characters.";
+    // The default Student entry is an unsaved placeholder, not a registered name.
+    this.working={...this.working,name};this.dirty=true;return "";
+  }
   rename(name) {
     if(!validName(name))return "Please enter 1 to 25 valid name characters.";
     // Original comparison includes the existing name and is case-sensitive.

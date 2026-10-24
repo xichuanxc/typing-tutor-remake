@@ -19,6 +19,8 @@ try{
   await page.goto(base+path);await page.locator(".cell").last().waitFor();
   assert.equal(await page.locator("#terminal").getAttribute("data-mode"),"welcome");
   await page.keyboard.press("Escape");
+  assert.equal(await page.locator("#terminal").getAttribute("data-mode"),"registration");
+  await page.locator("#name-entry").fill("Package Student");await page.keyboard.press("Enter");
   assert.equal(await page.locator("#terminal").getAttribute("data-mode"),"menu");
   assert.equal((await fetch(base+path+"TT/TT.EXE")).status,404);
   assert.equal((await fetch(base+path+"analysis/evidence-index.json")).status,404);

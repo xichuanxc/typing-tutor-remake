@@ -1,4 +1,5 @@
 import {InvadersGame,invadersTick} from "./invaders.js";
+import WELCOME from "./welcome-data.js";
 import GAME from "./invaders-data.js";
 import {GameAudio} from "./game-audio.js";
 import {shouldShowWelcome,WelcomeSequence,drawWelcome,welcomeNotes} from "./welcome.js";
@@ -90,12 +91,12 @@ function startWelcome(){
 }
 function finishWelcome(){
  if(welcomeFrame!==null){cancelAnimationFrame(welcomeFrame);welcomeFrame=null;}
- welcomeAudio.stop();welcome.phase="done";goMenu(0);
+ welcomeAudio.stop();welcome.phase="done";openRegistration();
 }
 function welcomeScreen(){
  title.textContent="Welcome to Typing Tutor IV";
  drawWelcome(grid,welcome);
- hotspot(welcome.phase==="ready"?"Play welcome":"Continue to main menu",24,0,80,()=>{
+ hotspot(welcome.phase==="ready"?"Play welcome":"Continue to registration",24,0,80,()=>{
   if(welcome.phase==="ready")startWelcome();else finishWelcome();
  });
 }
@@ -104,9 +105,9 @@ function footer(text,escape=true){
   const label=(escape?"Esc -> ":"")+text;
   grid.put(24,Math.trunc((80-label.length)/2),label,0x5e);
 }
-function header(text,returnTo="Main Menu",escape=true){
+function header(text,returnTo="Main Menu",escape=true,name=student.working.name){
   grid.clear();grid.put(0,0," "+text);
-  grid.put(0,79-student.working.name.length,student.working.name);
+  grid.put(0,79-name.length,name);
   grid.put(1,0,"═".repeat(80));footer(returnTo,escape);
   title.textContent=text;
 }
@@ -176,7 +177,8 @@ function paint(){
   terminal.dataset.keypadActivity=keypadSession?.activity??"";
   terminal.dataset.keypadDrill=String((keypadSession?.batches??0)+1);
   document.querySelector("#session-note").textContent=state.warning||(
-    state.mode==="welcome"?(welcome.phase==="ready"?"Welcome · Press a key or click the prompt to start · Esc: skip":"Welcome · Any key or click the prompt: Main Menu"):
+    state.mode==="welcome"?(welcome.phase==="ready"?"Welcome · Press a key or click the prompt to start · Esc: skip":"Welcome · Any key or click the prompt: Registration"):
+    state.mode==="registration"?"Registration · Type your name · Enter: continue · Esc: exit":
     state.mode==="game-playing"?"Letter Invaders · Type exact letters / words · Esc: surrender this player":
     ["game-ready","game-round"].includes(state.mode)?"Letter Invaders · Any key: begin round · Esc: Main Menu":
     state.mode==="game-scores"?"Score board · Esc: Main Menu":
@@ -301,9 +303,13 @@ function quit(){
   state.mode="choice";state.dialog={kind:"quit",title:DATA.quit.title,prompt:DATA.quit.prompt,
     labels:DATA.quit.choices,width:29,selected:0};render();announce(DATA.quit.prompt);
 }
+function openRegistration(){
+  clearTimeout(idleTimer);state.mode="registration";state.name="";state.nameError="";render();
+}
 function nameScreen(){
-  header(DATA.optionTitles.name);
-  grid.box(9,17,17,62);grid.put(10,19,"Please type your name");
+  if(state.mode==="registration")header(WELCOME.registration.title,WELCOME.registration.exit,true,"");
+  else header(DATA.optionTitles.name);
+  grid.box(9,17,17,62);grid.put(10,19,WELCOME.registration.prompt);
   grid.put(13,27,"_".repeat(25));
   grid.put(15,42,"..then press Enter.");
   if(state.nameError)paragraph(state.nameError,19,5,70,0x1e,22);
@@ -325,9 +331,10 @@ function filterName(text){
   return output;
 }
 function acceptName(){
-  const error=student.rename(state.name);
+  const registering=state.mode==="registration";
+  const error=registering?student.register(state.name):student.rename(state.name);
   if(error){state.nameError=error;beep();render();announce(error);return;}
-  goMenu(4,false);
+  goMenu(registering?0:4,registering);
 }
 const helpIndex={0:6,1:1,2:2,3:3,4:4,5:7};
 function paginate(paragraphs){
@@ -378,7 +385,7 @@ function exitScreen(){
   grid.put(12,25,"Press Enter to begin again.",0x07);
   hotspot("Begin again",12,25,26,restart);
 }
-function restart(){student.restart();state.warning="";goMenu(0);}
+function restart(){student.restart();state.warning="";if(shouldShowWelcome(storage,student))openRegistration();else goMenu(0);}
 function goMenu(menu=0,resetSelection=true){
   stopGameClock();
   state.mode="menu";state.menu=menu;state.dialog=null;
@@ -764,7 +771,7 @@ function render(focus=true){
   if(state.mode==="welcome")welcomeScreen();
   else if(state.mode==="menu")menuScreen();
   else if(state.mode==="choice")choiceScreen();
-  else if(state.mode==="name")nameScreen();
+  else if(state.mode==="name"||state.mode==="registration")nameScreen();
   else if(state.mode==="reader")readerScreen();
   else if(state.mode==="message")messageScreen();
   else if(state.mode==="practice"||state.mode==="lesson-end")practiceScreen();
@@ -782,7 +789,7 @@ function render(focus=true){
   paint();
   if(focus){
     if(state.mode==="game-name"){const input=document.querySelector("#game-second-name");input.focus({preventScroll:true});input.setSelectionRange(input.value.length,input.value.length);}
-    else if(state.mode==="name"){const input=document.querySelector("#name-entry");input.focus({preventScroll:true});input.setSelectionRange(input.value.length,input.value.length);}
+    else if(state.mode==="name"||state.mode==="registration"){const input=document.querySelector("#name-entry");input.focus({preventScroll:true});input.setSelectionRange(input.value.length,input.value.length);}
     else terminal.focus({preventScroll:true});
   }
 }
@@ -907,9 +914,9 @@ document.addEventListener("keydown",event=>{
     else if(key==="Escape"){event.preventDefault();quit();}
     return;
   }
-  if(state.mode==="name"){
+  if(state.mode==="name"||state.mode==="registration"){
     if(key==="Enter"){event.preventDefault();acceptName();}
-    else if(key==="Escape"){event.preventDefault();goMenu(0);}
+    else if(key==="Escape"){event.preventDefault();if(state.mode==="registration"){state.mode="exited";render();}else goMenu(0);}
     return;
   }
   if(!["Enter","Escape"," ","ArrowLeft","ArrowRight","ArrowUp","ArrowDown","Backspace","PageDown","PageUp"].includes(key)&&key.length!==1)return;

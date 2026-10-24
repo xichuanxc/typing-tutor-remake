@@ -41,6 +41,7 @@ try{
  await Promise.all([page.waitForEvent('domcontentloaded'),page.getByRole('button',{name:'Clear data',exact:true}).click()]);await page.locator('.cell').last().waitFor();
  assert.equal(await mode(),'welcome');assert.equal(await page.locator('#terminal').getAttribute('data-welcome-phase'),'ready');assert.equal(await page.locator('#terminal').getAttribute('data-dirty'),'false');
  assert.deepEqual(await page.evaluate(({KEY,LEGACY})=>[localStorage.getItem(KEY),localStorage.getItem(LEGACY),localStorage.getItem('unrelated')],{KEY,LEGACY}),[null,null,'keep me']);
+ await page.keyboard.press('Escape');assert.equal(await mode(),'registration');await page.locator('#name-entry').fill('After Reset');await page.keyboard.press('Enter');assert.equal(await mode(),'menu');assert.ok((await page.locator('#screen-text').textContent()).includes('After Reset'));
  assert.deepEqual(dialogs,[],'Confirmed reset must not open a second beforeunload confirmation');await context.close();
  for(const failure of ['remove','blocked','corrupt']){
   const {context,page}=await open(failure);await page.getByRole('button',{name:'Reset all Typing Tutor data',exact:true}).click();

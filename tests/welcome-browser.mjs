@@ -41,10 +41,12 @@ try{
   const offline=new OfflineAudioContext(1,22050,22050),sound=new GameAudio(()=>offline);sound.startNotes(welcomeNotes(),'welcome');
   const samples=(await offline.startRendering()).getChannelData(0);return Math.sqrt(samples.reduce((s,v)=>s+v*v,0)/samples.length);
  });assert.ok(rms>.01&&rms<.1);
- await page.clock.runFor(20000);assert.equal(await mode(),'menu');assert.equal(await page.evaluate(key=>localStorage.getItem(key),KEY),null);
+ await page.clock.runFor(20000);assert.equal(await mode(),'registration');assert.equal(await page.evaluate(key=>localStorage.getItem(key),KEY),null);
  assert.equal(await page.locator('#terminal').getAttribute('data-dirty'),'false');
  assert.equal(await page.evaluate(()=>window.__tones.find(t=>t.frequencies.length===64).stops.length),2);
- await page.keyboard.press('o');await page.keyboard.press('n');await page.locator('#name-entry').fill('Welcome Student');await page.keyboard.press('Enter');await page.keyboard.press('Escape');
+ await page.keyboard.press('Enter');assert.equal(await mode(),'registration');assert.match(await page.locator('#screen-text').textContent(),/Please enter/);
+ await page.locator('#name-entry').fill('Welcome Student');await page.keyboard.press('Enter');assert.equal(await mode(),'menu');
+ assert.equal(await page.locator('#terminal').getAttribute('data-dirty'),'true');
  await page.keyboard.press('q');await page.getByRole('option',{name:'Yes, save session to history',exact:true}).click();
  const saved=await page.evaluate(key=>localStorage.getItem(key),KEY);assert.ok(saved);
  await page.reload();await page.locator('.cell').last().waitFor();assert.equal(await mode(),'menu');assert.equal(await page.evaluate(()=>window.__contexts.length),0);assert.equal(await page.evaluate(key=>localStorage.getItem(key),KEY),saved);
@@ -55,10 +57,15 @@ try{
   if(fixture==='legacy')assert.equal(await current.page.evaluate(key=>localStorage.getItem(key),LEGACY),'{"sentinel":"keep"}');
   await current.context.close();
  }
- const skipped=await open();await skipped.page.keyboard.press('Escape');assert.equal(await skipped.page.locator('#terminal').getAttribute('data-mode'),'menu');assert.equal(await skipped.page.evaluate(()=>window.__contexts.length),0);await skipped.context.close();
+ const skipped=await open();await skipped.page.keyboard.press('Escape');assert.equal(await skipped.page.locator('#terminal').getAttribute('data-mode'),'registration');assert.equal(await skipped.page.evaluate(()=>window.__contexts.length),0);
+ await skipped.page.locator('#name-entry').fill('Student');await skipped.page.keyboard.press('Enter');assert.equal(await skipped.page.locator('#terminal').getAttribute('data-mode'),'menu');
+ await skipped.page.keyboard.press('q');await skipped.page.getByRole('option',{name:'No, do not save to history',exact:true}).click();await skipped.page.keyboard.press('Enter');assert.equal(await skipped.page.locator('#terminal').getAttribute('data-mode'),'registration');
+ await skipped.context.close();
  const clicked=await open();await clicked.page.getByRole('button',{name:'Play welcome',exact:true}).click();await clicked.page.clock.runFor(8000);assert.equal(await clicked.page.locator('#terminal').getAttribute('data-welcome-phase'),'logo');
- await clicked.page.getByRole('button',{name:'Continue to main menu',exact:true}).click();assert.equal(await clicked.page.locator('#terminal').getAttribute('data-mode'),'menu');
+ await clicked.page.getByRole('button',{name:'Continue to registration',exact:true}).click();assert.equal(await clicked.page.locator('#terminal').getAttribute('data-mode'),'registration');
  assert.equal(await clicked.page.evaluate(()=>window.__tones.find(t=>t.frequencies.length===64).stops.length),2);
- await clicked.page.clock.runFor(30000);assert.equal(await clicked.page.locator('#terminal').getAttribute('data-mode'),'menu');await clicked.context.close();
- assert.deepEqual(errors,[]);console.log('PASS Chrome fresh-user welcome: gesture activation, native title correction/logo,64-note music, waveform RMS='+rms.toFixed(4)+', auto-completion, keyboard/click skip, saved/legacy/corrupt/unavailable storage gates, no welcome writes or page errors.');
+ await clicked.page.clock.runFor(30000);assert.equal(await clicked.page.locator('#terminal').getAttribute('data-mode'),'registration');
+ await clicked.page.keyboard.press('Escape');assert.equal(await clicked.page.locator('#terminal').getAttribute('data-mode'),'exited');await clicked.page.keyboard.press('Enter');assert.equal(await clicked.page.locator('#terminal').getAttribute('data-mode'),'registration');
+ await clicked.page.screenshot({path:'docs/screenshots/startup-registration.png',fullPage:true});await clicked.context.close();
+ assert.deepEqual(errors,[]);console.log('PASS Chrome fresh-user welcome: gesture activation, native title correction/logo,64-note music, waveform RMS='+rms.toFixed(4)+', auto-completion to Registration, empty-name validation, Student placeholder registration, Escape/Begin again, keyboard/click skip, saved/legacy/corrupt/unavailable storage gates, no welcome writes or page errors.');
 }finally{if(browser)await browser.close();if(server&&server.exitCode===null){const ended=once(server,'exit');server.kill();await ended;}}

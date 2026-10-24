@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-24",
+  "scope": "Fresh-user name registration after welcome/reset; DOS date prompt omitted",
+  "evidence": [
+    "0x10860 startup order",
+    "0x10e3f/0x10ddc/0x10d63 registration",
+    "0x10f9a Date",
+    "0x1b751 shared editor",
+    "DS01c9/01ae/0843 registration strings"
+  ],
+  "unit_tests": 164,
+  "chrome": [
+    "Welcome automatic completion and skip lead to Registration",
+    "Empty name rejected",
+    "Student placeholder accepted as real name",
+    "Registration marks dirty without writing storage",
+    "Quit Save persists name and reload bypasses welcome/registration",
+    "No-save and Escape/restart ask name without replaying welcome",
+    "Reset welcome then name entry",
+    "Existing saved/legacy/unreadable paths preserved",
+    "Root/project-path static package",
+    "Existing menus/settings/Intro/name/export regression"
+  ],
+  "page_errors": [],
+  "original_files": "three unchanged",
+  "immutable_evidence_files": 1588,
+  "artifact_sha256": "633607ae84e65363f57308f357990fe5f8c3d36db502f20f45a781e2ea427169",
+  "limits": [
+    "Static original evidence; no native runtime observation",
+    "Date prompt deliberately omitted; browser dates unchanged",
+    "Remaining native new-user questionnaires, complete history import, native font/speaker and Safari remain open"
+  ],
+  "files": [
+    {
+      "path": "dist/app.js",
+      "sha256": "77b635ad5c2fc49a2ae5fde89e0fe3811da3cf0297fe14f806463f63662d86b9"
+    },
+    {
+      "path": "dist/faithful-session.js",
+      "sha256": "8d44b903c78ea7e37cfea8589ad93f4b18c87c4a2fde23c37486544c77dbd54a"
+    },
+    {
+      "path": "dist/welcome-data.js",
+      "sha256": "15eb6a181c6e3a177d3e0930b7500587af5abb2bcc74b4a9dd67a8835f95dede"
+    },
+    {
+      "path": "scripts/extract-welcome-data.py",
+      "sha256": "3ca8bc1e3444fed35db2512a72ce0b1af98eb8bfc7267a39e508a2e73bfd5e6f"
+    },
+    {
+      "path": "analysis/welcome/resources.json",
+      "sha256": "38c492513a01345381fcc4f55824d8cc2791dfc72a1ab365614a96cf866fab3a"
+    },
+    {
+      "path": "tests/registration.test.mjs",
+      "sha256": "60d8c6fc7d721df118bc694a14cb89a5bf5b83ba708e4acbba2cf07aea2c9316"
+    },
+    {
+      "path": "tests/welcome-browser.mjs",
+      "sha256": "9f57e251ff770ba2c5ba0d436720998fe12f6229755df88041eed31f0de1fa31"
+    },
+    {
+      "path": "tests/reset-browser.mjs",
+      "sha256": "17b108d4bb956ef8ce65893edc386cf52690e572b8b906ad58d7705eae8c88ea"
+    },
+    {
+      "path": "tests/package-browser.mjs",
+      "sha256": "d02a51f989ee3ee6406b3a01227de2eabca843efc7398428e78da431a105eeb6"
+    },
+    {
+      "path": "docs/screenshots/startup-registration.png",
+      "sha256": "41bca0453757d70c72dc40af7e676917489133f1a2c6f8f9ed58a02309f4a4a7"
+    }
+  ]
+}
