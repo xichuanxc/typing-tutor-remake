@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-24",
+  "url": "https://tt.xcstudio.dev",
+  "runtime_commit": "e8207601434d44b341ca9eb39ec9f3fde12008f8",
+  "ci": "https://github.com/xichuanxc/typing-tutor-remake/actions/runs/40064083441",
+  "deployment": "https://github.com/xichuanxc/typing-tutor-remake/actions/runs/40064083387",
+  "checks": {
+    "unit_tests": 152,
+    "ci": "success",
+    "deployment": "success",
+    "actual_live_cues": [
+      "wrong key",
+      "target destroyed",
+      "ground impact",
+      "Boomlet spawn",
+      "Word Ship spawn"
+    ],
+    "rendered_rms": {
+      "wrong": 0.011339069569555812,
+      "hit": 0.020186324645715913,
+      "impact": 0.020453374091749004,
+      "boomlet": 0.049,
+      "ship": 0.0446
+    },
+    "autoplay": "strict document user activation required",
+    "sound_off": "no AudioContext through all scenarios",
+    "collision": "special cue cancelled",
+    "summary": "one percent sign",
+    "page_errors": []
+  },
+  "network": "Explicit GitHub Pages hostname mapping in isolated Chrome; normal TLS verification",
+  "scope": "Game sound inventory; startup/title and general UI fidelity remain separately documented"
+}
