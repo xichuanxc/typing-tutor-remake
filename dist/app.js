@@ -400,13 +400,10 @@ function syncGameMode(){
   state.mode=({"ready":"game-ready","playing":"game-playing","level-end":"game-round","game-over":"game-over"})[gameSession.phase];
 }
 function gameSounds(){
-  const events=gameSession.drainEvents();
-  if(!student.working.sound||gameSession.phase!=="playing"){gameAudio.stop();return;}
-  const active=gameSession.targets.some(target=>target.type>1);
-  if(!active)gameAudio.stop();
-  const special=events.find(event=>event.type==="boomlet"||event.type==="ship");
-  if(active&&special)gameAudio.start(special.type);
-  if(events.some(event=>event.type!=="boomlet"&&event.type!=="ship")&&!gameAudio.playing)beep();
+  gameAudio.update(gameSession.drainEvents(),{
+    enabled:student.working.sound,playing:gameSession.phase==="playing",
+    specialType:gameSession.targets.find(target=>target.type>1)?.type??0
+  });
 }
 function armGameClock(){
   if(gameFrame!==null||state.mode!=="game-playing")return;

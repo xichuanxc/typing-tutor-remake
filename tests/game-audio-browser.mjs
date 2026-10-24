@@ -34,6 +34,18 @@ try{
   await page.keyboard.press("Enter");
   const state=async()=>JSON.parse(await page.locator("#terminal").getAttribute("data-game-state"));
   let snapshot;
+  await page.keyboard.press("~");
+  if(enabled){
+   const wrong=await page.evaluate(()=>window.__tones.at(-1).frequencies);
+   assert.equal(wrong.length,1);assert.ok(wrong[0]>1046&&wrong[0]<1048);
+  }
+  // Let the first real target hit the ground before playing the remaining wave.
+  for(let step=0;step<400;step++){
+   snapshot=await state();if(snapshot.health[0]<80)break;
+   await page.clock.runFor(120);
+  }
+  assert.ok((await state()).health[0]<80,"A real ground impact is exercised");
+  if(enabled)assert.ok(await page.evaluate(()=>window.__tones.some(tone=>tone.frequencies.length===3&&tone.frequencies[0]<100)),"Ground impact has its low rising three-note cue");
   // Play a complete real first round; no production test hook or injected game state.
   for(let step=0;step<1800;step++){
    snapshot=await state();if(snapshot.phase!=="playing")break;
@@ -41,6 +53,7 @@ try{
    await page.clock.runFor(120);
   }
   snapshot=await state();assert.equal(snapshot.phase,"level-end");assert.equal(snapshot.round,2);
+  if(enabled)assert.ok(await page.evaluate(()=>window.__tones.some(tone=>tone.frequencies.length===3&&tone.frequencies[0]>600)),"Successful hits have their distinct high falling cue");
   const summary=(await page.locator(".row").allTextContents()).join("\n");
   assert.match(summary,/Accuracy: \d+%(?!%)/);assert.ok(!summary.includes("%%"));
 
@@ -109,6 +122,17 @@ try{
    assert.equal(await page.evaluate(()=>window.__contexts.length),0);
    console.log("PASS Chrome Word Ship muted: no audio context; summary percent formatting correct.");
   }
+  const shortRms=await page.evaluate(async()=>{
+   const {GameAudio}=await import("./game-audio.js"),out={};
+   for(const kind of ["wrong","hit","impact"]){
+    const offline=new OfflineAudioContext(1,22050,22050),sound=new GameAudio(()=>offline);
+    sound.start(kind);const buffer=await offline.startRendering(),samples=buffer.getChannelData(0);
+    out[kind]=Math.sqrt(samples.reduce((sum,value)=>sum+value*value,0)/samples.length);
+   }
+   return out;
+  });
+  for(const value of Object.values(shortRms))assert.ok(value>.005&&value<.1);
+  console.log("PASS all five gameplay effects: actual wrong/hit/impact plus Boomlet/Word Ship; short waveform RMS="+JSON.stringify(shortRms));
   assert.deepEqual(errors,[]);
   await context.close();
  }

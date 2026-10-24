@@ -85,3 +85,6 @@ The owner reported the missing fast-letter warning. Boomlet sound now uses the r
 
 ## Word Ship audio and literal percent handling (2026-10-24)
 Word Ships now use their recovered85-tone melody with quantized rests, sharing special-target mute/lifecycle handling with Boomlets. Summary rendering decodes native printf %% tokens in one pass without reinterpreting substituted text. The scoring engine is unchanged. See [game evidence](letter-invaders.md).
+
+## Game sound coverage (2026-10-24)
+All five Letter Invaders effect kinds now map to recovered definitions. Short cues use a single occupied speaker voice; physics frames do not truncate them. Automated event-inventory checks and real-Chrome scenarios replace reliance on manual discovery. Native startup title/audio and general interface feedback remain separate fidelity work. See [the audit](game-sound-audit.md).

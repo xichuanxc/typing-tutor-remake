@@ -138,6 +138,14 @@
     {
       "address": "0x181a5",
       "evidence": "ev_e9ca185c60243fdf830ec1895bae90b3b1f8fc9f6f7c8d4e48e37c9aa24877a2"
+    },
+    {
+      "address": "0x19ecc",
+      "evidence": "ev_5279dfdc7d6755a1e7c9bfb536527b90c208848fef98f27ab81486bd08c5c34e"
+    },
+    {
+      "address": "0x19f66",
+      "evidence": "ev_0d1ef0e04d63e391e2dccc12aa724b3bc7b09451e556fa442ed20728427a07da"
     }
   ],
   "boomlet_sound": {
@@ -153,6 +161,12 @@
     ],
     "note_ms": 83,
     "timer_rounding": "floor((ms*182+5000)/10000) BIOS ticks; zero-length silence entries consume no tick"
+  },
+  "short_sounds": {
+    "impact": "0x17e47 case2; DS7bb0[3]",
+    "hit": "0x17e47 case3; DS7b98[3]",
+    "wrong": "0x17e47 case5; pitch0x198ca,duration62ms",
+    "priority": "Cases2/3/5 enqueue only when the sound queue is empty"
   },
   "word_ship_sound": {
     "effect": "0x17e47 case1",
@@ -182,6 +196,6 @@
     },
     "note": "Global tail data beyond active profile; no names or score values imported."
   },
-  "output_sha256": "eb7ec1193ff3dca1659ae3facd38c518c68d5164e36a4cf602ee1d7d5a824285",
-  "extractor_sha256": "def7dcfb694a6fe4c5f5017748a5814586b4bde18124e714ce914a6e97de2813"
+  "output_sha256": "d94245e3d9904311bb146ef5d5f2e6262cb0006a1646c2b4099c87dd31729214",
+  "extractor_sha256": "6a980e2545d2966b261109333051027e329ecbbb3472fd6fcd7bfd7976c0c62b"
 }

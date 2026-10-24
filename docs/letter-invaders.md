@@ -85,3 +85,7 @@ Horizontal type-3 targets are Word Ships. Native 0x1a541 calls 0x17e47 case 1, w
 The native summary format is Accuracy: %d%%. C printf turns %% into one literal percent sign; the JavaScript formatter formerly substituted the number but left both signs. It now processes placeholders and escaped percent tokens in one pass, leaving any percent characters inside substituted names alone. Accuracy calculations are unchanged.
 
 Unit checks cover native melody order/timing/rest vectors, voice replacement and literal percentages in round/game-over summaries. Strict-autoplay Chrome verification plays through to round-three Word Ships with Sound On/Off, checks all85 tone changes, collision cancellation, nonzero rendered waveform RMS0.0446 and a single summary percent sign. Existing Boomlet checks continue to pass.
+
+## Complete gameplay sound inventory (2026-10-24)
+
+A follow-up audit found three remaining generic placeholders: wrong keys, successful hits and ground impacts. All now use their recovered native definitions and speaker-busy policy. The five gameplay cues have automated inventory, engine-routing, mute/exit/priority and real-Chrome waveform coverage. See [the sound audit](game-sound-audit.md), including paths that are intentionally silent and separate startup/UI sounds still outside gameplay fidelity.

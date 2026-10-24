@@ -1,0 +1,110 @@
+{
+  "date": "2026-10-24",
+  "scope": "Five gameplay sound cues, silent paths and automatic coverage",
+  "inventory": {
+    "boomlet": "0x1a541 \u2192 0x17e47 case0",
+    "ship": "0x1a541 \u2192 0x17e47 case1",
+    "impact": "0x1a22a \u2192 0x17e47 case2/DS7bb0",
+    "hit": "0x1a22a \u2192 0x17e47 case3/DS7b98",
+    "wrong": "0x19ecc \u2192 0x17e47 case5"
+  },
+  "silent_game_paths": [
+    "ordinary movement/spawn",
+    "correct key/missile launch/flight",
+    "accuracy bonus",
+    "game-over display",
+    "high-score insertion"
+  ],
+  "outside_gameplay": [
+    "shared UI errors",
+    "startup title-letter cue/case4",
+    "startup title-logo melody/case7"
+  ],
+  "checks": {
+    "unit_tests": 152,
+    "chrome": [
+      "all five actual gameplay cues with strict autoplay and Sound On/Off",
+      "existing full game/scoring/turn/session",
+      "root/project package and prototype exclusion"
+    ],
+    "rendered_rms": {
+      "wrong": 0.0113390696,
+      "hit": 0.0201863246,
+      "impact": 0.0204533741,
+      "boomlet": 0.049,
+      "ship": 0.0446
+    },
+    "all_engine_sound_kinds_mapped": true,
+    "originals_unchanged": 3,
+    "retained_evidence_files": 1588,
+    "syntax": "PASS",
+    "documentation_links": 153
+  },
+  "limits": [
+    "Physical speaker/native interrupt queue occupancy not fully corroborated",
+    "Startup and general UI feedback separate from gameplay",
+    "Safari unverified"
+  ],
+  "source_artifacts": [
+    {
+      "path": "PROCESS.md",
+      "bytes": 64993,
+      "sha256": "9e3e9eec21137fc83ea1ca4138e56f19f32b9a33b55766f899cf8cca0c749fca"
+    },
+    {
+      "path": "README.md",
+      "bytes": 8612,
+      "sha256": "5c2a6b302da7cabee1daf75ac26fbbb3ee8f3bdafb7e163336ec56c7f2f9012d"
+    },
+    {
+      "path": "analysis/invaders/resources.json",
+      "bytes": 6086,
+      "sha256": "37e641b46346ca54bf40aea2874fa0f75719ad082efbcfc108e4761f828c03c3"
+    },
+    {
+      "path": "dist/app.js",
+      "bytes": 49894,
+      "sha256": "4dd6090a62ad6116fac424a45761ec1bc24e6d77f2281413a916553dba5ec9f8"
+    },
+    {
+      "path": "dist/game-audio.js",
+      "bytes": 3694,
+      "sha256": "c3143113290229515f8dd5102c4d481a1e5a61dd136fd2e8f61a126df1915f23"
+    },
+    {
+      "path": "dist/invaders-data.js",
+      "bytes": 4058,
+      "sha256": "d94245e3d9904311bb146ef5d5f2e6262cb0006a1646c2b4099c87dd31729214"
+    },
+    {
+      "path": "docs/game-sound-audit.md",
+      "bytes": 4313,
+      "sha256": "83c3136326bafd7646e89be928f40ed85fbd8a90c24409cc1775470027cebf6d"
+    },
+    {
+      "path": "docs/letter-invaders.md",
+      "bytes": 10504,
+      "sha256": "e9f41c9e54b29cd2ed7e77b2a98d0a895c4cf80586f8c9157510f82e1ae3f010"
+    },
+    {
+      "path": "docs/remake-design.md",
+      "bytes": 9474,
+      "sha256": "5e37fc832de25c75c7935f855a8c408610b05a01e96675208f19e46b7ebf91bc"
+    },
+    {
+      "path": "scripts/extract-invaders-data.py",
+      "bytes": 4986,
+      "sha256": "6a980e2545d2966b261109333051027e329ecbbb3472fd6fcd7bfd7976c0c62b"
+    },
+    {
+      "path": "tests/game-audio-browser.mjs",
+      "bytes": 9042,
+      "sha256": "a6a89aa612b3e99169cd3e5f2d27604a21d55f65e74c6f940ab9374f3dcce699"
+    },
+    {
+      "path": "tests/game-sound-coverage.test.mjs",
+      "bytes": 5497,
+      "sha256": "c80df48916adf1771d592ef0b85f4c30b2a3d48c04cbf715dffbc4e2c5eeb7ca"
+    }
+  ]
+}
