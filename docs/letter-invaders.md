@@ -89,3 +89,7 @@ Unit checks cover native melody order/timing/rest vectors, voice replacement and
 ## Complete gameplay sound inventory (2026-10-24)
 
 A follow-up audit found three remaining generic placeholders: wrong keys, successful hits and ground impacts. All now use their recovered native definitions and speaker-busy policy. The five gameplay cues have automated inventory, engine-routing, mute/exit/priority and real-Chrome waveform coverage. See [the sound audit](game-sound-audit.md), including paths that are intentionally silent and separate startup/UI sounds still outside gameplay fidelity.
+
+## Documentation capture refresh — 2026-10-24
+
+The [README gallery](../README.md#screenshots) now features the recovered welcome and Letter Invaders alongside the main menu. The playing capture was refreshed from the current app in installed Chrome using a disposable profile, real spawned targets and a successful shot/score. It includes the current Export and Reset browser controls. No game state or screen pixels were fabricated, and no actual user progress was changed. Captures demonstrate the remake, not native DOS runtime equivalence.

@@ -1,5 +1,7 @@
 # F1/F2 delivery — original menus and settings
 
+> Historical F1/F2 snapshot. Later deliveries add the full typing loop, reports/game, recovered welcome and Registration, plus an explicitly confirmed browser reset. See the [current scope and screenshots](../README.md), [startup record](startup-welcome.md) and [Letter Invaders](letter-invaders.md). The behavior/verification below describes this earlier stage.
+
 Completed 2026-10-23. This delivery implements the next bounded stage authorized by the owner.
 F3 (the original typing/scoring loop) remains outstanding.
 

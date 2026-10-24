@@ -1,13 +1,27 @@
 # Typing Tutor IV Remake
 
-An open-source browser remake of the DOS programme. The current delivery recreates the **original menus, settings, practice screen/scoring, full-keyboard teaching, fingering review, keypad lessons/tests, Disk tests, reports and Letter Invaders** using recovered REA/Ghidra evidence.
+An open-source browser remake of the DOS programme. The current delivery recreates the **original welcome animation/music, name registration, menus, settings, practice screen/scoring, full-keyboard teaching, fingering review, keypad lessons/tests, Disk tests, reports and Letter Invaders** using recovered REA/Ghidra evidence.
 
 First public release: **v0.2.0**. This is a JavaScript reconstruction; the original DOS executable is not run or bundled.
 
-![Typing Tutor IV main menu](docs/screenshots/faithful-main-menu.png)
-
 Live app: **https://tt.xcstudio.dev** — hosted on GitHub Pages with automatic deployment from main and HTTPS enforced.
 New implementation code is MIT licensed; [license scope](COPYING.md) and [original-resource provenance](THIRD_PARTY.md) identify the historical content separately.
+
+## Screenshots
+
+The recovered welcome types the title, highlights the keyboard, then shows the animated logo with startup music. New users continue to [Registration](docs/screenshots/startup-registration.png); saved profiles open at the main menu.
+
+![Typing Tutor IV welcome with the recovered title and colorful Kriya logo](docs/screenshots/welcome-logo.png)
+
+The original menu layout gives keyboard access to lessons, tests, reports, options and the game.
+
+![Typing Tutor IV main menu](docs/screenshots/faithful-main-menu.png)
+
+Letter Invaders turns typing practice into a game, with falling letters, moving words, missiles, scores and recovered sound effects. Open **Game → Play** to begin.
+
+![Letter Invaders during play, with falling letters, a successful hit and the score display](docs/screenshots/invaders-playing.png)
+
+These are Google Chrome captures of the browser remake. Gameplay uses a disposable test profile; they are not captures of the DOS executable. See [startup](docs/startup-welcome.md) and [Letter Invaders](docs/letter-invaders.md) for behavior, evidence and remaining fidelity limits.
 
 ## Run
 
@@ -30,7 +44,9 @@ A browser with no saved user data shows the recovered welcome animation and musi
 
 ## Current delivery: original typing loop and Letter Invaders
 
-- First-user welcome with original simulated title typing, keyboard highlights, animated logo and64-note startup music.
+- First-user welcome with original simulated title typing, keyboard highlights, animated logo and 64-note startup music.
+- Fresh-user Registration/name input; saved profiles bypass startup, and dates come from the browser.
+- Explicit browser-data reset with Export first, Clear data and Cancel; unrelated storage is preserved.
 - Fixed 80×25 character screen, original menu positions, colors, header/footer and idle instructions.
 - All six student menus: Main, Lessons, Tests, Reports, Options and Game.
 - Options: original WPM tiers, weekly hours, 5/10/15/20 drills, sound, name, Intro and Help.
@@ -78,7 +94,7 @@ Upload the extracted contents of artifacts/typing-tutor-remake-v0.2.0-web.zip to
 
 The v0.1 typing app is retained in dist/prototype/ for reference and local testing at http://127.0.0.1:8080/prototype/.
 It is excluded from the online site and deployment ZIP. Its old lessons, reports and scoring remain available in the repository.
-Its original browser-storage key is untouched. The faithful app uses a separate versioned key; no scores are migrated or relabeled.
+Normal practice leaves its original browser-storage key untouched; the explicit Reset all Typing Tutor data action removes it after confirmation. The faithful app uses a separate versioned key; no scores are migrated or relabeled.
 
 ## Checks
 
@@ -100,6 +116,8 @@ npm run test:keypad
 npm run test:disk
 npm run test:invaders
 npm run test:audio
+npm run test:welcome
+npm run test:reset
 ```
 
 The tests use temporary profiles, start/stop their own loopback servers and capture screenshots under docs/screenshots/.
@@ -108,6 +126,11 @@ The server exposes only dist/; DOS references and analysis artifacts are outside
 ## Records
 
 - [Process log](PROCESS.md)
+- [Welcome, Registration and browser reset](docs/startup-welcome.md)
+- [Welcome screenshot](docs/screenshots/welcome-logo.png)
+- [Registration screenshot](docs/screenshots/startup-registration.png)
+- [Letter Invaders screenshot](docs/screenshots/invaders-playing.png)
+- [Reset confirmation screenshot](docs/screenshots/reset-confirmation.png)
 - [F5c Letter Invaders and global scores](docs/letter-invaders.md)
 - [F5b Disk tests](docs/disk-tests.md)
 - [F5a fingering and keypad](docs/fingering-and-keypad.md)
@@ -117,7 +140,7 @@ The server exposes only dist/; DOS references and analysis artifacts are outside
 - [F3 practice/scoring delivery](docs/practice-scoring.md)
 - [Practice screenshot](docs/screenshots/faithful-practice.png)
 - [F1/F2 delivery and fidelity matrix](docs/faithful-delivery.md)
-- [Current screenshot](docs/screenshots/faithful-main-menu.png)
+- [Main-menu screenshot](docs/screenshots/faithful-main-menu.png)
 - [WPM dialog screenshot](docs/screenshots/faithful-wpm-dialog.png)
 - [Original settings audit](docs/original-settings.md)
 - [Next-stage plan](docs/next-steps.md)
@@ -139,6 +162,7 @@ python3 scripts/extract-report-data.py
 python3 scripts/extract-keypad-data.py
 python3 scripts/extract-disk-data.py
 python3 scripts/extract-invaders-data.py
+python3 scripts/extract-welcome-data.py
 ```
 
 Running the app does not require REA or Ghidra.
