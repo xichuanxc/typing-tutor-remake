@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-24",
+  "url": "https://tt.xcstudio.dev",
+  "runtime_commit": "6ac4f716bc4f37c365a9607fdb64f8427374d242",
+  "ci": "https://github.com/xichuanxc/typing-tutor-remake/actions/runs/40078900721",
+  "deployment": "https://github.com/xichuanxc/typing-tutor-remake/actions/runs/40078900839",
+  "unit_tests": 164,
+  "checks": [
+    "CI and Pages succeeded",
+    "Full welcome/music then Registration",
+    "Keyboard/click skip also opens Registration",
+    "Empty name rejected; Student accepted",
+    "Name saved explicitly and retained on reload",
+    "Saved profile bypasses startup",
+    "No-save/Escape/restart asks name without welcome replay",
+    "Reset then welcome then new name entry",
+    "Export/cancel/unrelated storage and failure protections retained"
+  ],
+  "page_errors": [],
+  "date_policy": "DOS date confirmation omitted; browser dates used",
+  "assets": [
+    {
+      "path": "app.js",
+      "sha256": "77b635ad5c2fc49a2ae5fde89e0fe3811da3cf0297fe14f806463f63662d86b9"
+    },
+    {
+      "path": "faithful-session.js",
+      "sha256": "8d44b903c78ea7e37cfea8589ad93f4b18c87c4a2fde23c37486544c77dbd54a"
+    },
+    {
+      "path": "welcome-data.js",
+      "sha256": "15eb6a181c6e3a177d3e0930b7500587af5abb2bcc74b4a9dd67a8835f95dede"
+    }
+  ],
+  "network": "Temporary hostname mapping in isolated Chrome and curl; normal TLS verification",
+  "data_scope": "Disposable isolated browser profiles only; no real user saves changed"
+}
