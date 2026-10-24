@@ -12,7 +12,7 @@ export function boomletNotes(){
  return notes;
 }
 // Native 8-byte pitch/duration/rest records, with PIT and BIOS-tick quantization.
-function recordNotes(records){
+export function recordNotes(records){
  const notes=[],ticks=ms=>Math.floor((ms*182+5000)/10000)*BIOS_TICK_MS/1000;
  for(const [pitch,durationMs,silenceMs] of records){
   const divisor=pitch?Math.trunc(G.boomletSound.pitHundredths/pitch)&0xffff:0;
@@ -26,7 +26,7 @@ export function wordShipNotes(){return recordNotes(G.wordShipSound.notes);}
 export function soundNotes(kind){
  if(kind==="boomlet")return boomletNotes();
  if(kind==="ship")return wordShipNotes();
- return G.gameSounds[kind]?recordNotes(G.gameSounds[kind]):[];
+ return G.gameSounds?.[kind]?recordNotes(G.gameSounds[kind]):[];
 }
 export class GameAudio{
  constructor(contextFactory){this.contextFactory=contextFactory;this.voice=null;}
@@ -45,8 +45,9 @@ export class GameAudio{
   if((this.kind==="boomlet"&&specialType!==2)||(this.kind==="ship"&&specialType!==3))this.stop();
   for(const event of events)this.play(event.type);
  }
- start(kind="boomlet"){
-  const notes=soundNotes(kind);if(!notes.length)return;
+ start(kind="boomlet"){this.startNotes(soundNotes(kind),kind);}
+ startNotes(notes,kind="custom"){
+  if(!notes.length)return;
   this.stop();
   try{
    const context=this.contextFactory();if(!context)return;

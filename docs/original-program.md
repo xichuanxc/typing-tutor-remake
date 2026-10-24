@@ -88,3 +88,9 @@ An independently archived 12,508-byte tt.hlp from Internet Archive exactly match
 
 ## Verified Intro applied (2026-10-24)
 The owner authorized applying the archived original Intro to the app. Its 17 source parts now replace the modified welcome/credit parts in Options → Intro; the browser groups them into seven fitted reader screens. Other Help sections still use the preserved fixed reference. Source hashes are embedded in generated resource evidence, and attribution is retained in THIRD_PARTY.md.
+
+## 2026-10-24 — Startup and profile-file static audit
+
+Retained assembly confirms TT.HIS is the native student-history file:0x10128 opens it r+,0x10f47 enumerates26-byte names at0x7cc-byte strides across eight scanned slots, and0x10e3f/0x10ddc load an existing1996-byte record or an unnamed template. This refines the initial unknown-layout finding without claiming a complete importer. No names/history were exported or references modified.
+
+0x1095c/0x10c43/0x1ca33 recover title correction, keyboard, copyright/logo and0x17e47 case7 startup melody. The browser first-user gate is an owner-requested adaptation; native startup precedes student selection. See [startup evidence and remaining runtime limits](startup-welcome.md). These are assembly/data findings, not help-text or native runtime observations.

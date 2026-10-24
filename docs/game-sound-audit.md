@@ -38,7 +38,7 @@ npm run test:audio uses installed Chrome with strict user-activation requirement
 These paths are outside the five gameplay cues:
 
 - Shared invalid-choice/name/help/input feedback also calls case5. Existing general UI beeps remain a browser approximation; the game-specific wrong cue now uses its recovered definition.
-- Startup title lettering calls case4 through 0x10bbb, and startup title/logo animation calls case7 through 0x1095c → 0x1ca33. The remake does not yet reproduce that native startup sequence. This is not a missing Letter Invaders event.
+- Startup title lettering calls case4 through 0x10bbb, and startup title/logo animation calls case7 through 0x1095c → 0x1ca33. The [startup delivery](startup-welcome.md) now reconstructs the title/keyboard/logo and64-note case7 melody for browsers without saved user data. Sub-tick case4 title-key pulses remain unsynthesized. These are separate from Letter Invaders events.
 - Options → Sound installs/removes native sound support and gives feedback through 0x1cb56. Browser audio uses the existing Sound setting and gesture policy.
 
-This distinction keeps game sound coverage concrete while leaving startup/onboarding fidelity visibly open.
+This distinction keeps game sound coverage concrete while tracking remaining startup/onboarding fidelity limits separately.

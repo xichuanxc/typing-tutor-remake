@@ -25,8 +25,11 @@ Python only serves static files on your computer. All application logic runs in 
 Use the same browser and address to return to saved progress. Direct file:// opening is not supported because the app uses JavaScript modules.
 Use Export browser data for a JSON backup; backup import is not implemented yet.
 
+A browser with no saved user data shows the recovered welcome animation and music. Press a key or click its prompt to start; Escape skips. Saved profiles open directly at the main menu. To try it without changing your progress, use a fresh Chrome Incognito session. See [startup behavior and original TT.HIS findings](docs/startup-welcome.md).
+
 ## Current delivery: original typing loop and Letter Invaders
 
+- First-user welcome with original simulated title typing, keyboard highlights, animated logo and64-note startup music.
 - Fixed 80×25 character screen, original menu positions, colors, header/footer and idle instructions.
 - All six student menus: Main, Lessons, Tests, Reports, Options and Game.
 - Options: original WPM tiers, weekly hours, 5/10/15/20 drills, sound, name, Intro and Help.

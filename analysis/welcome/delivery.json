@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-24",
+  "scope": "First-user welcome, recovered startup music and native profile-file identity",
+  "unit_tests": 158,
+  "chrome": [
+    "fresh gesture startup",
+    "original title correction and logo",
+    "64-note music and rendered waveform",
+    "automatic completion",
+    "Escape and click cancellation",
+    "actual profile change/save/reload bypass",
+    "legacy/corrupt/blocked storage preservation",
+    "existing menus/settings/Intro/export",
+    "all five gameplay audio cues",
+    "44-file ZIP root and project path"
+  ],
+  "welcome_rms": 0.0492,
+  "music_notes": 64,
+  "music_ticks": 303,
+  "originals": "three original files unchanged",
+  "immutable_evidence_files": 1588,
+  "saved_state_policy": "No startup writes; readable storage without faithful or legacy save shows welcome; existing/unreadable storage bypasses",
+  "limits": [
+    "Static original evidence; no native DOS runtime observation or video comparison",
+    "Browser gesture and first-user gate adapt native startup",
+    "BIOS-paced logo instead of CPU-dependent native loop",
+    "Sub-tick title key pulses not synthesized",
+    "Full original new-student questionnaire, native font and Safari remain open"
+  ],
+  "files": [
+    {
+      "path": "dist/app.js",
+      "sha256": "f9a1247e8d0a9fda8292ee958d7a8c7afc7ee9e4b91e96bd55a0dec5d008a2d8"
+    },
+    {
+      "path": "dist/game-audio.js",
+      "sha256": "7c268c48b24a0553807574111d6a51ae62298e7151dd6c754a20638db18fb463"
+    },
+    {
+      "path": "dist/welcome.js",
+      "sha256": "27973e5450c10b5b2c330943fd655b728c232444283d006808af8f99fca1c4fd"
+    },
+    {
+      "path": "dist/welcome-data.js",
+      "sha256": "9fd7d9a2ee13fec26b52fee570d407f9d63e6283759e09d5f254844e2896a962"
+    },
+    {
+      "path": "scripts/extract-welcome-data.py",
+      "sha256": "983c5602be27b956b0f2b2ad3fa5066ceab439d89f40289d2d64ae0f13d3c60c"
+    },
+    {
+      "path": "tests/welcome.test.mjs",
+      "sha256": "103d056578f0b12c13e64f00b6df61748e8a8ad7c60f59efa678a10dfdc51a1f"
+    },
+    {
+      "path": "tests/welcome-browser.mjs",
+      "sha256": "14df90d13de95449668931e2d93479d52bc65e668c3443b5616b15304ac257c7"
+    },
+    {
+      "path": "tests/package-browser.mjs",
+      "sha256": "6eb8c7661512e70accae80c9a20e6f9c65a27dd4e35a739a9b9c52ae7ee11c58"
+    },
+    {
+      "path": "docs/startup-welcome.md",
+      "sha256": "2126798e87ff937a79b2ae69bd0e1b95fbafa9e3bca074681e5fc7b9fa19b02e"
+    },
+    {
+      "path": "analysis/welcome/resources.json",
+      "sha256": "7f860b3f7462bc7b27a3863db28b33af5a740e055fe62ece0f9b798853f78966"
+    }
+  ]
+}

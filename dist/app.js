@@ -1,6 +1,7 @@
 import {InvadersGame,invadersTick} from "./invaders.js";
 import GAME from "./invaders-data.js";
 import {GameAudio} from "./game-audio.js";
+import {shouldShowWelcome,WelcomeSequence,drawWelcome,welcomeNotes} from "./welcome.js";
 import {drawGameSetup,drawSecondName,drawRoundReady,drawGame,drawGameOver,drawScores} from "./invaders-screen.js";
 import {DiskTest} from "./disk-test.js";
 import DISK from "./disk-data.js";
@@ -34,6 +35,7 @@ const state={mode:"menu",menu:0,selected:0,dialog:null,page:0,pages:[],readerTit
 let idleTimer, audio, lesson, testSession, fingering, keypadSession, diskSession;
 let diskFiles=[],diskLoadToken=0;
 let gameSession=null,gameFrame=null;
+let welcome=null,welcomeFrame=null,welcomeStartedAt=0;
 const spanNodes=[];
 for(let row=0;row<25;row++){
   const line=document.createElement("div");line.className="row";line.dataset.row=row;
@@ -55,6 +57,7 @@ function audioContext(){
   return audio;
 }
 const gameAudio=new GameAudio(audioContext);
+const welcomeAudio=new GameAudio(audioContext);
 function beep(){
   if(!student.working.sound)return;
   try{
@@ -63,6 +66,36 @@ function beep(){
     tone.type="square";tone.frequency.value=660;gain.gain.value=.025;
     tone.connect(gain);gain.connect(audio.destination);tone.start();tone.stop(audio.currentTime+.055);
   }catch{/* Audio support is optional; the setting remains usable. */}
+}
+function startWelcome(){
+ if(!welcome||welcome.phase!=="ready")return;
+ if(student.working.sound)welcomeAudio.unlock();
+ welcome.start();welcomeStartedAt=performance.now();render();
+ const frame=()=>{
+  welcomeFrame=null;if(state.mode!=="welcome")return;
+  const before=[welcome.phase,welcome.line,welcome.index,welcome.logoFrame].join(":");
+  welcome.advance(performance.now()-welcomeStartedAt);
+  const events=welcome.drainEvents();
+  if(welcome.phase==="done"){finishWelcome();return;}
+  if(student.working.sound){
+   if(events.some(event=>event.type==="music"))welcomeAudio.startNotes(welcomeNotes(),"welcome");
+   else if(events.some(event=>event.type==="wrong"))welcomeAudio.play("wrong");
+  }
+  if(before!==[welcome.phase,welcome.line,welcome.index,welcome.logoFrame].join(":"))render(false);
+  welcomeFrame=requestAnimationFrame(frame);
+ };
+ welcomeFrame=requestAnimationFrame(frame);
+}
+function finishWelcome(){
+ if(welcomeFrame!==null){cancelAnimationFrame(welcomeFrame);welcomeFrame=null;}
+ welcomeAudio.stop();welcome.phase="done";goMenu(0);
+}
+function welcomeScreen(){
+ title.textContent="Welcome to Typing Tutor IV";
+ drawWelcome(grid,welcome);
+ hotspot(welcome.phase==="ready"?"Play welcome":"Continue to main menu",24,0,80,()=>{
+  if(welcome.phase==="ready")startWelcome();else finishWelcome();
+ });
 }
 function footer(text,escape=true){
   grid.fill(24,0x5e);
@@ -119,6 +152,7 @@ function paint(){
   cells.style.backgroundRepeat="no-repeat";
   document.querySelector("#screen-text").textContent=grid.lines().map(line=>line.trimEnd()).join("\n");
   terminal.dataset.mode=state.mode;terminal.dataset.menu=state.menu;
+  terminal.dataset.welcomePhase=welcome?.phase??"";
   terminal.dataset.selected=state.mode==="choice"?state.dialog.selected:state.selected;
   terminal.dataset.dirty=String(student.dirty);
   terminal.dataset.testType=state.testType??"";
@@ -140,6 +174,7 @@ function paint(){
   terminal.dataset.keypadActivity=keypadSession?.activity??"";
   terminal.dataset.keypadDrill=String((keypadSession?.batches??0)+1);
   document.querySelector("#session-note").textContent=state.warning||(
+    state.mode==="welcome"?(welcome.phase==="ready"?"Welcome · Press a key or click the prompt to start · Esc: skip":"Welcome · Any key or click the prompt: Main Menu"):
     state.mode==="game-playing"?"Letter Invaders · Type exact letters / words · Esc: surrender this player":
     ["game-ready","game-round"].includes(state.mode)?"Letter Invaders · Any key: begin round · Esc: Main Menu":
     state.mode==="game-scores"?"Score board · Esc: Main Menu":
@@ -720,9 +755,11 @@ function reportScreen(){
   hotspot("Next report",24,0,80,nextReport);
 }
 function render(focus=true){
+  document.querySelector("#export-data").hidden=state.mode==="welcome";
   document.querySelector("#choose-disk-files").hidden=!["disk-picker","disk-error"].includes(state.mode);
   controls.replaceChildren();
-  if(state.mode==="menu")menuScreen();
+  if(state.mode==="welcome")welcomeScreen();
+  else if(state.mode==="menu")menuScreen();
   else if(state.mode==="choice")choiceScreen();
   else if(state.mode==="name")nameScreen();
   else if(state.mode==="reader")readerScreen();
@@ -750,6 +787,12 @@ document.addEventListener("keydown",event=>{
   if(event.ctrlKey||event.metaKey||event.altKey||event.isComposing)return;
   if(event.target.closest(".browser-tools"))return;
   const key=event.key;
+  if(state.mode==="welcome"){
+    if(["Shift","Control","Alt","Meta","CapsLock"].includes(key))return;
+    event.preventDefault();
+    if(key==="Escape"||welcome.phase!=="ready")finishWelcome();else startWelcome();
+    return;
+  }
 
   if(["game-setup","game-players"].includes(state.mode)){
     if(["ArrowUp","ArrowDown"," "].includes(key)){event.preventDefault();state.selected=(state.selected+1)%2;render();}
@@ -926,4 +969,5 @@ document.querySelector("#disk-files").addEventListener("change",event=>{
   diskFiles=prepareDiskFiles(event.target.files);event.target.value="";openDiskPicker();
 });
 
-resetIdle();render();
+if(shouldShowWelcome(storage,student)){state.mode="welcome";welcome=new WelcomeSequence();render();}
+else{resetIdle();render();}

@@ -1,0 +1,99 @@
+{
+  "scope": "Startup screen/music and profile-file identity; no saved student names/history exported",
+  "binary_sha256": "6e80ab0186040beef29c8be8b39a36ddc0e2c9b15ca20e0eedd4055d76379288",
+  "output_sha256": "9fd7d9a2ee13fec26b52fee570d407f9d63e6283759e09d5f254844e2896a962",
+  "extractor_sha256": "983c5602be27b956b0f2b2ad3fa5066ceab439d89f40289d2d64ae0f13d3c60c",
+  "functions": [
+    {
+      "address": "0x10860",
+      "sha256": "e43f0ae47662a0681aea85348a5d7d1ba42f9ab9f216c8f98aa2345eea04d888"
+    },
+    {
+      "address": "0x1095c",
+      "sha256": "752b2940b56af925e882a11eef92655a21028e4ac2e87fbc8e2616721fde0a78"
+    },
+    {
+      "address": "0x10c43",
+      "sha256": "970489836b95d19157829eac023a211b0066a4039df2f2e6f4c0f5c67ff66519"
+    },
+    {
+      "address": "0x10bbb",
+      "sha256": "09821a1cabbde2bb281ad638c2ea970ac7f1de232c1aed976800081767f85390"
+    },
+    {
+      "address": "0x1c78e",
+      "sha256": "d5b953dc98815ff9f277c996ebfa59d4a36cddd1fa49d6bb241cce7fb670badd"
+    },
+    {
+      "address": "0x1c98e",
+      "sha256": "6ac8858f0d0ecd22ebdcf06c51e0243c84a618bc8c45d8ea9982c5240809af37"
+    },
+    {
+      "address": "0x1ca33",
+      "sha256": "a4c36fcad6742113e1c27882f23641cd663a505376d9284e163abd4295d7a4c4"
+    },
+    {
+      "address": "0x17e47",
+      "sha256": "4adc4977bc376b7df5a4a7bf22be2c2e0be9f88a9ef6d3d6d198d748f8b252d0"
+    },
+    {
+      "address": "0x1804e",
+      "sha256": "a1324bda6be2956922dc5a8753d31c2ed1181c515a615003a0e6f0f5bc80ba06"
+    },
+    {
+      "address": "0x17a75",
+      "sha256": "91eb73c6bb4b050d94d5ccda9132caf67a4193a08fcf52844f4ff71dcd04a342"
+    },
+    {
+      "address": "0x17ce8",
+      "sha256": "0173906a346d6cbe3e6ff55d760be5830b165cdb039f7fa396fe81a7942b0380"
+    },
+    {
+      "address": "0x14cb5",
+      "sha256": "c54a13705eaaaa6b88de735682aaeb349dc1f8b9603eabacb7e3dd9eea871dd0"
+    },
+    {
+      "address": "0x14d14",
+      "sha256": "d1ab814fcec04e54e12759c48a078b52346f80c72ccdb92ebce377ff81114608"
+    },
+    {
+      "address": "0x10128",
+      "sha256": "a373f3c3a0825b18047c56ebd3dcde5217023649844ac94e5d3550b2ed1957f6"
+    },
+    {
+      "address": "0x10f47",
+      "sha256": "ba06da9cefc11bcd2123feaa1a3b3bfaa6c1a78481c1e3dbfb28f3aaa0c46653"
+    },
+    {
+      "address": "0x10e3f",
+      "sha256": "9c9761d4d23b240960207a448bcdc3889581cc2bf58ef1e01cf5fe4e84a41b70"
+    },
+    {
+      "address": "0x10ddc",
+      "sha256": "8b1b7df03558742156ff933572b1be156f9cdf66c50f03ff27d85e10094512d2"
+    }
+  ],
+  "music": {
+    "effect": "0x17e47 case7",
+    "phrase": "0x1804e",
+    "tables": "DS7bc8..7ccf",
+    "notes": 64,
+    "duration_ticks": 303
+  },
+  "logo": {
+    "rows": "DS8940[50]",
+    "columns": "DS8972[50]",
+    "characters": "DS89a4[50]",
+    "colors": "DS89d6[5]"
+  },
+  "profile": {
+    "file": "TT.HIS",
+    "record_bytes": 1996,
+    "enumeration_scans": 8
+  },
+  "limits": [
+    "Static recovery; video not retrieved and no native DOS runtime observation",
+    "First-visit-only browser gating and gesture start are owner-requested/browser adapters",
+    "Sub-tick title key pulses are not synthesized"
+  ]
+}

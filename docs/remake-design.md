@@ -88,3 +88,7 @@ Word Ships now use their recovered85-tone melody with quantized rests, sharing s
 
 ## Game sound coverage (2026-10-24)
 All five Letter Invaders effect kinds now map to recovered definitions. Short cues use a single occupied speaker voice; physics frames do not truncate them. Automated event-inventory checks and real-Chrome scenarios replace reliance on manual discovery. Native startup title/audio and general interface feedback remain separate fidelity work. See [the audit](game-sound-audit.md).
+
+## 2026-10-24 — First-user welcome
+
+The owner requested the recovered startup animation/music only when no saved user data exists. The startup module reads faithful/legacy storage without writing a seen flag; corrupt/unavailable storage preserves warnings and bypasses startup. A gesture starts audio, Escape skips, completion/cancellation returns to the main menu. Existing saves bypass it. See [startup evidence, tests and limits](startup-welcome.md); explicit session persistence remains unchanged.
