@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-24",
+  "url": "https://tt.xcstudio.dev",
+  "runtime_commit": "fc8427391edaaf306090d3ea202eed252e1afdda",
+  "ci": "https://github.com/xichuanxc/typing-tutor-remake/actions/runs/40071682277",
+  "deployment": "https://github.com/xichuanxc/typing-tutor-remake/actions/runs/40071682282",
+  "checks": {
+    "ci": "success",
+    "deployment": "success",
+    "unit_tests": 158,
+    "fresh_profile": "ready without audio, gesture plays title/logo and64-tone music",
+    "saved_profile": "actual name change, explicit save, reload bypasses welcome and opens no audio context",
+    "other_storage": [
+      "legacy preserved/bypass",
+      "corrupt preserved/warning/bypass",
+      "unavailable bypass"
+    ],
+    "welcome_writes": 0,
+    "welcome_dirty": false,
+    "automatic_completion": "main menu and stopped voice",
+    "skip": "Escape before activation; click during music cancels voice",
+    "waveform_rms": 0.0492,
+    "page_errors": []
+  },
+  "assets": [
+    {
+      "path": "app.js",
+      "sha256": "f9a1247e8d0a9fda8292ee958d7a8c7afc7ee9e4b91e96bd55a0dec5d008a2d8"
+    },
+    {
+      "path": "welcome.js",
+      "sha256": "27973e5450c10b5b2c330943fd655b728c232444283d006808af8f99fca1c4fd"
+    },
+    {
+      "path": "welcome-data.js",
+      "sha256": "9fd7d9a2ee13fec26b52fee570d407f9d63e6283759e09d5f254844e2896a962"
+    },
+    {
+      "path": "game-audio.js",
+      "sha256": "7c268c48b24a0553807574111d6a51ae62298e7151dd6c754a20638db18fb463"
+    }
+  ],
+  "network": "Explicit GitHub Pages hostname mapping in isolated Chrome and curl; normal TLS verification",
+  "scope": "No actual user profile modified; no native DOS runtime or physical speaker equivalence claimed"
+}
