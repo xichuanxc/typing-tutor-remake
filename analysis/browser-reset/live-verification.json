@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-24",
+  "url": "https://tt.xcstudio.dev",
+  "runtime_commit": "393743fd394fe02bf16e8047bb708bfecb0e57df",
+  "ci": "https://github.com/xichuanxc/typing-tutor-remake/actions/runs/40077040938",
+  "deployment": "https://github.com/xichuanxc/typing-tutor-remake/actions/runs/40077040808",
+  "checks": {
+    "ci": "success",
+    "deployment": "success",
+    "unit_tests": 161,
+    "live_chrome": [
+      "Cancel/Escape preserve existing saved and dirty working data",
+      "Initial Cancel focus",
+      "Export first downloads faithful, legacy and working backup without clearing",
+      "Confirmed reset removes two app keys while unrelated sentinel survives",
+      "Dirty session reload has no second unload confirmation",
+      "Fresh welcome after clear",
+      "Corrupt data reset",
+      "Blocked export/removal and partial removal stay open with error",
+      "Narrow dialog after resize"
+    ],
+    "page_errors": []
+  },
+  "assets": [
+    {
+      "path": "index.html",
+      "sha256": "3a2d7340488099dadb9c608dcb4b9f69d7ba0e502b33b827cede852a62cb1d61"
+    },
+    {
+      "path": "app.js",
+      "sha256": "3242e2ef2c3ad0984b527bff7c641e42e1b88d7b0b6f3a1f5ffe6428af4659f8"
+    },
+    {
+      "path": "faithful-session.js",
+      "sha256": "48a2972f4d94cd765cda8e1a5dd6e26d9904eed55030b6edc3684e6a00749a6a"
+    },
+    {
+      "path": "style.css",
+      "sha256": "1a42994622d67c68846af8df4704e3da2077bf40e64721a8404f6460ebcc8257"
+    }
+  ],
+  "network": "Temporary GitHub Pages hostname mapping in isolated Chrome and curl; normal TLS verification",
+  "data_scope": "All deletion checks used disposable isolated test profiles; no real user data modified"
+}
