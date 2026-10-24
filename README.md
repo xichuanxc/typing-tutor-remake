@@ -24,6 +24,7 @@ After downloading the repository, no dependency installation, build step, accoun
 Python only serves static files on your computer. All application logic runs in the browser; progress is saved in that browser's localStorage.
 Use the same browser and address to return to saved progress. Direct file:// opening is not supported because the app uses JavaScript modules.
 Use Export browser data for a JSON backup; backup import is not implemented yet.
+To start over, choose **Reset all Typing Tutor data** beside Export, then **Clear data** in the confirmation dialog. This removes current and earlier-prototype saves for this browser/site, discards the unsaved session, and reloads the welcome. **Export first** downloads a backup; **Cancel** or Escape leaves the session intact.
 
 A browser with no saved user data shows the recovered welcome animation and music. Press a key or click its prompt to start; Escape skips. Saved profiles open directly at the main menu. To try it without changing your progress, use a fresh Chrome Incognito session. See [startup behavior and original TT.HIS findings](docs/startup-welcome.md).
 

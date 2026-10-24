@@ -7,6 +7,12 @@ import {createCurriculum,validCurriculum,commitCurriculum,recalculateThreshold} 
 import {validPracticeRecord} from "./practice.js";
 export const PROFILE_KEY="type-tutor-remake.faithful.v2";
 export const LEGACY_KEY="type-tutor-remake.v1";
+// Explicit browser-tool reset; never clear unrelated entries at this origin.
+export function clearBrowserData(storage){
+  storage.removeItem(LEGACY_KEY);
+  storage.removeItem(PROFILE_KEY);
+  if(storage.getItem(LEGACY_KEY)!==null||storage.getItem(PROFILE_KEY)!==null)throw Error("Browser data was not removed");
+}
 export const DEFAULT_PROFILE=Object.freeze({id:"student-1",name:"Student",wpm:20,weekly:1,drills:10,sound:true});
 export function validName(name) {
   return typeof name==="string"&&name.length>0&&name.length<=25&&/^[A-Za-z0-9.,'][A-Za-z0-9 .,\x27-]*$/.test(name);

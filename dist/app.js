@@ -13,7 +13,7 @@ import KEYPAD from "./keypad-data.js";
 import {drawKeypadIntro,drawKeypadActivity,drawKeypadSummary} from "./keypad-screen.js";
 import DATA from "./original-data.js";
 import {Grid,PALETTE,wrap,choiceLayout} from "./grid.js";
-import {StudentSession,PROFILE_KEY,LEGACY_KEY,validName} from "./faithful-session.js";
+import {StudentSession,PROFILE_KEY,LEGACY_KEY,validName,clearBrowserData} from "./faithful-session.js";
 
 import {browserClock} from "./practice.js";
 import {AdaptiveLesson} from "./adaptive-lesson.js";
@@ -26,6 +26,8 @@ import REPORT from "./report-data.js";
 import {drawProgress,drawGraph,drawTest} from "./report-screen.js";
 
 const terminal=document.querySelector("#terminal"), cells=document.querySelector("#cells");
+const resetDialog=document.querySelector("#reset-dialog"),resetError=document.querySelector("#reset-error");
+let resetting=false;
 const controls=document.querySelector("#controls"), title=document.querySelector("#screen-title");
 let storage;
 try {storage=localStorage;} catch {storage={getItem(){throw Error("Storage unavailable");},setItem(){throw Error("Storage unavailable");}};}
@@ -756,6 +758,7 @@ function reportScreen(){
 }
 function render(focus=true){
   document.querySelector("#export-data").hidden=state.mode==="welcome";
+  document.querySelector("#reset-data").hidden=state.mode==="welcome";
   document.querySelector("#choose-disk-files").hidden=!["disk-picker","disk-error"].includes(state.mode);
   controls.replaceChildren();
   if(state.mode==="welcome")welcomeScreen();
@@ -784,6 +787,7 @@ function render(focus=true){
   }
 }
 document.addEventListener("keydown",event=>{
+  if(resetDialog.open)return;
   if(event.ctrlKey||event.metaKey||event.altKey||event.isComposing)return;
   if(event.target.closest(".browser-tools"))return;
   const key=event.key;
@@ -948,8 +952,8 @@ document.addEventListener("keydown",event=>{
     if(index>=0){event.preventDefault();activate(index);}else beep();
   }
 });
-window.addEventListener("beforeunload",event=>{if(student.dirty){event.preventDefault();event.returnValue="";}});
-document.querySelector("#export-data").addEventListener("click",()=>{
+window.addEventListener("beforeunload",event=>{if(student.dirty&&!resetting){event.preventDefault();event.returnValue="";}});
+function exportBrowserData(){
   try{
     const raw={exportedAt:new Date().toISOString(),faithfulSaved:storage.getItem(PROFILE_KEY),
       earlierPrototype:storage.getItem(LEGACY_KEY),workingSettings:student.working,
@@ -962,7 +966,28 @@ document.querySelector("#export-data").addEventListener("click",()=>{
     const url=URL.createObjectURL(new Blob([JSON.stringify(raw,null,2)],{type:"application/json"}));
     const a=document.createElement("a");a.href=url;a.download="typing-tutor-browser-data.json";a.click();
     setTimeout(()=>URL.revokeObjectURL(url),1000);
-  }catch(error){state.warning="Browser data could not be exported.";render(false);announce(state.warning);}
+    return true;
+  }catch(error){
+    const message="Browser data could not be exported.";
+    if(resetDialog.open)resetError.textContent=message;
+    else{state.warning=message;render(false);announce(message);}
+    return false;
+  }
+}
+document.querySelector("#export-data").addEventListener("click",exportBrowserData);
+document.querySelector("#reset-data").addEventListener("click",()=>{
+  resetError.textContent="";resetDialog.showModal();document.querySelector("#reset-cancel").focus();
+});
+document.querySelector("#reset-cancel").addEventListener("click",()=>resetDialog.close());
+document.querySelector("#reset-export").addEventListener("click",()=>{
+  resetError.textContent="";exportBrowserData();
+});
+document.querySelector("#reset-confirm").addEventListener("click",()=>{
+  try{
+    clearBrowserData(storage);resetting=true;window.location.reload();
+  }catch{
+    resetting=false;resetError.textContent="Reset could not be completed. Some saved data may remain. Your current session is still open; export a backup or try again.";
+  }
 });
 document.querySelector("#choose-disk-files").addEventListener("click",()=>document.querySelector("#disk-files").click());
 document.querySelector("#disk-files").addEventListener("change",event=>{

@@ -92,3 +92,7 @@ All five Letter Invaders effect kinds now map to recovered definitions. Short cu
 ## 2026-10-24 — First-user welcome
 
 The owner requested the recovered startup animation/music only when no saved user data exists. The startup module reads faithful/legacy storage without writing a seen flag; corrupt/unavailable storage preserves warnings and bypasses startup. A gesture starts audio, Escape skips, completion/cancellation returns to the main menu. Existing saves bypass it. See [startup evidence, tests and limits](startup-welcome.md); explicit session persistence remains unchanged.
+
+## 2026-10-24 — Explicit browser reset
+
+Owner approved Reset all Typing Tutor data beside Export. A browser-native modal explains deletion of saved profiles/settings/history/scores, earlier prototype data and the current unsaved session, with Export first, Clear data and Cancel. Cancel receives initial focus; Escape closes only the modal. Export uses the existing backup format and leaves confirmation open; import remains unavailable. Clear removes only the two known app localStorage entries, verifies removal, bypasses the existing dirty-session unload prompt only for the confirmed reload, and returns to the fresh welcome. Errors leave the modal/session open and report that removal may be incomplete; localStorage does not provide a multi-key transaction. This is a browser design choice, not a recovered DOS feature.

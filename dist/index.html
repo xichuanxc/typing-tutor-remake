@@ -13,7 +13,14 @@
 <pre id="screen-text" class="sr-only"></pre>
 <p id="screen-status" class="sr-only" role="status" aria-live="polite"></p>
 <div class="browser-tools"><span id="session-note">Left / Right: choose · Enter: select · Esc: return</span>
-<nav aria-label="Browser tools"><input type="file" id="disk-files" accept=".tst,.txt,text/plain" multiple hidden><button type="button" id="choose-disk-files" hidden>Choose local test files</button><button type="button" id="export-data">Export browser data</button></nav></div>
+<nav aria-label="Browser tools"><input type="file" id="disk-files" accept=".tst,.txt,text/plain" multiple hidden><button type="button" id="choose-disk-files" hidden>Choose local test files</button><button type="button" id="export-data">Export browser data</button><button type="button" id="reset-data">Reset all Typing Tutor data</button></nav></div>
 <p class="browser-note">Use Quit to save your settings and practice before closing this page.</p>
+<dialog id="reset-dialog" aria-labelledby="reset-title" aria-describedby="reset-description">
+<h2 id="reset-title">Reset all Typing Tutor data?</h2>
+<p id="reset-description">This removes all saved profiles, settings, practice history and game scores in this browser for this site, including earlier prototype data. It also discards your current unsaved session and returns to the welcome screen.</p>
+<p>You can export a backup first. Backup import is not supported yet.</p>
+<p id="reset-error" role="alert"></p>
+<div class="reset-actions"><button type="button" id="reset-export">Export first</button><button type="button" id="reset-confirm">Clear data</button><button type="button" id="reset-cancel" autofocus>Cancel</button></div>
+</dialog>
 <script type="module" src="./app.js"></script>
 </body></html>

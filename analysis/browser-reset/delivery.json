@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-24",
+  "scope": "Owner-approved browser-only reset with optional export",
+  "unit_tests": 161,
+  "chrome": [
+    "Cancel/Escape preserve saved and unsaved state",
+    "Cancel initially focused",
+    "Export first saves existing-format current/legacy/working backup and keeps dialog open",
+    "Clear removes two app keys only and preserves unrelated storage",
+    "Dirty session resets without redundant beforeunload confirmation",
+    "Reload returns to fresh welcome",
+    "Corrupt saves can be reset",
+    "Blocked/partial failures report error and retain open current session",
+    "Narrow confirmation fits after resize",
+    "Existing menus/Intro/save/export regressions",
+    "ZIP root/project paths"
+  ],
+  "page_errors": [],
+  "originals": "Three protected TT files unchanged",
+  "immutable_evidence_files": 1588,
+  "artifact_sha256": "75cee9e68527104cc3b96338451a46063ca135b4497cabd6a5fc2efd88811ea6",
+  "limits": [
+    "Browser-local reset, not a native DOS feature",
+    "localStorage removal across two keys is not transactional; errors can leave partial removal",
+    "Export import and Safari verification remain unavailable"
+  ],
+  "files": [
+    {
+      "path": "dist/app.js",
+      "sha256": "3242e2ef2c3ad0984b527bff7c641e42e1b88d7b0b6f3a1f5ffe6428af4659f8"
+    },
+    {
+      "path": "dist/faithful-session.js",
+      "sha256": "48a2972f4d94cd765cda8e1a5dd6e26d9904eed55030b6edc3684e6a00749a6a"
+    },
+    {
+      "path": "dist/index.html",
+      "sha256": "3a2d7340488099dadb9c608dcb4b9f69d7ba0e502b33b827cede852a62cb1d61"
+    },
+    {
+      "path": "dist/style.css",
+      "sha256": "1a42994622d67c68846af8df4704e3da2077bf40e64721a8404f6460ebcc8257"
+    },
+    {
+      "path": "tests/browser-reset.test.mjs",
+      "sha256": "21009ece457c9567384745c20d776fd946b18d1fe0270850ee58710a6976c3b0"
+    },
+    {
+      "path": "tests/reset-browser.mjs",
+      "sha256": "ff4af6fb78474a53301438770841cd461587c1d7bed7023c5e2350041cc93a4d"
+    },
+    {
+      "path": "docs/screenshots/reset-confirmation.png",
+      "sha256": "96089f8bc967fb79f344f76fefdb4e35e4a5f98bcf617a305ce14cba10a80226"
+    }
+  ]
+}

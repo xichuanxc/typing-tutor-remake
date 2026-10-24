@@ -10,7 +10,7 @@ Existing browser saves go directly to the main menu. Unreadable or blocked stora
 
 Persistence still uses the normal explicit save flow: after practice or a settings change, Quit → Yes, save session to history. Reloading without ever saving leaves no profile, so that browser will show the welcome again. Quitting/restarting within the same page does not replay it. Older prototype data also suppresses the welcome, without being migrated or relabeled.
 
-To try the welcome while keeping existing progress, open https://tt.xcstudio.dev in a new Chrome Incognito session. Close existing Incognito windows first if that private session already holds a save. The app offers no forced replay control.
+To try the welcome while keeping existing progress, open https://tt.xcstudio.dev in a new Chrome Incognito session. Close existing Incognito windows first if that private session already holds a save. To deliberately start over, use Reset all Typing Tutor data beside Export. The confirmation offers Export first, Clear data and Cancel. Clearing removes both app save entries and the unsaved session, then reloads into this welcome. It preserves unrelated data at the same origin. This resets progress; use a fresh Incognito session when you only want to preview the welcome.
 
 ## Original evidence
 
